@@ -6,7 +6,7 @@ The Karma Game Library is a powerful and rich software framework for the computa
 It is easy to use and compatible with domain specific simulators.
 
 **This repository equips you with the necessary tools to successfully apply the Karma mechanism in your resource allocation context.**
-In the [documentation](docs/build/html/index.html) you will find installation instructions, coding examples in Python and an extensive documentation.
+In the [documentation](https://derkevinriehl.github.io/karma_game_library/) you will find installation instructions, coding examples in Python and an extensive documentation.
 
 <img src="docs/source/_static/logo_light.svg" alt="KarmaKnot" style="width:150px;"/>
 
@@ -26,7 +26,7 @@ pip install karma_game
 conda install karma_game
 ```	
 
-After installation, you can try one of our [examples](docs/build/html/examples.html) to verify your installation was successful.
+After installation, you can try one of our [examples](https://derkevinriehl.github.io/karma_game_library/gettingstarted.html) to verify your installation was successful.
 
 
 What is Karma
