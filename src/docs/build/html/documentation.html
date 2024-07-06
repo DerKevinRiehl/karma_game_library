@@ -1,0 +1,2179 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Documentation &#8212; Karma Game Library 1.0.0 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
+  <script src="_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'documentation';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Modelling Examples" href="modelling_examples.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+<div class="bd-header__inner bd-page-width">
+  <label class="sidebar-toggle primary-toggle" for="__primary">
+    <span class="fa-solid fa-bars"></span>
+  </label>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+
+<a class="navbar-brand logo" href="index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/logo_light.svg" class="logo__image only-light" alt=""/>
+    <script>document.write(`<img src="_static/logo_dark.svg" class="logo__image only-dark" alt=""/>`);</script>
+  
+  
+    <p class="title logo__title">Karma Game Library (v1.0.0)</p>
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="home.html">
+                        Home
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="gettingstarted.html">
+                            Getting Started
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="modelling_examples.html">
+                        Modelling
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="#">
+                            Documentation
+                      </a>
+                    </li>
+                
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/<your-org>/<your-repo>" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/project/pydata-sphinx-theme/" title="PyPI" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-python fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">PyPI</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/project/pydata-sphinx-theme/" title="Issue Tracker & Support" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-regular fa-circle-question fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">Issue Tracker & Support</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/project/pydata-sphinx-theme/" title="Contact & Mailing List" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-regular fa-envelope fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">Contact & Mailing List</span></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+    </div>
+  
+
+  
+    <label class="sidebar-toggle secondary-toggle" for="__secondary" tabindex="0">
+      <span class="fa-solid fa-outdent"></span>
+    </label>
+  
+</div>
+
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar hide-on-wide">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          <div class="navbar-item">
+<nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="home.html">
+                        Home
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="gettingstarted.html">
+                            Getting Started
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="modelling_examples.html">
+                        Modelling
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="#">
+                            Documentation
+                      </a>
+                    </li>
+                
+  </ul>
+</nav></div>
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script></div>
+        
+          <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/<your-org>/<your-repo>" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/project/pydata-sphinx-theme/" title="PyPI" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-python fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">PyPI</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/project/pydata-sphinx-theme/" title="Issue Tracker & Support" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-regular fa-circle-question fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">Issue Tracker & Support</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/project/pydata-sphinx-theme/" title="Contact & Mailing List" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-regular fa-envelope fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">Contact & Mailing List</span></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<nav class="sidebar-indices-items">
+  <p class="sidebar-indices-items__title" role="heading" aria-level="1">Indices</p>
+  <ul class="indices-link">
+        <li class="toctree-l1">
+          <a class="reference internal"
+             href="genindex.html"
+             accesskey="I">General Index</a>
+        </li>
+        <li class="toctree-l1">
+          <a class="reference internal" href="py-modindex.html">Python Module Index</a>
+        </li>
+  </ul>
+</nav></div>
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+<nav aria-label="Breadcrumb">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    <li class="breadcrumb-item active" aria-current="page">Documentation</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section id="documentation">
+<h1>Documentation<a class="headerlink" href="#documentation" title="Permalink to this heading">#</a></h1>
+<p><strong>Version:</strong> 1.0.0</p>
+<p><strong>Historical documentation:</strong> <a class="reference external" href="http://google.com">1.0.0</a></p>
+<p><strong>Useful links:</strong> <a class="reference external" href="http://google.com">Source Repository</a>  | <a class="reference external" href="http://google.com">Issue Tracker &amp; Support</a>  | <a class="reference external" href="http://google.com">Contact &amp; Mailing List</a></p>
+</section>
+<section id="objects">
+<h1>Objects<a class="headerlink" href="#objects" title="Permalink to this heading">#</a></h1>
+<section id="gameparameters">
+<h2>GameParameters<a class="headerlink" href="#gameparameters" title="Permalink to this heading">#</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="karma_game_library.entities.game_parameters.GameParameters">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">karma_game_library.entities.game_parameters.</span></span><span class="sig-name descname"><span class="pre">GameParameters</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">num_agents</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_participants</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_types</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_urgencies</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_outcomes</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_average_karma</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">map_type_temp_preference</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lst_init_types</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lst_init_urgencies</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lst_init_karmas</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">func_cost</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Callable</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">func_outcome</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Callable</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">func_payment</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Callable</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">func_urgency_transition</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Callable</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">func_overflow_distribution</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Callable</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">func_karma_redistribution</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Callable</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/karma_game_library/entities/game_parameters.html#GameParameters"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#karma_game_library.entities.game_parameters.GameParameters" title="Permalink to this definition">#</a></dt>
+<dd><p>A class to encapsulate all parameters necessary to describe a Karma
+game for policy computation and simulation purposes. It is used when
+instantiating StateDistribution and Policy objects, as well as it is used
+for Simulator and Optimizer.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="karma_game_library.entities.game_parameters.GameParameters.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">num_agents</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_participants</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_types</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_urgencies</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_outcomes</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_average_karma</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">map_type_temp_preference</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lst_init_types</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lst_init_urgencies</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lst_init_karmas</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">func_cost</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Callable</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">func_outcome</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Callable</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">func_payment</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Callable</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">func_urgency_transition</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Callable</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">func_overflow_distribution</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Callable</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">func_karma_redistribution</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Callable</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/karma_game_library/entities/game_parameters.html#GameParameters.__init__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#karma_game_library.entities.game_parameters.GameParameters.__init__" title="Permalink to this definition">#</a></dt>
+<dd><p>This constructor initializes the GameParameters instance and checks
+the validity of the given parameters.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>num_agents</strong> (<em>int</em>) – The number agents in the population (the population size).</p></li>
+<li><p><strong>num_participants</strong> (<em>int</em>) – The number of agents that participate in an interaction.</p></li>
+<li><p><strong>num_types</strong> (<em>int</em>) – The finite number of possible agent types.</p></li>
+<li><p><strong>num_urgencies</strong> (<em>int</em>) – The finite number of possible agent urgencies.</p></li>
+<li><p><strong>num_outcomes</strong> (<em>int</em>) – The finite number of possible outcomes for a participant.</p></li>
+<li><p><strong>num_average_karma</strong> (<em>int</em>) – The initial state is focussed on num_average_karma. The average
+Karma will remain constant.</p></li>
+<li><p><strong>map_type_temp_preference</strong> (<em>Dict</em><em>[</em><em>int</em><em>, </em><em>float</em><em>]</em><em>:</em><em> [</em><em>type</em><em>] </em><em>-&gt;</em><em> [</em><em>temporal preference</em><em>]</em>) – This map maps the given agent type to a temporal preference between
+0.0 and 1.0.</p></li>
+<li><p><strong>lst_init_types</strong> (<em>List</em><em>[</em><em>int</em><em>]</em>) – This list of integers represents the list of agent types.
+The agent types (temporal preferences) cannot change over time.</p></li>
+<li><p><strong>lst_init_urgencies</strong> (<em>List</em><em>[</em><em>int</em><em>]</em>) – This list of integers represents the list of initial agent
+urgencies.</p></li>
+<li><p><strong>lst_init_karmas</strong> (<em>List</em><em>[</em><em>int</em><em>]</em>) – This list of integers represents the list of initial agents’
+karma balances.</p></li>
+<li><p><strong>func_cost</strong> (<em>Callable</em><em>, </em><em>(</em><em>urgency</em><em>, </em><em>outcome</em><em>) </em><em>-&gt;</em><em> (</em><em>cost</em><em>)</em>) – This function takes the urgency and outcome of a participant and
+returns the costs that result of to it. The cost should be a
+positive number as the software framework works with negative
+costs.</p></li>
+<li><p><strong>func_outcome</strong> (<em>Callable</em><em>, </em><em>(</em><em>lst_actions</em><em>) </em><em>-&gt;</em><em> (</em><em>outcomes</em><em>)</em>) – This function takes the interaction participant actions and returns
+an integers representing the interaction outcome. The outcomes is
+a vector of outcomes for each participant.</p></li>
+<li><p><strong>func_payment</strong> (<em>Callable</em><em>, </em><em>(</em><em>actions</em><em>, </em><em>outcomes</em><em>) </em><em>-&gt;</em><em> (</em><em>payments</em><em>, </em><em>karma_overflow</em><em>)</em>) – This function takes the participants actions and interaction
+outcomes and returns the lists of payments and karma_overflow.
+Note, payments are added to the karma balances of participants.
+Note2: This function cannot be probabilistic!</p></li>
+<li><p><strong>func_urgency_transition</strong> (<em>Callable</em><em>, </em><em>(</em><em>atype</em><em>, </em><em>urgency</em><em>, </em><em>outcome</em><em>, </em><em>set_urgencies</em><em>) </em><em>-&gt;</em><em> (</em><em>urgency_next</em><em>)</em>) – This function takes an agent type, urgency, and outcome, and
+returns the next agent urgency. This enables the user to model the
+urgency_next in dependence of outcome. The outcome is encoded as
+follows: -1 means the agent didnt participate an interaction this
+epoch, otherwise it is the max outcome of all interactions from
+this epoch the agent participated. One could model the urgency
+transition with type specific finite state machines for instance.</p></li>
+<li><p><strong>func_overflow_distribution</strong> (<em>Callable</em><em>, </em><em>(</em><em>pop_karmas</em><em>, </em><em>karma_overflow</em><em>) </em><em>-&gt;</em><em> (</em><em>pop_karmas_next</em><em>)</em>) – This function takes the population karma balances, and the payment
+overflow, and distributes it across the population.</p></li>
+<li><p><strong>func_karma_redistribution</strong> (<em>Callable</em><em>, </em><em>(</em><em>pop_karmas</em><em>) </em><em>-&gt;</em><em> (</em><em>pop_karmas_next</em><em>)</em>) – This function takes the population (represented by karma balances)
+and returns a list of integers representing the new karma balances
+of agents after redistribution.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>Exception</strong> – In case the input parameters are not plausible a specific exception
+    will be raised.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="karma_game_library.entities.game_parameters.GameParameters.load">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">load</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">source_file</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#karma_game_library.entities.game_parameters.GameParameters.load" title="Permalink to this definition">#</a></dt>
+<dd><p>This function loads the GameParameters from a file.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>source_file</strong> (<em>str</em>) – The file to load the GameParameters from.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>parameters</strong> – A GameParameters instance.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="#karma_game_library.entities.game_parameters.GameParameters" title="karma_game_library.entities.game_parameters.GameParameters">GameParameters</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="karma_game_library.entities.game_parameters.GameParameters.save">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">save</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parameters</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#karma_game_library.entities.game_parameters.GameParameters" title="karma_game_library.entities.game_parameters.GameParameters"><span class="pre">GameParameters</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">target_file</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#karma_game_library.entities.game_parameters.GameParameters.save" title="Permalink to this definition">#</a></dt>
+<dd><p>This function stores the GameParameters to a file.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>parameters</strong> (<a class="reference internal" href="#karma_game_library.entities.game_parameters.GameParameters" title="karma_game_library.entities.game_parameters.GameParameters"><em>GameParameters</em></a>) – A GameParameters instance.</p></li>
+<li><p><strong>target_file</strong> (<em>str</em>) – The file to store the GameParameters.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="statedistribution">
+<h2>StateDistribution<a class="headerlink" href="#statedistribution" title="Permalink to this heading">#</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="karma_game_library.StateDistribution">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">karma_game_library.</span></span><span class="sig-name descname"><span class="pre">StateDistribution</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">game_parameters</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#karma_game_library.entities.game_parameters.GameParameters" title="karma_game_library.entities.game_parameters.GameParameters"><span class="pre">GameParameters</span></a></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/karma_game_library/entities/state_distribution.html#StateDistribution"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#karma_game_library.StateDistribution" title="Permalink to this definition">#</a></dt>
+<dd><p>A class to represent the state distribution of a Karma system. This means,
+the share of the population, that has a specific type, specific urgency,
+and a specific karma balance. All shares together add up to 1.0.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="karma_game_library.StateDistribution.dist_matrix">
+<span class="sig-name descname"><span class="pre">dist_matrix</span></span><a class="headerlink" href="#karma_game_library.StateDistribution.dist_matrix" title="Permalink to this definition">#</a></dt>
+<dd><p>The social state distribution matrix. Each value represents the share
+of the population, that has a specific type, specific urgency, and a
+specific karma balance. All shares together add up to 1.0.  Note, that
+the share for the last karma balance index represents agents with a
+karma balance of exactly this value or higher.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>np.array, indexes: [type][urgency][karma_balance]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="karma_game_library.StateDistribution.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">game_parameters</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#karma_game_library.entities.game_parameters.GameParameters" title="karma_game_library.entities.game_parameters.GameParameters"><span class="pre">GameParameters</span></a></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/karma_game_library/entities/state_distribution.html#StateDistribution.__init__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#karma_game_library.StateDistribution.__init__" title="Permalink to this definition">#</a></dt>
+<dd><p>This constructor initializes the state distribution instance.
+The distribution matrix will be initialized to an even distribution.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>game_parameters</strong> (<a class="reference internal" href="#karma_game_library.entities.game_parameters.GameParameters" title="karma_game_library.entities.game_parameters.GameParameters"><em>GameParameters</em></a>) – The game parameters for the simulator.</p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>Exception</strong> – In case the input parameters are not plausible a specific exception
+    will be raised.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>None.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="karma_game_library.StateDistribution.autocorrect">
+<span class="sig-name descname"><span class="pre">autocorrect</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/karma_game_library/entities/state_distribution.html#StateDistribution.autocorrect"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#karma_game_library.StateDistribution.autocorrect" title="Permalink to this definition">#</a></dt>
+<dd><p>This function corrects the state_distribution after changes by the
+user. This involves normalizing the matrix, so that all shares add
+up to 1.0, and transforming the distribution so that the average karma
+balance is preserved as constant.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>None</strong> – </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>changed</strong> – Whether the state_distribution was changed by the function or not.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="karma_game_library.StateDistribution.copy_social_state_distribution">
+<span class="sig-name descname"><span class="pre">copy_social_state_distribution</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">other_social_state</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/karma_game_library/entities/state_distribution.html#StateDistribution.copy_social_state_distribution"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#karma_game_library.StateDistribution.copy_social_state_distribution" title="Permalink to this definition">#</a></dt>
+<dd><p>This function copies the dist_matrix from other_social_state into this
+instances dist_matrix.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>other_social_state_distribution</strong> (<a class="reference internal" href="#karma_game_library.StateDistribution" title="karma_game_library.StateDistribution"><em>StateDistribution</em></a>) – Another social state distribution from which the content shall be
+copied into this instance.</p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>Exception</strong> – In case the StateDistribution other_social_state_distribution
+    is invalid a specific exception will be raised.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="karma_game_library.StateDistribution.get_average_karma">
+<span class="sig-name descname"><span class="pre">get_average_karma</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/karma_game_library/entities/state_distribution.html#StateDistribution.get_average_karma"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#karma_game_library.StateDistribution.get_average_karma" title="Permalink to this definition">#</a></dt>
+<dd><p>Returns the average amount of Karma.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>average</strong> – The empirical, average amount of Karma.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="karma_game_library.StateDistribution.get_limited_dist_matrix">
+<span class="sig-name descname"><span class="pre">get_limited_dist_matrix</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">limit</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/karma_game_library/entities/state_distribution.html#StateDistribution.get_limited_dist_matrix"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#karma_game_library.StateDistribution.get_limited_dist_matrix" title="Permalink to this definition">#</a></dt>
+<dd><p>This function returns a karma balance limited state_distribution. If
+the limit is larger than the _num_state_karmas, the additional fields
+are added up with zeros. If the limit is smaller, then the state
+distribution is aggregated, meaning that the share for the returned
+distribution for karma=limit-1 represents the share of all balances
+with karmas&gt;=limit-1.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>limit</strong> (<em>int</em>) – The limit for the limited distribution matrix.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>limited_dist_matrix</strong> – The limited distribution matrix.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>np.array</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="karma_game_library.StateDistribution.load">
+<span class="sig-name descname"><span class="pre">load</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">source_file</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/karma_game_library/entities/state_distribution.html#StateDistribution.load"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#karma_game_library.StateDistribution.load" title="Permalink to this definition">#</a></dt>
+<dd><p>This function loads the state distribution from a file into this
+instance.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>source_file</strong> (<em>str</em>) – The file where to load the state distribution from.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="karma_game_library.StateDistribution.save">
+<span class="sig-name descname"><span class="pre">save</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">target_file</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/karma_game_library/entities/state_distribution.html#StateDistribution.save"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#karma_game_library.StateDistribution.save" title="Permalink to this definition">#</a></dt>
+<dd><p>This function saves the state distribution to a file.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>target_file</strong> (<em>str</em>) – The file where to store the state distribution.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="karma_game_library.StateDistribution.validate">
+<span class="sig-name descname"><span class="pre">validate</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/karma_game_library/entities/state_distribution.html#StateDistribution.validate"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#karma_game_library.StateDistribution.validate" title="Permalink to this definition">#</a></dt>
+<dd><p>This function validates whether the social state distribution is valid.
+This means, that all shares add up to 1.0, and that the average karma
+balance is preserved as constant.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>None</strong> – </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>valid</strong> – Whether the policy is valid or not.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="policy">
+<h2>Policy<a class="headerlink" href="#policy" title="Permalink to this heading">#</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="karma_game_library.Policy">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">karma_game_library.</span></span><span class="sig-name descname"><span class="pre">Policy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">game_parameters</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#karma_game_library.entities.game_parameters.GameParameters" title="karma_game_library.entities.game_parameters.GameParameters"><span class="pre">GameParameters</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">initialization</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'even'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/karma_game_library/entities/policy.html#Policy"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#karma_game_library.Policy" title="Permalink to this definition">#</a></dt>
+<dd><p>A class to represent the agent policy, meaning for a specific type and
+urgency the 2D probability matrix of karma balances (columns) and actions
+taken (rows). The type and urgency specific 2D probability matrix will add
+up to 1.0 for each column (for one given karma balance, the sum of
+probabilities of different actions sum up to 1.0).</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="karma_game_library.Policy.prob_matrix">
+<span class="sig-name descname"><span class="pre">prob_matrix</span></span><a class="headerlink" href="#karma_game_library.Policy.prob_matrix" title="Permalink to this definition">#</a></dt>
+<dd><p>The probability matrix. Each value represents the probability, that an
+agent of a specific type and a specific urgency with a specific karma
+balance will choose a specific action. The probability matrix will add
+up to 1.0 for each column (for one given karma balance, the sum of
+probabilities of different actions sum up to 1.0).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>np.array, indexes: [type][urgency][karma_balance][action]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="karma_game_library.Policy.map_possible_actions">
+<span class="sig-name descname"><span class="pre">map_possible_actions</span></span><a class="headerlink" href="#karma_game_library.Policy.map_possible_actions" title="Permalink to this definition">#</a></dt>
+<dd><p>This map maps the given karma balance to a list of possible actions
+during an interaction.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Dict[int,List[int]], [karma] -&gt; [list of actions]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="karma_game_library.Policy.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">game_parameters</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#karma_game_library.entities.game_parameters.GameParameters" title="karma_game_library.entities.game_parameters.GameParameters"><span class="pre">GameParameters</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">initialization</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'even'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/karma_game_library/entities/policy.html#Policy.__init__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#karma_game_library.Policy.__init__" title="Permalink to this definition">#</a></dt>
+<dd><p>This constructor initializes the Policy instance. The probability
+matrix will be initialized to an even distribution.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>game_parameters</strong> (<a class="reference internal" href="#karma_game_library.entities.game_parameters.GameParameters" title="karma_game_library.entities.game_parameters.GameParameters"><em>GameParameters</em></a>) – The game parameters for the simulator.</p></li>
+<li><p><strong>initialization</strong> (<em>str</em>) – Optional. The initialization of the policy. There are three
+possible options: “even”, “bottom”, “top”. Default value is
+“even” (recommended).</p></li>
+</ul>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>Exception</strong> – In case the input parameters are not plausible a specific exception
+    will be raised.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>None.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="karma_game_library.Policy.autocorrect">
+<span class="sig-name descname"><span class="pre">autocorrect</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/karma_game_library/entities/policy.html#Policy.autocorrect"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#karma_game_library.Policy.autocorrect" title="Permalink to this definition">#</a></dt>
+<dd><p>This function corrects the prob_matrix after changes by the user.
+This involves (i) eliminating illegal actions for specific karma
+balances as defined during initialization by map_possible_actions
+(setting their probability to zero), and (ii) normalizing the columns,
+so that the type and urgency specific 2D probability matrix will add
+up to 1.0 for each column.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>None</strong> – </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>changed</strong> – Whether the prob_matrix was changed by the function or not.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="karma_game_library.Policy.copy_policy">
+<span class="sig-name descname"><span class="pre">copy_policy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">other_policy</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/karma_game_library/entities/policy.html#Policy.copy_policy"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#karma_game_library.Policy.copy_policy" title="Permalink to this definition">#</a></dt>
+<dd><p>This function copies the prob_matrix from other_policy into this
+instances prob_matrix.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>other_policy</strong> (<a class="reference internal" href="#karma_game_library.Policy" title="karma_game_library.Policy"><em>Policy</em></a>) – Another policy from which the content shall be copied into this
+instance.</p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>Exception</strong> – In case the Policy other_policy is invalid a specific exception
+    will be raised.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="karma_game_library.Policy.load">
+<span class="sig-name descname"><span class="pre">load</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">source_file</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/karma_game_library/entities/policy.html#Policy.load"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#karma_game_library.Policy.load" title="Permalink to this definition">#</a></dt>
+<dd><p>This function loads the policy from a file.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>source_file</strong> (<em>str</em>) – The file where to load the policy from.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="karma_game_library.Policy.save">
+<span class="sig-name descname"><span class="pre">save</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">target_file</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/karma_game_library/entities/policy.html#Policy.save"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#karma_game_library.Policy.save" title="Permalink to this definition">#</a></dt>
+<dd><p>This function saves the policy to a file.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>target_file</strong> (<em>str</em>) – The file where to store the policy.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="karma_game_library.Policy.validate">
+<span class="sig-name descname"><span class="pre">validate</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/karma_game_library/entities/policy.html#Policy.validate"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#karma_game_library.Policy.validate" title="Permalink to this definition">#</a></dt>
+<dd><p>This function validates whether the policy is valid. This means, that
+for each type and urgency specific 2D probability matrix, the columns
+add up to 1.0 (for one given karma balance, the sum of probabilities
+of different actions sum up to 1.0). Moreover, it checks whether all
+actions are valid (one cannot bid more in an auction then one has
+karma). If the outcome of the validation is negative you could try to
+call function autocorrect().</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>None</strong> – </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>valid</strong> – Whether the policy is valid or not.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+</section>
+</section>
+<section id="algorithms">
+<h1>Algorithms<a class="headerlink" href="#algorithms" title="Permalink to this heading">#</a></h1>
+<section id="simulator">
+<h2>Simulator<a class="headerlink" href="#simulator" title="Permalink to this heading">#</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="karma_game_library.Simulator">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">karma_game_library.</span></span><span class="sig-name descname"><span class="pre">Simulator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">game_parameters</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#karma_game_library.entities.game_parameters.GameParameters" title="karma_game_library.entities.game_parameters.GameParameters"><span class="pre">GameParameters</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">state</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#karma_game_library.StateDistribution" title="karma_game_library.entities.state_distribution.StateDistribution"><span class="pre">StateDistribution</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">steady_state_init</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/karma_game_library/algorithms/simulator.html#Simulator"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#karma_game_library.Simulator" title="Permalink to this definition">#</a></dt>
+<dd><p>A class to provide entities and functionality to perform the simulation of
+a Karma game.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="karma_game_library.Simulator.epoch_counter">
+<span class="sig-name descname"><span class="pre">epoch_counter</span></span><a class="headerlink" href="#karma_game_library.Simulator.epoch_counter" title="Permalink to this definition">#</a></dt>
+<dd><p>The current epoch of the game (starts counting from zero).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="karma_game_library.Simulator.last_participants">
+<span class="sig-name descname"><span class="pre">last_participants</span></span><a class="headerlink" href="#karma_game_library.Simulator.last_participants" title="Permalink to this definition">#</a></dt>
+<dd><p>List of participating agents from last interaction.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>List[int]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="karma_game_library.Simulator.last_actions">
+<span class="sig-name descname"><span class="pre">last_actions</span></span><a class="headerlink" href="#karma_game_library.Simulator.last_actions" title="Permalink to this definition">#</a></dt>
+<dd><p>List of participant actions from last interaction.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>List[int]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="karma_game_library.Simulator.last_outcome">
+<span class="sig-name descname"><span class="pre">last_outcome</span></span><a class="headerlink" href="#karma_game_library.Simulator.last_outcome" title="Permalink to this definition">#</a></dt>
+<dd><p>List of outcomes from last interaction.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>List[int]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="karma_game_library.Simulator.all_epoch_participants">
+<span class="sig-name descname"><span class="pre">all_epoch_participants</span></span><a class="headerlink" href="#karma_game_library.Simulator.all_epoch_participants" title="Permalink to this definition">#</a></dt>
+<dd><p>List of participants during all interactions of the current epoch.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>List[int]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="karma_game_library.Simulator.all_epoch_outcomes">
+<span class="sig-name descname"><span class="pre">all_epoch_outcomes</span></span><a class="headerlink" href="#karma_game_library.Simulator.all_epoch_outcomes" title="Permalink to this definition">#</a></dt>
+<dd><p>List of the maximum of outcomes during all interactions of the current epoch for the participants in all_epoch_participants.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>List[int]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="karma_game_library.Simulator.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">game_parameters</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#karma_game_library.entities.game_parameters.GameParameters" title="karma_game_library.entities.game_parameters.GameParameters"><span class="pre">GameParameters</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">state</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#karma_game_library.StateDistribution" title="karma_game_library.entities.state_distribution.StateDistribution"><span class="pre">StateDistribution</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">steady_state_init</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/karma_game_library/algorithms/simulator.html#Simulator.__init__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#karma_game_library.Simulator.__init__" title="Permalink to this definition">#</a></dt>
+<dd><p>This constructor initializes the internal variables of the simulator
+according to the simulation_parameters by calling the function reset().</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>game_parameters</strong> (<a class="reference internal" href="#karma_game_library.entities.game_parameters.GameParameters" title="karma_game_library.entities.game_parameters.GameParameters"><em>GameParameters</em></a>) – The game parameters for the simulator.</p></li>
+<li><p><strong>steady_state_init</strong> (<em>bool</em>) – Optional, Default: True. This will define whether population
+initialization for the simulation is as given by the initial
+parameters for the optimization (lst_init_types,
+lst_init_urgencies, lst_init_karmas), or the steady state computed
+by the optimizer will be used.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="karma_game_library.Simulator.begin_epoch">
+<span class="sig-name descname"><span class="pre">begin_epoch</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/karma_game_library/algorithms/simulator.html#Simulator.begin_epoch"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#karma_game_library.Simulator.begin_epoch" title="Permalink to this definition">#</a></dt>
+<dd><p>This function begins the next epoch of the game.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>None</strong> – </p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>Exception</strong> – In case the previous epoch was not closed.
+    In case the karma overflow is not empty due to invalid functions func_payment, func_overflow_distribution or func_karma_redistribution.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="karma_game_library.Simulator.close_epoch">
+<span class="sig-name descname"><span class="pre">close_epoch</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/karma_game_library/algorithms/simulator.html#Simulator.close_epoch"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#karma_game_library.Simulator.close_epoch" title="Permalink to this definition">#</a></dt>
+<dd><p>This function closes / ends the current epoch of the game. This
+includes the distribution of karma overflow, and the redistribution of
+karma balances.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>None</strong> – </p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>Exception</strong> – In case there is no open epoch started yet.
+    In case the karma overflow is not empty due to invalid functions
+    func_payment, func_overflow_distribution or func_karma_redistribution.
+    In case the total amount of karma did not stay constant due to
+    invalid functions func_payment, func_overflow_distribution or
+    func_karma_redistribution.</p>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>epoch_counter</strong> – The increment epoch_counter after playing the epoch.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="karma_game_library.Simulator.get_agent_information">
+<span class="sig-name descname"><span class="pre">get_agent_information</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">agent_idx</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arr</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/karma_game_library/algorithms/simulator.html#Simulator.get_agent_information"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#karma_game_library.Simulator.get_agent_information" title="Permalink to this definition">#</a></dt>
+<dd><p>This function returns the information of an agent.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>agent_idx</strong> (<em>int</em>) – The agent index in the population.</p></li>
+<li><p><strong>arr</strong> (<em>bool</em>) – Whether an array shall be returned, or a tuple of values.
+Default is True.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><strong>arr</strong> (<em>np.array</em>) – The agent information as a 1x5 array, where each column is
+represented by following enumeration: TYPE_COL = 0,
+URGENCY_COL = 1, KARMA_COL = 2, CUM_COST_COL = 3,
+ENCOUNTERS_COL = 4.</p></li>
+<li><p><strong>type</strong> (<em>int</em>) – (if parameter ‘arr’ set to False)</p></li>
+<li><p><strong>urgency</strong> (<em>int</em>) – (if parameter ‘arr’ set to False)</p></li>
+<li><p><strong>karma</strong> (<em>int</em>) – (if parameter ‘arr’ set to False)</p></li>
+<li><p><strong>cum_cost</strong> (<em>float</em>) – (if parameter ‘arr’ set to False)</p></li>
+<li><p><strong>encounters</strong> (<em>int</em>) – (if parameter ‘arr’ set to False)</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="karma_game_library.Simulator.get_agent_population">
+<span class="sig-name descname"><span class="pre">get_agent_population</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/karma_game_library/algorithms/simulator.html#Simulator.get_agent_population"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#karma_game_library.Simulator.get_agent_population" title="Permalink to this definition">#</a></dt>
+<dd><p>This function returns the complete population, meaning the information
+of all agents. Each column is represented by following enumeration:
+TYPE_COL = 0, URGENCY_COL = 1, KARMA_COL = 2, CUM_COST_COL = 3,
+ENCOUNTERS_COL = 4.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>None</strong> – </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>population</strong> – The agent information as a [num_agent x 5] array, where each column
+is represented by following enumeration: TYPE_COL = 0,
+URGENCY_COL = 1, KARMA_COL = 2, CUM_COST_COL = 3,
+ENCOUNTERS_COL = 4.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>np.array</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="karma_game_library.Simulator.get_karma_distribution">
+<span class="sig-name descname"><span class="pre">get_karma_distribution</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/karma_game_library/algorithms/simulator.html#Simulator.get_karma_distribution"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#karma_game_library.Simulator.get_karma_distribution" title="Permalink to this definition">#</a></dt>
+<dd><p>This function returns the Karma distribution of the population.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>None</strong> – </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>distribution</strong> – This distribution represents the relative share of the population
+that owns a specific amount of Karma. The distribution is
+calculated for all karmas in parameters._num_state_karmas. The
+last value of the distribution thus represents the share of agents
+with a karma balance of num_state_karmas-1 or higher.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>np.array</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="karma_game_library.Simulator.get_population_cumulative_costs">
+<span class="sig-name descname"><span class="pre">get_population_cumulative_costs</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/karma_game_library/algorithms/simulator.html#Simulator.get_population_cumulative_costs"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#karma_game_library.Simulator.get_population_cumulative_costs" title="Permalink to this definition">#</a></dt>
+<dd><p>This function returns the cumulative, and discounted costs for each
+agent of the population. Discounting takes place for each encounter
+and not for each epoch!</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>None</strong> – </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>pop_costs</strong> – This array represents the cumulative, discounted costs for each
+agent of the population.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>np.array</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="karma_game_library.Simulator.get_population_encounters">
+<span class="sig-name descname"><span class="pre">get_population_encounters</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/karma_game_library/algorithms/simulator.html#Simulator.get_population_encounters"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#karma_game_library.Simulator.get_population_encounters" title="Permalink to this definition">#</a></dt>
+<dd><p>This function returns the number of encounters (being a participant in
+an interaction) for each agent of the population.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>None</strong> – </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>pop_encounters</strong> – This represents the number of encounters for each agent during the game.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>np.array</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="karma_game_library.Simulator.get_state_transition_counts">
+<span class="sig-name descname"><span class="pre">get_state_transition_counts</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">participants_only</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/karma_game_library/algorithms/simulator.html#Simulator.get_state_transition_counts"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#karma_game_library.Simulator.get_state_transition_counts" title="Permalink to this definition">#</a></dt>
+<dd><p>This function returns the state transition counts.
+This means the times an agent reached state X (urgency, karma) from the
+original state Y (urgency, karma).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>participants_only</strong> (<em>bool</em>) – Optional. Default=True. This defines, whether the state transition
+distribution of all agents, or just of the agents that participated
+during an epoch shall be considered.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>distribution</strong> – This distribution is a four dimensional matrix with following
+indexes: [urgency_next][karma_next][urgency_before][karma_before]</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>np.array</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="karma_game_library.Simulator.get_total_cumulative_costs">
+<span class="sig-name descname"><span class="pre">get_total_cumulative_costs</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/karma_game_library/algorithms/simulator.html#Simulator.get_total_cumulative_costs"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#karma_game_library.Simulator.get_total_cumulative_costs" title="Permalink to this definition">#</a></dt>
+<dd><p>This function returns the total cumulative, and discounted costs as
+sum of the cumulative, discounted costs over all agents. Discounting
+takes place for each encounter and not for each epoch!</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>None</strong> – </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>costs</strong> – This cost is the sum of all cumulative, discounted costs over all
+agents.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="karma_game_library.Simulator.get_total_encounters">
+<span class="sig-name descname"><span class="pre">get_total_encounters</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/karma_game_library/algorithms/simulator.html#Simulator.get_total_encounters"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#karma_game_library.Simulator.get_total_encounters" title="Permalink to this definition">#</a></dt>
+<dd><p>This function returns the total number of encounters (participations in
+interactions) as sum over all agents of the population.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>None</strong> – </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>encounters</strong> – This represents the number of total encounters during the game.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="karma_game_library.Simulator.peer_selection_random">
+<span class="sig-name descname"><span class="pre">peer_selection_random</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">excluded_indexes</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/karma_game_library/algorithms/simulator.html#Simulator.peer_selection_random"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#karma_game_library.Simulator.peer_selection_random" title="Permalink to this definition">#</a></dt>
+<dd><p>This function simulates the random peer selection, which is the random
+selection of num_participants from a population of num_agents.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>excluded_indexes</strong> (<em>List</em><em>[</em><em>int</em><em>]</em>) – Optional. Default is None. If defined, certain agents can be
+excluded from the peer_selection process.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>participants</strong> – The agent indexes of the participants of the interaction.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>List[int]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="karma_game_library.Simulator.peer_selection_random_exclusive_peer_groups">
+<span class="sig-name descname"><span class="pre">peer_selection_random_exclusive_peer_groups</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n_groups</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/karma_game_library/algorithms/simulator.html#Simulator.peer_selection_random_exclusive_peer_groups"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#karma_game_library.Simulator.peer_selection_random_exclusive_peer_groups" title="Permalink to this definition">#</a></dt>
+<dd><p>This function simulates the random peer selection, which is the random
+selection of num_participants from a population of num_agents. This is
+repeated for n_pairs times, and returns a list of participants lists.
+This function produces exclusive peer groups, meaning that it is
+not possible that one agent participates in more than one interaction.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>n_groups</strong> (<em>int</em>) – Number of participant groups that shall be returned.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>lst_participants</strong> – The list of participant lists (agent indexes of the participants) of the interactions.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>List[List[int]]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="karma_game_library.Simulator.peer_selection_random_non_exclusive_peer_groups">
+<span class="sig-name descname"><span class="pre">peer_selection_random_non_exclusive_peer_groups</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n_groups</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/karma_game_library/algorithms/simulator.html#Simulator.peer_selection_random_non_exclusive_peer_groups"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#karma_game_library.Simulator.peer_selection_random_non_exclusive_peer_groups" title="Permalink to this definition">#</a></dt>
+<dd><p>This function simulates the random peer selection, which is the random
+selection of num_participants from a population of num_agents. This is
+repeated for n_pairs times, and returns a list of participants lists.
+This function produces non-exclusive peer groups, meaning that it is
+possible that one agent participates in more than one interaction.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>n_groups</strong> (<em>int</em>) – Number of participant groups that shall be returned.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>lst_participants</strong> – The list of participant lists (agent indexes of the participants)
+of the interactions.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>List[List[int]]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="karma_game_library.Simulator.peer_selection_whole_population">
+<span class="sig-name descname"><span class="pre">peer_selection_whole_population</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/karma_game_library/algorithms/simulator.html#Simulator.peer_selection_whole_population"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#karma_game_library.Simulator.peer_selection_whole_population" title="Permalink to this definition">#</a></dt>
+<dd><p>This function simulates the peer selection of all agents interacting
+with each other at the same time.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>None</strong> – </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>participants</strong> – The agent indexes of the participants of the interaction.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>List[int]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="karma_game_library.Simulator.play_interaction">
+<span class="sig-name descname"><span class="pre">play_interaction</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">policy</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#karma_game_library.Policy" title="karma_game_library.entities.policy.Policy"><span class="pre">Policy</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">participants</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/karma_game_library/algorithms/simulator.html#Simulator.play_interaction"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#karma_game_library.Simulator.play_interaction" title="Permalink to this definition">#</a></dt>
+<dd><p>This function performs one interaction, consisting out of decision
+making, outcome determinantion and transaction (of costs, urgencies,
+and karma balances exclusive overflow distribution and karma
+redistribution).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>policy</strong> (<a class="reference internal" href="#karma_game_library.Policy" title="karma_game_library.Policy"><em>Policy</em></a>) – The Karma policy that should be used to play in this interaction.</p></li>
+<li><p><strong>participants</strong> (<em>List</em><em>[</em><em>int</em><em>]</em>) – The list of participants of this interaction.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>Exception</strong> – In case the policy is invalid, an exception will be raised.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="karma_game_library.Simulator.reset">
+<span class="sig-name descname"><span class="pre">reset</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">state</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#karma_game_library.StateDistribution" title="karma_game_library.entities.state_distribution.StateDistribution"><span class="pre">StateDistribution</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">steady_state_init</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/karma_game_library/algorithms/simulator.html#Simulator.reset"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#karma_game_library.Simulator.reset" title="Permalink to this definition">#</a></dt>
+<dd><p>This function resets all internal variables of the simulator so that
+a restart of the simulation from the beginning is possible.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>state</strong> (<a class="reference internal" href="#karma_game_library.StateDistribution" title="karma_game_library.StateDistribution"><em>StateDistribution</em></a>) – The state distribution, that is used to reset the population in
+case steady_state_init is set to True.</p></li>
+<li><p><strong>steady_state_init</strong> (<em>bool</em>) – Optional, Default: True. This will define whether population
+initialization for the simulation is as given by the initial
+parameters for the optimization (lst_init_types,
+lst_init_urgencies, lst_init_karmas), or the steady state computed
+by the optimizer will be used.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="optimizer">
+<h2>Optimizer<a class="headerlink" href="#optimizer" title="Permalink to this heading">#</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="karma_game_library.Optimizer">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">karma_game_library.</span></span><span class="sig-name descname"><span class="pre">Optimizer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">game_parameters</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#karma_game_library.entities.game_parameters.GameParameters" title="karma_game_library.entities.game_parameters.GameParameters"><span class="pre">GameParameters</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">hyper_lambda</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hyper_dt</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hyper_nu</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">func_prob_outcome</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Callable</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">func_prob_karma_transition</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Callable</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">func_prob_urgency_transition</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Callable</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/karma_game_library/algorithms/optimizer.html#Optimizer"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#karma_game_library.Optimizer" title="Permalink to this definition">#</a></dt>
+<dd><p>A class to provide functionality to iteratively optimize the agent policy.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="karma_game_library.Optimizer.hyper_lambda">
+<span class="sig-name descname"><span class="pre">hyper_lambda</span></span><a class="headerlink" href="#karma_game_library.Optimizer.hyper_lambda" title="Permalink to this definition">#</a></dt>
+<dd><p>Exponential scaling factor for policy perturbation.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="karma_game_library.Optimizer.hyper_dt">
+<span class="sig-name descname"><span class="pre">hyper_dt</span></span><a class="headerlink" href="#karma_game_library.Optimizer.hyper_dt" title="Permalink to this definition">#</a></dt>
+<dd><p>Stepwidth for state updates. Only values between 0.0 and 1.0 allowed.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="karma_game_library.Optimizer.hyper_nu">
+<span class="sig-name descname"><span class="pre">hyper_nu</span></span><a class="headerlink" href="#karma_game_library.Optimizer.hyper_nu" title="Permalink to this definition">#</a></dt>
+<dd><p>Stepwidth for policy updates. Only values between 0.0 and 1.0 allowed.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="karma_game_library.Optimizer.func_prob_outcome">
+<span class="sig-name descname"><span class="pre">func_prob_outcome</span></span><a class="headerlink" href="#karma_game_library.Optimizer.func_prob_outcome" title="Permalink to this definition">#</a></dt>
+<dd><p>This function returns the probability for the outcome given the actions.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Callable, (outcome, actions) -&gt; (probability)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="karma_game_library.Optimizer.func_prob_karma_transition">
+<span class="sig-name descname"><span class="pre">func_prob_karma_transition</span></span><a class="headerlink" href="#karma_game_library.Optimizer.func_prob_karma_transition" title="Permalink to this definition">#</a></dt>
+<dd><p>This function returns the probability of karma_next given a prior
+karma, actions and outcome.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Callable, (karma_next, karma, actions, outcome) -&gt; (probability)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="karma_game_library.Optimizer.func_prob_urgency_transition">
+<span class="sig-name descname"><span class="pre">func_prob_urgency_transition</span></span><a class="headerlink" href="#karma_game_library.Optimizer.func_prob_urgency_transition" title="Permalink to this definition">#</a></dt>
+<dd><p>This function returns the probability of urgency_next given a prior
+urgency and outcome and type.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Callable, (urgency_next, urgency, outcome, atype, set_urgencies) -&gt; (probability)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="karma_game_library.Optimizer.v">
+<span class="sig-name descname"><span class="pre">v</span></span><a class="headerlink" href="#karma_game_library.Optimizer.v" title="Permalink to this definition">#</a></dt>
+<dd><p>“Distribution of agents’ actions”
+Intermediate result, returns probability of an action.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>np.array [action]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="karma_game_library.Optimizer.gamma">
+<span class="sig-name descname"><span class="pre">gamma</span></span><a class="headerlink" href="#karma_game_library.Optimizer.gamma" title="Permalink to this definition">#</a></dt>
+<dd><p>“Probability of interaction outcome given bid”
+Intermediate result, returns the probability of an outcome given the action.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>np.array [outcome][action]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="karma_game_library.Optimizer.kappa">
+<span class="sig-name descname"><span class="pre">kappa</span></span><a class="headerlink" href="#karma_game_library.Optimizer.kappa" title="Permalink to this definition">#</a></dt>
+<dd><p>“Probabilistic karma transition function”
+Intermediate result, returns the probability of karma_next given the
+prior karma, action and outcome.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>np.array [karma_next][karma][action][outcome]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="karma_game_library.Optimizer.xi">
+<span class="sig-name descname"><span class="pre">xi</span></span><a class="headerlink" href="#karma_game_library.Optimizer.xi" title="Permalink to this definition">#</a></dt>
+<dd><p>“Immediate reward function”
+Intermediate result, returns the expected immediate reward (negative
+cost) for an participant with specific urgency, and action.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>np.array [urgency][action]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="karma_game_library.Optimizer.rho">
+<span class="sig-name descname"><span class="pre">rho</span></span><a class="headerlink" href="#karma_game_library.Optimizer.rho" title="Permalink to this definition">#</a></dt>
+<dd><p>“Probabilistic state transition function”
+Intermediate result, returns the probability that participant of type
+ends up in next state urgency_next and karma_next given a prior
+urgency and karma and action.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>np.array [type][urgency_next][karma_next][urgency][karma][action]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="karma_game_library.Optimizer.R">
+<span class="sig-name descname"><span class="pre">R</span></span><a class="headerlink" href="#karma_game_library.Optimizer.R" title="Permalink to this definition">#</a></dt>
+<dd><p>“Expected immediate reward”
+Imme result, returns the expected immediate reward
+(negative cost) for an participant of a specific type, urgency, karma.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>np.array [type][urgency][karma]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="karma_game_library.Optimizer.P">
+<span class="sig-name descname"><span class="pre">P</span></span><a class="headerlink" href="#karma_game_library.Optimizer.P" title="Permalink to this definition">#</a></dt>
+<dd><p>“State transition probabilities”
+Intermediate result, returns the probability of an agent of specific
+type to end up in next state urgency_next, karma_next given his prior
+state urgency, karma</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>np.array [type][urgency_next][karma_next][urgency][karma]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="karma_game_library.Optimizer.V">
+<span class="sig-name descname"><span class="pre">V</span></span><a class="headerlink" href="#karma_game_library.Optimizer.V" title="Permalink to this definition">#</a></dt>
+<dd><p>“Expected infinite horizon reward”
+Intermediate result, returns the expected inifinite horizon reward
+(negative cost) for an agent of specific type, urgency, karma.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>np.array [type][urgency][karma]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="karma_game_library.Optimizer.Q">
+<span class="sig-name descname"><span class="pre">Q</span></span><a class="headerlink" href="#karma_game_library.Optimizer.Q" title="Permalink to this definition">#</a></dt>
+<dd><p>“Single-stage deviation reward (from current policy)”
+Intermediate result, returns the expected reward (negative cost) for an
+participant with specific type, urgency, karma and action.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>np.array [type][urgency][karma][action]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="karma_game_library.Optimizer.pi_pbp">
+<span class="sig-name descname"><span class="pre">pi_pbp</span></span><a class="headerlink" href="#karma_game_library.Optimizer.pi_pbp" title="Permalink to this definition">#</a></dt>
+<dd><p>“Perturbed best response policy”
+Intermediate result, represents a modified, potentially better policy.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>np.array [type][urgency][karma][bid]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="karma_game_library.Optimizer.delta_state">
+<span class="sig-name descname"><span class="pre">delta_state</span></span><a class="headerlink" href="#karma_game_library.Optimizer.delta_state" title="Permalink to this definition">#</a></dt>
+<dd><p>The amount the state changed when compared to previous iteration. Can
+be used as an indicator for convergence.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="karma_game_library.Optimizer.delta_policy">
+<span class="sig-name descname"><span class="pre">delta_policy</span></span><a class="headerlink" href="#karma_game_library.Optimizer.delta_policy" title="Permalink to this definition">#</a></dt>
+<dd><p>The amount the policy changed when compared to previous iteration. Can
+be used as an indicator for convergence.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="karma_game_library.Optimizer.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">game_parameters</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#karma_game_library.entities.game_parameters.GameParameters" title="karma_game_library.entities.game_parameters.GameParameters"><span class="pre">GameParameters</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">hyper_lambda</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hyper_dt</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hyper_nu</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">func_prob_outcome</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Callable</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">func_prob_karma_transition</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Callable</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">func_prob_urgency_transition</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Callable</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/karma_game_library/algorithms/optimizer.html#Optimizer.__init__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#karma_game_library.Optimizer.__init__" title="Permalink to this definition">#</a></dt>
+<dd><p>This constructor initializes the PolicyOptimizer.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>game_parameters</strong> (<a class="reference internal" href="#karma_game_library.entities.game_parameters.GameParameters" title="karma_game_library.entities.game_parameters.GameParameters"><em>GameParameters</em></a>) – The simulation parameters.</p></li>
+<li><p><strong>hyper_lambda</strong> (<em>float</em>) – Exponential scaling factor for policy perturbation.</p></li>
+<li><p><strong>hyper_dt</strong> (<em>float</em>) – Stepwidth for state updates. Only values between 0.0 and 1.0
+allowed.</p></li>
+<li><p><strong>hyper_nu</strong> (<em>float</em>) – Stepwidth for policy updates. Only values between 0.0 and 1.0
+allowed.</p></li>
+<li><p><strong>func_prob_outcome</strong> (<em>Callable</em><em>, </em><em>(</em><em>outcome</em><em>, </em><em>actions</em><em>) </em><em>-&gt;</em><em> (</em><em>probability</em><em>)</em>) – This function returns the probability for the outcome given the
+actions.</p></li>
+<li><p><strong>func_prob_karma_transition</strong> (<em>Callable</em><em>, </em><em>(</em><em>outcome</em><em>, </em><em>actions</em><em>) </em><em>-&gt;</em><em> (</em><em>probability</em><em>)</em>) – This function returns the probability of karma_next given a prior
+karma, actions and outcome.</p></li>
+<li><p><strong>func_prob_urgency_transition</strong> (<em>Callable</em><em>, </em><em>(</em><em>urgency_next</em><em>, </em><em>urgency</em><em>, </em><em>outcome</em><em>, </em><em>atype</em><em>, </em><em>set_urgencies</em><em>) </em><em>-&gt;</em><em> (</em><em>probability</em><em>)</em>) – This function returns the probability of urgency_next given a prior
+urgency and outcome.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>Exception</strong> – In case the input parameters are not plausible a specific exception
+    will be raised.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>None.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="karma_game_library.Optimizer.compute_iteration">
+<span class="sig-name descname"><span class="pre">compute_iteration</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">state</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#karma_game_library.StateDistribution" title="karma_game_library.entities.state_distribution.StateDistribution"><span class="pre">StateDistribution</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">policy</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#karma_game_library.Policy" title="karma_game_library.entities.policy.Policy"><span class="pre">Policy</span></a></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/karma_game_library/algorithms/optimizer.html#Optimizer.compute_iteration"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#karma_game_library.Optimizer.compute_iteration" title="Permalink to this definition">#</a></dt>
+<dd><p>This function updates the social state distribution and policy
+probability matrix according to an optimization algorithm.
+This algorithm is iterative, and shall be repeated iteratively until
+state and policy converge to a stationary Nash equilibrium.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>state</strong> (<a class="reference internal" href="#karma_game_library.StateDistribution" title="karma_game_library.StateDistribution"><em>StateDistribution</em></a>) – The social state distribution that should be optimized.</p></li>
+<li><p><strong>policy</strong> (<a class="reference internal" href="#karma_game_library.Policy" title="karma_game_library.Policy"><em>Policy</em></a>) – The policy that should be optimized.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>Exception</strong> – In case the policy or state are invalid, an exception will be
+    raised.</p>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p><ul class="simple">
+<li><p><strong>delta_state</strong> (<em>float</em>) – The absolute change to the state (can be used as an indicator for
+convergence).</p></li>
+<li><p><strong>delta_policy</strong> (<em>float</em>) – The absolute change to the policy (can be used as an indicator
+for convergence).</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+</section>
+</section>
+<section id="modelling-templates">
+<h1>Modelling Templates<a class="headerlink" href="#modelling-templates" title="Permalink to this heading">#</a></h1>
+<section id="game-logic-functions">
+<h2>Game Logic Functions<a class="headerlink" href="#game-logic-functions" title="Permalink to this heading">#</a></h2>
+<section id="module-karma_game_library.templates.cost.cost">
+<span id="cost"></span><h3>Cost<a class="headerlink" href="#module-karma_game_library.templates.cost.cost" title="Permalink to this heading">#</a></h3>
+<dl class="py function">
+<dt class="sig sig-object py" id="karma_game_library.templates.cost.cost.default">
+<span class="sig-prename descclassname"><span class="pre">karma_game_library.templates.cost.cost.</span></span><span class="sig-name descname"><span class="pre">default</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">urgency</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">outcome</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="reference internal" href="_modules/karma_game_library/templates/cost/cost.html#default"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#karma_game_library.templates.cost.cost.default" title="Permalink to this definition">#</a></dt>
+<dd><p>The default cost function. Outcome=0 means resource not received, therefore
+costs created. Cost = urgency_level (urgency_level=0 has no costs)</p>
+</dd></dl>
+
+</section>
+<section id="module-karma_game_library.templates.outcome.outcome">
+<span id="outcome"></span><h3>Outcome<a class="headerlink" href="#module-karma_game_library.templates.outcome.outcome" title="Permalink to this heading">#</a></h3>
+<dl class="py function">
+<dt class="sig sig-object py" id="karma_game_library.templates.outcome.outcome.highest_bid">
+<span class="sig-prename descclassname"><span class="pre">karma_game_library.templates.outcome.outcome.</span></span><span class="sig-name descname"><span class="pre">highest_bid</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">actions</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="_modules/karma_game_library/templates/outcome/outcome.html#highest_bid"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#karma_game_library.templates.outcome.outcome.highest_bid" title="Permalink to this definition">#</a></dt>
+<dd><p>The highest bid (action) wins. Tiebreaker: random.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="karma_game_library.templates.outcome.outcome.second_highest_bid">
+<span class="sig-prename descclassname"><span class="pre">karma_game_library.templates.outcome.outcome.</span></span><span class="sig-name descname"><span class="pre">second_highest_bid</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">actions</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="_modules/karma_game_library/templates/outcome/outcome.html#second_highest_bid"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#karma_game_library.templates.outcome.outcome.second_highest_bid" title="Permalink to this definition">#</a></dt>
+<dd><p>The second highest bid (action) wins. Tiebreaker: random.</p>
+</dd></dl>
+
+</section>
+<section id="module-karma_game_library.templates.payment.payment">
+<span id="payment"></span><h3>Payment<a class="headerlink" href="#module-karma_game_library.templates.payment.payment" title="Permalink to this heading">#</a></h3>
+<dl class="py function">
+<dt class="sig sig-object py" id="karma_game_library.templates.payment.payment.bid_difference_to_peer">
+<span class="sig-prename descclassname"><span class="pre">karma_game_library.templates.payment.payment.</span></span><span class="sig-name descname"><span class="pre">bid_difference_to_peer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">actions</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">outcomes</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="_modules/karma_game_library/templates/payment/payment.html#bid_difference_to_peer"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#karma_game_library.templates.payment.payment.bid_difference_to_peer" title="Permalink to this definition">#</a></dt>
+<dd><p>The winner pays the difference of highest and second highest bid to the
+other peer. Only for Karma Games with exactly two participants per interaction.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="karma_game_library.templates.payment.payment.bid_difference_to_society">
+<span class="sig-prename descclassname"><span class="pre">karma_game_library.templates.payment.payment.</span></span><span class="sig-name descname"><span class="pre">bid_difference_to_society</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">actions</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">outcomes</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="_modules/karma_game_library/templates/payment/payment.html#bid_difference_to_society"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#karma_game_library.templates.payment.payment.bid_difference_to_society" title="Permalink to this definition">#</a></dt>
+<dd><p>The winner pays the difference of highest and second highest bid to the
+society (Karma overflow).</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="karma_game_library.templates.payment.payment.highest_bid_to_peer">
+<span class="sig-prename descclassname"><span class="pre">karma_game_library.templates.payment.payment.</span></span><span class="sig-name descname"><span class="pre">highest_bid_to_peer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">actions</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">outcomes</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="_modules/karma_game_library/templates/payment/payment.html#highest_bid_to_peer"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#karma_game_library.templates.payment.payment.highest_bid_to_peer" title="Permalink to this definition">#</a></dt>
+<dd><p>The highest bid (action) is paid by the winner to the other peer.
+Only for Karma Games with exactly two participants per interaction.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="karma_game_library.templates.payment.payment.highest_bid_to_society">
+<span class="sig-prename descclassname"><span class="pre">karma_game_library.templates.payment.payment.</span></span><span class="sig-name descname"><span class="pre">highest_bid_to_society</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">actions</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">outcomes</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="_modules/karma_game_library/templates/payment/payment.html#highest_bid_to_society"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#karma_game_library.templates.payment.payment.highest_bid_to_society" title="Permalink to this definition">#</a></dt>
+<dd><p>The highest bid (action) is paid by the winner to the society (Karma overflow).</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="karma_game_library.templates.payment.payment.one_to_peer">
+<span class="sig-prename descclassname"><span class="pre">karma_game_library.templates.payment.payment.</span></span><span class="sig-name descname"><span class="pre">one_to_peer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">actions</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">outcomes</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="_modules/karma_game_library/templates/payment/payment.html#one_to_peer"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#karma_game_library.templates.payment.payment.one_to_peer" title="Permalink to this definition">#</a></dt>
+<dd><p>The winner pays exactly one Karma unit to the other peer.
+Only for Karma Games with exactly two participants per interaction.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="karma_game_library.templates.payment.payment.one_to_society">
+<span class="sig-prename descclassname"><span class="pre">karma_game_library.templates.payment.payment.</span></span><span class="sig-name descname"><span class="pre">one_to_society</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">actions</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">outcomes</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="_modules/karma_game_library/templates/payment/payment.html#one_to_society"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#karma_game_library.templates.payment.payment.one_to_society" title="Permalink to this definition">#</a></dt>
+<dd><p>The winner pays exactly one Karma unit to the society (Karma overflow).</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="karma_game_library.templates.payment.payment.second_highest_bid_to_peer">
+<span class="sig-prename descclassname"><span class="pre">karma_game_library.templates.payment.payment.</span></span><span class="sig-name descname"><span class="pre">second_highest_bid_to_peer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">actions</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">outcomes</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="_modules/karma_game_library/templates/payment/payment.html#second_highest_bid_to_peer"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#karma_game_library.templates.payment.payment.second_highest_bid_to_peer" title="Permalink to this definition">#</a></dt>
+<dd><p>The second highest bid (action) is paid by the winner to the other peer.
+Only for Karma Games with exactly two participants per interaction.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="karma_game_library.templates.payment.payment.second_highest_bid_to_society">
+<span class="sig-prename descclassname"><span class="pre">karma_game_library.templates.payment.payment.</span></span><span class="sig-name descname"><span class="pre">second_highest_bid_to_society</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">actions</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">outcomes</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="_modules/karma_game_library/templates/payment/payment.html#second_highest_bid_to_society"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#karma_game_library.templates.payment.payment.second_highest_bid_to_society" title="Permalink to this definition">#</a></dt>
+<dd><p>The second highest bid (action) is paid by the winner to the society (Karma overflow).</p>
+</dd></dl>
+
+</section>
+<section id="module-karma_game_library.templates.urgency_transition.urgency_transition">
+<span id="urgency-transition"></span><h3>Urgency Transition<a class="headerlink" href="#module-karma_game_library.templates.urgency_transition.urgency_transition" title="Permalink to this heading">#</a></h3>
+<dl class="py function">
+<dt class="sig sig-object py" id="karma_game_library.templates.urgency_transition.urgency_transition.random">
+<span class="sig-prename descclassname"><span class="pre">karma_game_library.templates.urgency_transition.urgency_transition.</span></span><span class="sig-name descname"><span class="pre">random</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">atype</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">urgency</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">outcome</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">set_urgencies</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Set</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="reference internal" href="_modules/karma_game_library/templates/urgency_transition/urgency_transition.html#random"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#karma_game_library.templates.urgency_transition.urgency_transition.random" title="Permalink to this definition">#</a></dt>
+<dd><p>This function transitions randomly from one urgency level to the next.
+This happens independent from agent type, urgency level, and outcome.</p>
+</dd></dl>
+
+</section>
+<section id="module-karma_game_library.templates.overflow_distribution.overflow_distribution">
+<span id="overflow-distribution"></span><h3>Overflow Distribution<a class="headerlink" href="#module-karma_game_library.templates.overflow_distribution.overflow_distribution" title="Permalink to this heading">#</a></h3>
+<dl class="py function">
+<dt class="sig sig-object py" id="karma_game_library.templates.overflow_distribution.overflow_distribution.none">
+<span class="sig-prename descclassname"><span class="pre">karma_game_library.templates.overflow_distribution.overflow_distribution.</span></span><span class="sig-name descname"><span class="pre">none</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pop_karmas</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">overflow</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="_modules/karma_game_library/templates/overflow_distribution/overflow_distribution.html#none"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#karma_game_library.templates.overflow_distribution.overflow_distribution.none" title="Permalink to this definition">#</a></dt>
+<dd><p>This function does not distribute any karma overflow.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="karma_game_library.templates.overflow_distribution.overflow_distribution.random_group_each_one">
+<span class="sig-prename descclassname"><span class="pre">karma_game_library.templates.overflow_distribution.overflow_distribution.</span></span><span class="sig-name descname"><span class="pre">random_group_each_one</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pop_karmas</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">overflow</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="_modules/karma_game_library/templates/overflow_distribution/overflow_distribution.html#random_group_each_one"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#karma_game_library.templates.overflow_distribution.overflow_distribution.random_group_each_one" title="Permalink to this definition">#</a></dt>
+<dd><p>This function distributes the Karma overflow randomly two n agents, where
+each agent receives one unit of Karma.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="karma_game_library.templates.overflow_distribution.overflow_distribution.random_individual_all">
+<span class="sig-prename descclassname"><span class="pre">karma_game_library.templates.overflow_distribution.overflow_distribution.</span></span><span class="sig-name descname"><span class="pre">random_individual_all</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pop_karmas</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">overflow</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="_modules/karma_game_library/templates/overflow_distribution/overflow_distribution.html#random_individual_all"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#karma_game_library.templates.overflow_distribution.overflow_distribution.random_individual_all" title="Permalink to this definition">#</a></dt>
+<dd><p>This function distributes the whole Karma overflow to one randomly chosen
+individual.</p>
+</dd></dl>
+
+</section>
+<section id="module-karma_game_library.templates.karma_redistribution.karma_redistribution">
+<span id="karma-redistribution"></span><h3>Karma Redistribution<a class="headerlink" href="#module-karma_game_library.templates.karma_redistribution.karma_redistribution" title="Permalink to this heading">#</a></h3>
+<dl class="py function">
+<dt class="sig sig-object py" id="karma_game_library.templates.karma_redistribution.karma_redistribution.none">
+<span class="sig-prename descclassname"><span class="pre">karma_game_library.templates.karma_redistribution.karma_redistribution.</span></span><span class="sig-name descname"><span class="pre">none</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pop_karmas</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="_modules/karma_game_library/templates/karma_redistribution/karma_redistribution.html#none"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#karma_game_library.templates.karma_redistribution.karma_redistribution.none" title="Permalink to this definition">#</a></dt>
+<dd><p>This function does not redistribute Karma.</p>
+</dd></dl>
+
+</section>
+</section>
+<section id="probabilistic-functions">
+<h2>Probabilistic Functions<a class="headerlink" href="#probabilistic-functions" title="Permalink to this heading">#</a></h2>
+<section id="id2">
+<h3>Outcome<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h3>
+<span class="target" id="module-karma_game_library.templates.p_outcome.p_outcome"></span><dl class="py function">
+<dt class="sig sig-object py" id="karma_game_library.templates.p_outcome.p_outcome.highest_bid">
+<span class="sig-prename descclassname"><span class="pre">karma_game_library.templates.p_outcome.p_outcome.</span></span><span class="sig-name descname"><span class="pre">highest_bid</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">outcome</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">actions</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="reference internal" href="_modules/karma_game_library/templates/p_outcome/p_outcome.html#highest_bid"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#karma_game_library.templates.p_outcome.p_outcome.highest_bid" title="Permalink to this definition">#</a></dt>
+<dd><p>The highest bid (action) wins. Tiebreaker: random.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="karma_game_library.templates.p_outcome.p_outcome.second_highest_bid">
+<span class="sig-prename descclassname"><span class="pre">karma_game_library.templates.p_outcome.p_outcome.</span></span><span class="sig-name descname"><span class="pre">second_highest_bid</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">outcome</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">actions</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="reference internal" href="_modules/karma_game_library/templates/p_outcome/p_outcome.html#second_highest_bid"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#karma_game_library.templates.p_outcome.p_outcome.second_highest_bid" title="Permalink to this definition">#</a></dt>
+<dd><p>The second highest bid (action) wins. Tiebreaker: random.</p>
+</dd></dl>
+
+</section>
+<section id="module-karma_game_library.templates.p_karma_transition.p_karma_transition">
+<span id="karma-transition"></span><h3>Karma Transition<a class="headerlink" href="#module-karma_game_library.templates.p_karma_transition.p_karma_transition" title="Permalink to this heading">#</a></h3>
+<dl class="py function">
+<dt class="sig sig-object py" id="karma_game_library.templates.p_karma_transition.p_karma_transition.highest_bid_to_peer_no_redistribution">
+<span class="sig-prename descclassname"><span class="pre">karma_game_library.templates.p_karma_transition.p_karma_transition.</span></span><span class="sig-name descname"><span class="pre">highest_bid_to_peer_no_redistribution</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">karma_next</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">karma</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">action</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">outcome</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">state_mat</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">Any</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">dtype</span><span class="p"><span class="pre">[</span></span><span class="pre">ScalarType</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">policy_mat</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">Any</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">dtype</span><span class="p"><span class="pre">[</span></span><span class="pre">ScalarType</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">game_parameters</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gamma_mat</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">Any</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">dtype</span><span class="p"><span class="pre">[</span></span><span class="pre">ScalarType</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">v_mat</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">Any</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">dtype</span><span class="p"><span class="pre">[</span></span><span class="pre">ScalarType</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="reference internal" href="_modules/karma_game_library/templates/p_karma_transition/p_karma_transition.html#highest_bid_to_peer_no_redistribution"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#karma_game_library.templates.p_karma_transition.p_karma_transition.highest_bid_to_peer_no_redistribution" title="Permalink to this definition">#</a></dt>
+<dd><p>This function returns the probability to reach a karma_next balance given a karma, action and outcome for the case
+that the highest bidding peer wins, pays the bid to the peer, and there is no Karma redistribution.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="karma_game_library.templates.p_karma_transition.p_karma_transition.highest_bid_to_society_no_redistribution">
+<span class="sig-prename descclassname"><span class="pre">karma_game_library.templates.p_karma_transition.p_karma_transition.</span></span><span class="sig-name descname"><span class="pre">highest_bid_to_society_no_redistribution</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">karma_next</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">karma</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">action</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">outcome</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">state_mat</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">Any</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">dtype</span><span class="p"><span class="pre">[</span></span><span class="pre">ScalarType</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">policy_mat</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">Any</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">dtype</span><span class="p"><span class="pre">[</span></span><span class="pre">ScalarType</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">game_parameters</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gamma_mat</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">Any</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">dtype</span><span class="p"><span class="pre">[</span></span><span class="pre">ScalarType</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">v_mat</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">Any</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">dtype</span><span class="p"><span class="pre">[</span></span><span class="pre">ScalarType</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="reference internal" href="_modules/karma_game_library/templates/p_karma_transition/p_karma_transition.html#highest_bid_to_society_no_redistribution"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#karma_game_library.templates.p_karma_transition.p_karma_transition.highest_bid_to_society_no_redistribution" title="Permalink to this definition">#</a></dt>
+<dd><p>This function returns the probability to reach a karma_next balance given a karma, action and outcome for the case
+that the highest bidding peer wins, pays the bid to the society (Karma overflow), and there is no Karma redistribution.</p>
+</dd></dl>
+
+</section>
+<section id="id3">
+<h3>Urgency Transition<a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h3>
+<span class="target" id="module-karma_game_library.templates.p_urgency_transition.p_urgency_transition"></span><dl class="py function">
+<dt class="sig sig-object py" id="karma_game_library.templates.p_urgency_transition.p_urgency_transition.random">
+<span class="sig-prename descclassname"><span class="pre">karma_game_library.templates.p_urgency_transition.p_urgency_transition.</span></span><span class="sig-name descname"><span class="pre">random</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">urgency_next</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">urgency</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">outcome</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">atype</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">set_urgencies</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Set</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="reference internal" href="_modules/karma_game_library/templates/p_urgency_transition/p_urgency_transition.html#random"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#karma_game_library.templates.p_urgency_transition.p_urgency_transition.random" title="Permalink to this definition">#</a></dt>
+<dd><p>This function assumes that the transition probability from one urgency level to another is random.
+It is completely independent from the agent type, urgency, and interaction outcome.</p>
+</dd></dl>
+
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+</section>
+</section>
+</section>
+<section id="module-karma_game_library.utils.visualizer">
+<span id="visualization-utilities"></span><h1>Visualization Utilities<a class="headerlink" href="#module-karma_game_library.utils.visualizer" title="Permalink to this heading">#</a></h1>
+<dl class="py function">
+<dt class="sig sig-object py" id="karma_game_library.utils.visualizer.draw_distribution_bar">
+<span class="sig-prename descclassname"><span class="pre">karma_game_library.utils.visualizer.</span></span><span class="sig-name descname"><span class="pre">draw_distribution_bar</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">set_karmas</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Set</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">values</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Iterable</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">std_errs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Iterable</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bins</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/karma_game_library/utils/visualizer.html#draw_distribution_bar"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#karma_game_library.utils.visualizer.draw_distribution_bar" title="Permalink to this definition">#</a></dt>
+<dd><p>This function draws a bar chart from a given vector of values using
+matplotlib.pyplot.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>set_karmas</strong> (<em>Set</em><em>[</em><em>int</em><em>]</em>) – The set_policy_karmas.</p></li>
+<li><p><strong>values</strong> (<em>Iterable</em><em>[</em><em>float</em><em>]</em>) – The values to plot.</p></li>
+<li><p><strong>std_errs</strong> (<em>Iterable</em><em>[</em><em>float</em><em>]</em>) – Optional parameter, representing standard errors.</p></li>
+<li><p><strong>bins</strong> (<em>int</em>) – Optional parameter, Default: None. If provided, only ‘bins’ ticks are
+displayed on the x axis.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="karma_game_library.utils.visualizer.draw_distribution_from_simulator">
+<span class="sig-prename descclassname"><span class="pre">karma_game_library.utils.visualizer.</span></span><span class="sig-name descname"><span class="pre">draw_distribution_from_simulator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">simulator</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">game_parameters</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">column</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mode</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bins</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">15</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/karma_game_library/utils/visualizer.html#draw_distribution_from_simulator"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#karma_game_library.utils.visualizer.draw_distribution_from_simulator" title="Permalink to this definition">#</a></dt>
+<dd><p>This function draw the interaction distribution from a given state
+distribution for a specific agent type. The karma distribution shows the
+average across all urgencies, if the urgency level is unspecified (None).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>simulator</strong> (<a class="reference internal" href="#karma_game_library.Simulator" title="karma_game_library.Simulator"><em>Simulator</em></a>) – The state distribution to draw from.</p></li>
+<li><p><strong>game_parameters</strong> (<a class="reference internal" href="#karma_game_library.entities.game_parameters.GameParameters" title="karma_game_library.entities.game_parameters.GameParameters"><em>GameParameters</em></a>) – The game parameters used.</p></li>
+<li><p><strong>column</strong> (<em>int</em>) – The column from the agent population. Each column is represented by
+following enumeration: TYPE_COL = 0, URGENCY_COL = 1, KARMA_COL = 2,
+CUM_COST_COL = 3, ENCOUNTERS_COL = 4.</p></li>
+<li><p><strong>mode</strong> (<em>str</em>) – Which mode for the distribution. Possible options are: ‘unique’ to
+display how often all unique elements of the population occur;
+‘histogram’ to display how often values occur in predefined bins.</p></li>
+<li><p><strong>bins</strong> (<em>int</em>) – Optional. Default=15. This defines how many bins are used for the mode
+‘histogram’.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="karma_game_library.utils.visualizer.draw_heatmap">
+<span class="sig-prename descclassname"><span class="pre">karma_game_library.utils.visualizer.</span></span><span class="sig-name descname"><span class="pre">draw_heatmap</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">matrix</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">Any</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">dtype</span><span class="p"><span class="pre">[</span></span><span class="pre">ScalarType</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">labels_x</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">labels_y</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cmap</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'Blues'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bins</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/karma_game_library/utils/visualizer.html#draw_heatmap"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#karma_game_library.utils.visualizer.draw_heatmap" title="Permalink to this definition">#</a></dt>
+<dd><p>This function draws a heatmap from a given matrix of values using
+matplotlib.pyplot.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>matrix</strong> (<em>npt.NDArray</em>) – The matrix to be drawn.</p></li>
+<li><p><strong>labels_x</strong> (<em>List</em><em>[</em><em>str</em><em>]</em>) – The list of labels for the abscissa.</p></li>
+<li><p><strong>labels_y</strong> (<em>List</em><em>[</em><em>str</em><em>]</em>) – The list of labels for the ordinate.</p></li>
+<li><p><strong>cmap</strong> (<em>str</em>) – Optional parameter, representing the colormap.
+Default is ‘Blues’.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="karma_game_library.utils.visualizer.draw_karma_distribution_from_simulator">
+<span class="sig-prename descclassname"><span class="pre">karma_game_library.utils.visualizer.</span></span><span class="sig-name descname"><span class="pre">draw_karma_distribution_from_simulator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">simulator</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">game_parameters</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bins</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/karma_game_library/utils/visualizer.html#draw_karma_distribution_from_simulator"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#karma_game_library.utils.visualizer.draw_karma_distribution_from_simulator" title="Permalink to this definition">#</a></dt>
+<dd><p>This function draw the Karma distribution from a given state distribution
+for a specific agent type. The karma distribution shows the average across
+all urgencies, if the urgency level is unspecified (None).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>simulator</strong> (<a class="reference internal" href="#karma_game_library.Simulator" title="karma_game_library.Simulator"><em>Simulator</em></a>) – The state distribution to draw from.</p></li>
+<li><p><strong>game_parameters</strong> (<a class="reference internal" href="#karma_game_library.entities.game_parameters.GameParameters" title="karma_game_library.entities.game_parameters.GameParameters"><em>GameParameters</em></a>) – The game parameters used.</p></li>
+<li><p><strong>bins</strong> (<em>int</em>) – Optional parameter, Default: None. If provided, only ‘bins’ ticks are
+displayed on the x axis.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="karma_game_library.utils.visualizer.draw_karma_distribution_from_state">
+<span class="sig-prename descclassname"><span class="pre">karma_game_library.utils.visualizer.</span></span><span class="sig-name descname"><span class="pre">draw_karma_distribution_from_state</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">state</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">game_parameters</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">limit</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">atype</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">urgency</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bins</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/karma_game_library/utils/visualizer.html#draw_karma_distribution_from_state"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#karma_game_library.utils.visualizer.draw_karma_distribution_from_state" title="Permalink to this definition">#</a></dt>
+<dd><p>This function draw the Karma distirbution from a given state distribution
+for a specific agent type. The karma distribution shows the average across
+all urgencies, if the urgency level is unspecified (None).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>state</strong> (<a class="reference internal" href="#karma_game_library.StateDistribution" title="karma_game_library.StateDistribution"><em>StateDistribution</em></a>) – The state distribution to draw from.</p></li>
+<li><p><strong>game_parameters</strong> (<a class="reference internal" href="#karma_game_library.entities.game_parameters.GameParameters" title="karma_game_library.entities.game_parameters.GameParameters"><em>GameParameters</em></a>) – The game parameters used.</p></li>
+<li><p><strong>limit</strong> (<em>int</em>) – Optional. Default is None. If not defined, the full distribution is
+displayed, otherwise only until the limit. The last bar will then
+represent the karma balances greater or equal that value.</p></li>
+<li><p><strong>atype</strong> (<em>int</em>) – Optional. Default is None. If not defined, the average across all
+types is displayed, otherwise for the agent type specifically.</p></li>
+<li><p><strong>urgency</strong> (<em>int</em>) – Optional. Default is None. If not defined, the average across all
+urgencies is displayed, otherwise for the urgency level specifically.</p></li>
+<li><p><strong>bins</strong> (<em>int</em>) – Optional parameter, Default: None. If provided, only ‘bins’ ticks are
+displayed on the x axis.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="karma_game_library.utils.visualizer.draw_karma_transition_heatmap_from_simulator">
+<span class="sig-prename descclassname"><span class="pre">karma_game_library.utils.visualizer.</span></span><span class="sig-name descname"><span class="pre">draw_karma_transition_heatmap_from_simulator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">simulator</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">game_parameters</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/karma_game_library/utils/visualizer.html#draw_karma_transition_heatmap_from_simulator"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#karma_game_library.utils.visualizer.draw_karma_transition_heatmap_from_simulator" title="Permalink to this definition">#</a></dt>
+<dd><p>This function draws a karma transition heatmap from a given state
+transition matrix of a simulation as average over types and urgencies
+using matplotlib.pyplot.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>simulator</strong> (<a class="reference internal" href="#karma_game_library.Simulator" title="karma_game_library.Simulator"><em>Simulator</em></a>) – The state_transition_distribution from a KarmaSimulationInstance.</p></li>
+<li><p><strong>game_parameters</strong> (<em>The game parameters</em>) – The set_state_karmas.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="karma_game_library.utils.visualizer.draw_specific_policy">
+<span class="sig-prename descclassname"><span class="pre">karma_game_library.utils.visualizer.</span></span><span class="sig-name descname"><span class="pre">draw_specific_policy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">policy</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">game_parameters</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">atype</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">urgency</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bins</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/karma_game_library/utils/visualizer.html#draw_specific_policy"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#karma_game_library.utils.visualizer.draw_specific_policy" title="Permalink to this definition">#</a></dt>
+<dd><p>This function draws the probability of certain actions according to
+karma balances as heatmap for a specific type and urgency using
+matplotlib.pyplot.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>policy</strong> (<a class="reference internal" href="#karma_game_library.Policy" title="karma_game_library.Policy"><em>Policy</em></a>) – The policy used in simulation.</p></li>
+<li><p><strong>game_parameters</strong> (<a class="reference internal" href="#karma_game_library.entities.game_parameters.GameParameters" title="karma_game_library.entities.game_parameters.GameParameters"><em>GameParameters</em></a>) – </p></li>
+<li><p><strong>atype</strong> (<em>int</em>) – The specific agent type.</p></li>
+<li><p><strong>urgency</strong> (<em>int</em>) – The specific agent urgency.</p></li>
+<li><p><strong>bins</strong> (<em>int</em>) – Optional parameter, Default: None. If provided, only ‘bins’ ticks are
+displayed on the x axis.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="karma_game_library.utils.visualizer.render_gif_animation">
+<span class="sig-prename descclassname"><span class="pre">karma_game_library.utils.visualizer.</span></span><span class="sig-name descname"><span class="pre">render_gif_animation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lst_image_files</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target_file</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">speed</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">100</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">first_last_slow</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/karma_game_library/utils/visualizer.html#render_gif_animation"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#karma_game_library.utils.visualizer.render_gif_animation" title="Permalink to this definition">#</a></dt>
+<dd><p>This function reads static images from a list of image files, and stores
+all of them in an GIF animation.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>lst_image_files</strong> (<em>List</em><em>[</em><em>str</em><em>]</em>) – A list with image files that shall be connected to a GIF animation.</p></li>
+<li><p><strong>target_file</strong> (<em>str</em>) – The target file to store the GIF into.</p></li>
+<li><p><strong>speed</strong> (<em>int</em>) – Optional, Defualt: 100. The time per image. The slower the faster the animation.</p></li>
+<li><p><strong>first_last_slow</strong> (<em>bool</em>) – Optional, Default : True. This will repeat the first and the last
+image for ten times, so the animation does not directly run.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="indices-and-tables">
+<h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this heading">#</a></h1>
+<ul class="simple">
+<li><p><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a></p></li>
+<li><p><a class="reference internal" href="search.html"><span class="std std-ref">Search Page</span></a></p></li>
+</ul>
+</section>
+
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="modelling_examples.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Modelling Examples</p>
+      </div>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Documentation</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#objects">Objects</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gameparameters">GameParameters</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#statedistribution">StateDistribution</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#policy">Policy</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#algorithms">Algorithms</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#simulator">Simulator</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#optimizer">Optimizer</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#modelling-templates">Modelling Templates</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#game-logic-functions">Game Logic Functions</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#module-karma_game_library.templates.cost.cost">Cost</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#module-karma_game_library.templates.outcome.outcome">Outcome</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#module-karma_game_library.templates.payment.payment">Payment</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#module-karma_game_library.templates.urgency_transition.urgency_transition">Urgency Transition</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#module-karma_game_library.templates.overflow_distribution.overflow_distribution">Overflow Distribution</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#module-karma_game_library.templates.karma_redistribution.karma_redistribution">Karma Redistribution</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#probabilistic-functions">Probabilistic Functions</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Outcome</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#module-karma_game_library.templates.p_karma_transition.p_karma_transition">Karma Transition</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Urgency Transition</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#module-karma_game_library.utils.visualizer">Visualization Utilities</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#indices-and-tables">Indices and tables</a></li>
+</ul>
+
+  </nav></div>
+
+  <div class="sidebar-secondary-item">
+
+  <div class="tocsection sourcelink">
+    <a href="_sources/documentation.rst.txt">
+      <i class="fa-solid fa-file-lines"></i> Show Source
+    </a>
+  </div>
+</div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright 2023, Kevin Riehl.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.0.2.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.14.4.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

@@ -1,0 +1,840 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>karma_game_library.utils.visualizer &#8212; Karma Game Library 1.0.0 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../../../_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+
+  
+  <link href="../../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
+  <script src="../../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
+
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '_modules/karma_game_library/utils/visualizer';</script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+<div class="bd-header__inner bd-page-width">
+  <label class="sidebar-toggle primary-toggle" for="__primary">
+    <span class="fa-solid fa-bars"></span>
+  </label>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+
+<a class="navbar-brand logo" href="../../../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../../_static/logo_light.svg" class="logo__image only-light" alt=""/>
+    <script>document.write(`<img src="../../../_static/logo_dark.svg" class="logo__image only-dark" alt=""/>`);</script>
+  
+  
+    <p class="title logo__title">Karma Game Library (v1.0.0)</p>
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../home.html">
+                        Home
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../gettingstarted.html">
+                            Getting Started
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../modelling_examples.html">
+                        Modelling
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../documentation.html">
+                            Documentation
+                      </a>
+                    </li>
+                
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/<your-org>/<your-repo>" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/project/pydata-sphinx-theme/" title="PyPI" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-python fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">PyPI</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/project/pydata-sphinx-theme/" title="Issue Tracker & Support" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-regular fa-circle-question fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">Issue Tracker & Support</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/project/pydata-sphinx-theme/" title="Contact & Mailing List" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-regular fa-envelope fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">Contact & Mailing List</span></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+    </div>
+  
+
+  
+</div>
+
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar hide-on-wide">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          <div class="navbar-item">
+<nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../home.html">
+                        Home
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../gettingstarted.html">
+                            Getting Started
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../modelling_examples.html">
+                        Modelling
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../documentation.html">
+                            Documentation
+                      </a>
+                    </li>
+                
+  </ul>
+</nav></div>
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script></div>
+        
+          <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/<your-org>/<your-repo>" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/project/pydata-sphinx-theme/" title="PyPI" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-python fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">PyPI</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/project/pydata-sphinx-theme/" title="Issue Tracker & Support" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-regular fa-circle-question fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">Issue Tracker & Support</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/project/pydata-sphinx-theme/" title="Contact & Mailing List" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-regular fa-envelope fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">Contact & Mailing List</span></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<nav class="sidebar-indices-items">
+  <p class="sidebar-indices-items__title" role="heading" aria-level="1">Indices</p>
+  <ul class="indices-link">
+        <li class="toctree-l1">
+          <a class="reference internal"
+             href="../../../genindex.html"
+             accesskey="I">General Index</a>
+        </li>
+        <li class="toctree-l1">
+          <a class="reference internal" href="../../../py-modindex.html">Python Module Index</a>
+        </li>
+  </ul>
+</nav></div>
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+<nav aria-label="Breadcrumb">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../../../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="../../index.html" class="nav-link">Module code</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page">karma_game_l...</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <h1>Source code for karma_game_library.utils.visualizer</h1><div class="highlight"><pre>
+<span></span><span class="c1"># Karma Game Library, Copyrights Kevin Riehl 2023, &lt;kriehl@ethz.ch&gt;</span>
+
+<span class="c1"># Imports</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">sklearn.preprocessing</span> <span class="kn">import</span> <span class="n">normalize</span>
+<span class="kn">import</span> <span class="nn">PIL.Image</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">numpy.typing</span> <span class="k">as</span> <span class="nn">npt</span>
+<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Set</span><span class="p">,</span> <span class="n">List</span><span class="p">,</span> <span class="n">Iterable</span>
+
+<span class="c1"># Functions</span>
+
+<span class="k">def</span> <span class="nf">_convert_set_to_labels</span><span class="p">(</span><span class="n">set_instance</span><span class="p">:</span> <span class="n">Set</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    This function converts a set to a list of string.</span>
+<span class="sd">    </span>
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    set_instance : Set</span>
+<span class="sd">        The set to be converted.</span>
+<span class="sd">    </span>
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    list_return : List[str]</span>
+<span class="sd">        The list of strings generated from the set.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="p">[</span><span class="nb">str</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">set_instance</span><span class="p">]</span>
+
+<div class="viewcode-block" id="draw_distribution_bar"><a class="viewcode-back" href="../../../documentation.html#karma_game_library.utils.visualizer.draw_distribution_bar">[docs]</a><span class="k">def</span> <span class="nf">draw_distribution_bar</span><span class="p">(</span><span class="n">set_karmas</span><span class="p">:</span> <span class="n">Set</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="n">values</span><span class="p">:</span> <span class="n">Iterable</span><span class="p">[</span><span class="nb">float</span><span class="p">],</span> <span class="n">std_errs</span><span class="p">:</span> <span class="n">Iterable</span><span class="p">[</span><span class="nb">float</span><span class="p">]</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">bins</span><span class="p">:</span><span class="nb">int</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    This function draws a bar chart from a given vector of values using </span>
+<span class="sd">    matplotlib.pyplot.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    set_karmas : Set[int]</span>
+<span class="sd">        The set_policy_karmas.</span>
+<span class="sd">    values : Iterable[float]</span>
+<span class="sd">        The values to plot.</span>
+<span class="sd">    std_errs: Iterable[float]</span>
+<span class="sd">        Optional parameter, representing standard errors. </span>
+<span class="sd">    bins: int</span>
+<span class="sd">        Optional parameter, Default: None. If provided, only &#39;bins&#39; ticks are</span>
+<span class="sd">        displayed on the x axis.</span>
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    None</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">labels</span> <span class="o">=</span> <span class="n">_convert_set_to_labels</span><span class="p">(</span><span class="n">set_karmas</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">labels</span><span class="p">,</span> <span class="n">values</span><span class="p">,</span> <span class="n">yerr</span><span class="o">=</span><span class="n">std_errs</span><span class="p">,</span> <span class="n">tick_label</span><span class="o">=</span><span class="n">labels</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">setp</span><span class="p">(</span><span class="n">plt</span><span class="o">.</span><span class="n">gca</span><span class="p">()</span><span class="o">.</span><span class="n">get_xticklabels</span><span class="p">(),</span> <span class="n">rotation</span><span class="o">=</span><span class="mi">90</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">bins</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">locator_params</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="s1">&#39;x&#39;</span><span class="p">,</span> <span class="n">nbins</span><span class="o">=</span><span class="n">bins</span><span class="p">)</span></div>
+    
+<div class="viewcode-block" id="draw_heatmap"><a class="viewcode-back" href="../../../documentation.html#karma_game_library.utils.visualizer.draw_heatmap">[docs]</a><span class="k">def</span> <span class="nf">draw_heatmap</span><span class="p">(</span><span class="n">matrix</span><span class="p">:</span> <span class="n">npt</span><span class="o">.</span><span class="n">NDArray</span><span class="p">,</span> <span class="n">labels_x</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span> <span class="n">labels_y</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span> <span class="n">cmap</span><span class="p">:</span><span class="nb">str</span><span class="o">=</span><span class="s2">&quot;Blues&quot;</span><span class="p">,</span> <span class="n">bins</span><span class="p">:</span><span class="nb">int</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    This function draws a heatmap from a given matrix of values using </span>
+<span class="sd">    matplotlib.pyplot.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    matrix : npt.NDArray</span>
+<span class="sd">        The matrix to be drawn.</span>
+<span class="sd">    labels_x : List[str]</span>
+<span class="sd">        The list of labels for the abscissa.</span>
+<span class="sd">    labels_y : List[str]</span>
+<span class="sd">        The list of labels for the ordinate.</span>
+<span class="sd">    cmap: str</span>
+<span class="sd">        Optional parameter, representing the colormap. </span>
+<span class="sd">        Default is &#39;Blues&#39;.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    None</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">matrix</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="n">cmap</span><span class="p">,</span> <span class="n">interpolation</span><span class="o">=</span><span class="s2">&quot;nearest&quot;</span><span class="p">,</span> <span class="n">origin</span><span class="o">=</span><span class="s1">&#39;lower&#39;</span><span class="p">,</span> <span class="n">extent</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">])</span>
+    <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">labels_x</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">gca</span><span class="p">()</span><span class="o">.</span><span class="n">set_xticks</span><span class="p">([</span><span class="mi">1</span><span class="o">/</span><span class="n">n</span><span class="o">*</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span> <span class="o">-</span> <span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">n</span><span class="p">))</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">n</span><span class="p">)])</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">gca</span><span class="p">()</span><span class="o">.</span><span class="n">set_xticklabels</span><span class="p">(</span><span class="n">labels_x</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">setp</span><span class="p">(</span><span class="n">plt</span><span class="o">.</span><span class="n">gca</span><span class="p">()</span><span class="o">.</span><span class="n">get_xticklabels</span><span class="p">(),</span> <span class="n">rotation</span><span class="o">=</span><span class="mi">90</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">bins</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">locator_params</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="s1">&#39;x&#39;</span><span class="p">,</span> <span class="n">nbins</span><span class="o">=</span><span class="n">bins</span><span class="p">)</span>
+    <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">labels_y</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">gca</span><span class="p">()</span><span class="o">.</span><span class="n">set_yticks</span><span class="p">([</span><span class="mi">1</span><span class="o">/</span><span class="n">n</span><span class="o">*</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span> <span class="o">-</span> <span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">n</span><span class="p">))</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">n</span><span class="p">)])</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">gca</span><span class="p">()</span><span class="o">.</span><span class="n">set_yticklabels</span><span class="p">(</span><span class="n">labels_y</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="draw_specific_policy"><a class="viewcode-back" href="../../../documentation.html#karma_game_library.utils.visualizer.draw_specific_policy">[docs]</a><span class="k">def</span> <span class="nf">draw_specific_policy</span><span class="p">(</span><span class="n">policy</span><span class="p">,</span> <span class="n">game_parameters</span><span class="p">,</span> <span class="n">atype</span><span class="p">,</span> <span class="n">urgency</span><span class="p">,</span> <span class="n">bins</span><span class="p">:</span><span class="nb">int</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    This function draws the probability of certain actions according to</span>
+<span class="sd">    karma balances as heatmap for a specific type and urgency using </span>
+<span class="sd">    matplotlib.pyplot.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    policy : Policy</span>
+<span class="sd">        The policy used in simulation.</span>
+<span class="sd">    game_parameters : GameParameters</span>
+<span class="sd">    atype : int</span>
+<span class="sd">        The specific agent type.</span>
+<span class="sd">    urgency : int</span>
+<span class="sd">        The specific agent urgency.</span>
+<span class="sd">    bins: int</span>
+<span class="sd">        Optional parameter, Default: None. If provided, only &#39;bins&#39; ticks are</span>
+<span class="sd">        displayed on the x axis.</span>
+<span class="sd">        </span>
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    None</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">karma_action_probabilities</span> <span class="o">=</span> <span class="n">policy</span><span class="o">.</span><span class="n">prob_matrix</span><span class="p">[</span><span class="n">atype</span><span class="p">][</span><span class="n">urgency</span><span class="p">]</span>
+    <span class="n">labels_x</span> <span class="o">=</span> <span class="n">_convert_set_to_labels</span><span class="p">(</span><span class="n">game_parameters</span><span class="o">.</span><span class="n">_set_state_karmas</span><span class="p">)</span>
+    <span class="n">labels_y</span> <span class="o">=</span> <span class="n">_convert_set_to_labels</span><span class="p">(</span><span class="n">game_parameters</span><span class="o">.</span><span class="n">_set_actions</span><span class="p">)</span>
+    <span class="n">draw_heatmap</span><span class="p">(</span><span class="n">karma_action_probabilities</span><span class="o">.</span><span class="n">transpose</span><span class="p">(),</span> <span class="n">labels_x</span><span class="p">,</span> <span class="n">labels_y</span><span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="n">bins</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Karma balance&quot;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Action&quot;</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="draw_karma_distribution_from_state"><a class="viewcode-back" href="../../../documentation.html#karma_game_library.utils.visualizer.draw_karma_distribution_from_state">[docs]</a><span class="k">def</span> <span class="nf">draw_karma_distribution_from_state</span><span class="p">(</span><span class="n">state</span><span class="p">,</span> <span class="n">game_parameters</span><span class="p">,</span> <span class="n">limit</span><span class="p">:</span><span class="nb">int</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">atype</span><span class="p">:</span> <span class="nb">int</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">urgency</span><span class="p">:</span><span class="nb">int</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">bins</span><span class="p">:</span><span class="nb">int</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    This function draw the Karma distirbution from a given state distribution</span>
+<span class="sd">    for a specific agent type. The karma distribution shows the average across</span>
+<span class="sd">    all urgencies, if the urgency level is unspecified (None).</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    state : StateDistribution</span>
+<span class="sd">        The state distribution to draw from.</span>
+<span class="sd">    game_parameters : GameParameters</span>
+<span class="sd">        The game parameters used.</span>
+<span class="sd">    limit : int</span>
+<span class="sd">        Optional. Default is None. If not defined, the full distribution is</span>
+<span class="sd">        displayed, otherwise only until the limit. The last bar will then</span>
+<span class="sd">        represent the karma balances greater or equal that value.</span>
+<span class="sd">    atype : int</span>
+<span class="sd">        Optional. Default is None. If not defined, the average across all</span>
+<span class="sd">        types is displayed, otherwise for the agent type specifically.</span>
+<span class="sd">    urgency : int</span>
+<span class="sd">        Optional. Default is None. If not defined, the average across all </span>
+<span class="sd">        urgencies is displayed, otherwise for the urgency level specifically.</span>
+<span class="sd">    bins: int</span>
+<span class="sd">        Optional parameter, Default: None. If provided, only &#39;bins&#39; ticks are</span>
+<span class="sd">        displayed on the x axis.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    None</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">limit</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">labels_to_draw</span> <span class="o">=</span> <span class="n">game_parameters</span><span class="o">.</span><span class="n">_set_state_karmas</span>
+        <span class="n">matrix_to_draw</span> <span class="o">=</span> <span class="n">state</span><span class="o">.</span><span class="n">dist_matrix</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">labels_to_draw</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">limit</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
+        <span class="n">matrix_to_draw</span> <span class="o">=</span> <span class="n">state</span><span class="o">.</span><span class="n">get_limited_dist_matrix</span><span class="p">(</span><span class="n">limit</span><span class="o">=</span><span class="n">limit</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">atype</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">matrix_to_draw</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">matrix_to_draw</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">matrix_to_draw</span> <span class="o">=</span> <span class="n">matrix_to_draw</span><span class="p">[</span><span class="n">atype</span><span class="p">]</span>
+    <span class="k">if</span> <span class="n">urgency</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">matrix_to_draw</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">matrix_to_draw</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">matrix_to_draw</span> <span class="o">=</span> <span class="n">matrix_to_draw</span><span class="p">[</span><span class="n">urgency</span><span class="p">]</span>
+    <span class="n">draw_distribution_bar</span><span class="p">(</span><span class="n">labels_to_draw</span><span class="p">,</span> <span class="n">matrix_to_draw</span><span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="n">bins</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Karma balance&quot;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Share of population&quot;</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="draw_karma_distribution_from_simulator"><a class="viewcode-back" href="../../../documentation.html#karma_game_library.utils.visualizer.draw_karma_distribution_from_simulator">[docs]</a><span class="k">def</span> <span class="nf">draw_karma_distribution_from_simulator</span><span class="p">(</span><span class="n">simulator</span><span class="p">,</span> <span class="n">game_parameters</span><span class="p">,</span> <span class="n">bins</span><span class="p">:</span><span class="nb">int</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    This function draw the Karma distribution from a given state distribution</span>
+<span class="sd">    for a specific agent type. The karma distribution shows the average across</span>
+<span class="sd">    all urgencies, if the urgency level is unspecified (None).</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    simulator : Simulator</span>
+<span class="sd">        The state distribution to draw from.</span>
+<span class="sd">    game_parameters : GameParameters</span>
+<span class="sd">        The game parameters used.</span>
+<span class="sd">    bins: int</span>
+<span class="sd">        Optional parameter, Default: None. If provided, only &#39;bins&#39; ticks are</span>
+<span class="sd">        displayed on the x axis.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    None</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">distribution</span> <span class="o">=</span> <span class="n">simulator</span><span class="o">.</span><span class="n">get_karma_distribution</span><span class="p">()</span>
+    <span class="n">distribution</span> <span class="o">=</span> <span class="n">distribution</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">distribution</span><span class="p">)</span>
+    <span class="n">draw_distribution_bar</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">distribution</span><span class="p">)),</span> <span class="n">distribution</span><span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="n">bins</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Karma balance&quot;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Share of population&quot;</span><span class="p">)</span></div>
+    
+<div class="viewcode-block" id="draw_distribution_from_simulator"><a class="viewcode-back" href="../../../documentation.html#karma_game_library.utils.visualizer.draw_distribution_from_simulator">[docs]</a><span class="k">def</span> <span class="nf">draw_distribution_from_simulator</span><span class="p">(</span><span class="n">simulator</span><span class="p">,</span> <span class="n">game_parameters</span><span class="p">,</span> <span class="n">column</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">mode</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">bins</span><span class="p">:</span><span class="nb">int</span><span class="o">=</span><span class="mi">15</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    This function draw the interaction distribution from a given state </span>
+<span class="sd">    distribution for a specific agent type. The karma distribution shows the </span>
+<span class="sd">    average across all urgencies, if the urgency level is unspecified (None).</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    simulator : Simulator</span>
+<span class="sd">        The state distribution to draw from.</span>
+<span class="sd">    game_parameters : GameParameters</span>
+<span class="sd">        The game parameters used.</span>
+<span class="sd">    column : int</span>
+<span class="sd">        The column from the agent population. Each column is represented by </span>
+<span class="sd">        following enumeration: TYPE_COL = 0, URGENCY_COL = 1, KARMA_COL = 2, </span>
+<span class="sd">        CUM_COST_COL = 3, ENCOUNTERS_COL = 4.</span>
+<span class="sd">    mode : str</span>
+<span class="sd">        Which mode for the distribution. Possible options are: &#39;unique&#39; to </span>
+<span class="sd">        display how often all unique elements of the population occur; </span>
+<span class="sd">        &#39;histogram&#39; to display how often values occur in predefined bins.</span>
+<span class="sd">    bins : int</span>
+<span class="sd">        Optional. Default=15. This defines how many bins are used for the mode</span>
+<span class="sd">        &#39;histogram&#39;.</span>
+<span class="sd">        </span>
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    None</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">population</span> <span class="o">=</span> <span class="n">simulator</span><span class="o">.</span><span class="n">_population</span><span class="p">[:,</span> <span class="n">column</span><span class="p">]</span>
+    <span class="k">if</span> <span class="n">mode</span><span class="o">==</span><span class="s1">&#39;unique&#39;</span><span class="p">:</span>
+        <span class="n">vals</span><span class="p">,</span> <span class="n">counts</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">unique</span><span class="p">(</span><span class="n">population</span><span class="p">,</span> <span class="n">return_counts</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">mode</span><span class="o">==</span><span class="s1">&#39;histogram&#39;</span><span class="p">:</span>
+        <span class="n">counts</span><span class="p">,</span> <span class="n">vals</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">histogram</span><span class="p">(</span><span class="n">population</span><span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="n">bins</span><span class="p">)</span>
+        <span class="n">vals</span> <span class="o">=</span> <span class="n">vals</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+        <span class="n">vals</span> <span class="o">=</span> <span class="p">[</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">x</span><span class="si">:</span><span class="s1">.3f</span><span class="si">}</span><span class="s1">&#39;</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">vals</span><span class="p">]</span>
+    <span class="n">draw_distribution_bar</span><span class="p">(</span><span class="n">vals</span><span class="p">,</span> <span class="n">counts</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Occurences in population&quot;</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="draw_karma_transition_heatmap_from_simulator"><a class="viewcode-back" href="../../../documentation.html#karma_game_library.utils.visualizer.draw_karma_transition_heatmap_from_simulator">[docs]</a><span class="k">def</span> <span class="nf">draw_karma_transition_heatmap_from_simulator</span><span class="p">(</span><span class="n">simulator</span><span class="p">,</span> <span class="n">game_parameters</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    This function draws a karma transition heatmap from a given state </span>
+<span class="sd">    transition matrix of a simulation as average over types and urgencies </span>
+<span class="sd">    using matplotlib.pyplot.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    simulator : Simulator</span>
+<span class="sd">        The state_transition_distribution from a KarmaSimulationInstance.</span>
+<span class="sd">    game_parameters : The game parameters</span>
+<span class="sd">        The set_state_karmas.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    None</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">mean_over_urgencies</span> <span class="o">=</span> <span class="n">simulator</span><span class="o">.</span><span class="n">get_state_transition_counts</span><span class="p">()</span>
+    <span class="n">mean_over_urgencies</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">mean_over_urgencies</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+    <span class="n">mean_over_urgencies</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">mean_over_urgencies</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">mean_over_urgencies</span> <span class="o">=</span> <span class="n">normalize</span><span class="p">(</span><span class="n">mean_over_urgencies</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">norm</span><span class="o">=</span><span class="s2">&quot;l1&quot;</span><span class="p">)</span>
+    <span class="n">labels</span> <span class="o">=</span> <span class="n">_convert_set_to_labels</span><span class="p">(</span><span class="n">game_parameters</span><span class="o">.</span><span class="n">_set_state_karmas</span><span class="p">)</span>
+    <span class="n">draw_heatmap</span><span class="p">(</span><span class="n">mean_over_urgencies</span><span class="p">,</span> <span class="n">labels</span><span class="p">,</span> <span class="n">labels</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Karma before&quot;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Karma after&quot;</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="render_gif_animation"><a class="viewcode-back" href="../../../documentation.html#karma_game_library.utils.visualizer.render_gif_animation">[docs]</a><span class="k">def</span> <span class="nf">render_gif_animation</span><span class="p">(</span><span class="n">lst_image_files</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span> <span class="n">target_file</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">speed</span><span class="p">:</span><span class="nb">int</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">first_last_slow</span><span class="p">:</span><span class="nb">bool</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    This function reads static images from a list of image files, and stores </span>
+<span class="sd">    all of them in an GIF animation.</span>
+<span class="sd">    </span>
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    lst_image_files: List[str]</span>
+<span class="sd">        A list with image files that shall be connected to a GIF animation.</span>
+<span class="sd">    target_file : str</span>
+<span class="sd">        The target file to store the GIF into.</span>
+<span class="sd">    speed : int</span>
+<span class="sd">        Optional, Defualt: 100. The time per image. The slower the faster the animation.</span>
+<span class="sd">    first_last_slow : bool</span>
+<span class="sd">        Optional, Default : True. This will repeat the first and the last </span>
+<span class="sd">        image for ten times, so the animation does not directly run.</span>
+<span class="sd">        </span>
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    None</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">frames</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">if</span> <span class="n">first_last_slow</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">10</span><span class="p">):</span>
+            <span class="n">image</span> <span class="o">=</span> <span class="n">PIL</span><span class="o">.</span><span class="n">Image</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">lst_image_files</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+            <span class="n">frames</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">image</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">file</span> <span class="ow">in</span> <span class="n">lst_image_files</span><span class="p">:</span>
+        <span class="n">image</span> <span class="o">=</span> <span class="n">PIL</span><span class="o">.</span><span class="n">Image</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">file</span><span class="p">)</span>
+        <span class="n">frames</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">image</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">first_last_slow</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">10</span><span class="p">):</span>
+            <span class="n">frames</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">frames</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+    <span class="n">frames</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="n">target_file</span><span class="p">,</span> <span class="nb">format</span><span class="o">=</span><span class="s1">&#39;GIF&#39;</span><span class="p">,</span>
+                    <span class="n">append_images</span><span class="o">=</span><span class="n">frames</span><span class="p">[</span><span class="mi">1</span><span class="p">:],</span>
+                    <span class="n">save_all</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+                    <span class="n">duration</span><span class="o">=</span><span class="n">speed</span><span class="p">,</span> <span class="n">loop</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span></div>
+</pre></div>
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
+<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright 2023, Kevin Riehl.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.0.2.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.14.4.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

@@ -1,0 +1,980 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Getting Started &#8212; Karma Game Library 1.0.0 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
+  <script src="_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'gettingstarted';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Modelling Examples" href="modelling_examples.html" />
+    <link rel="prev" title="Karma Game Library, Documentation (v1.0.0)" href="home.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+<div class="bd-header__inner bd-page-width">
+  <label class="sidebar-toggle primary-toggle" for="__primary">
+    <span class="fa-solid fa-bars"></span>
+  </label>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+
+<a class="navbar-brand logo" href="index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/logo_light.svg" class="logo__image only-light" alt=""/>
+    <script>document.write(`<img src="_static/logo_dark.svg" class="logo__image only-dark" alt=""/>`);</script>
+  
+  
+    <p class="title logo__title">Karma Game Library (v1.0.0)</p>
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="home.html">
+                        Home
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="#">
+                            Getting Started
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="modelling_examples.html">
+                        Modelling
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="documentation.html">
+                            Documentation
+                      </a>
+                    </li>
+                
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/<your-org>/<your-repo>" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/project/pydata-sphinx-theme/" title="PyPI" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-python fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">PyPI</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/project/pydata-sphinx-theme/" title="Issue Tracker & Support" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-regular fa-circle-question fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">Issue Tracker & Support</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/project/pydata-sphinx-theme/" title="Contact & Mailing List" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-regular fa-envelope fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">Contact & Mailing List</span></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+    </div>
+  
+
+  
+    <label class="sidebar-toggle secondary-toggle" for="__secondary" tabindex="0">
+      <span class="fa-solid fa-outdent"></span>
+    </label>
+  
+</div>
+
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar hide-on-wide">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          <div class="navbar-item">
+<nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="home.html">
+                        Home
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="#">
+                            Getting Started
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="modelling_examples.html">
+                        Modelling
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="documentation.html">
+                            Documentation
+                      </a>
+                    </li>
+                
+  </ul>
+</nav></div>
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script></div>
+        
+          <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/<your-org>/<your-repo>" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/project/pydata-sphinx-theme/" title="PyPI" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-python fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">PyPI</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/project/pydata-sphinx-theme/" title="Issue Tracker & Support" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-regular fa-circle-question fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">Issue Tracker & Support</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/project/pydata-sphinx-theme/" title="Contact & Mailing List" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-regular fa-envelope fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">Contact & Mailing List</span></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<nav class="sidebar-indices-items">
+  <p class="sidebar-indices-items__title" role="heading" aria-level="1">Indices</p>
+  <ul class="indices-link">
+        <li class="toctree-l1">
+          <a class="reference internal"
+             href="genindex.html"
+             accesskey="I">General Index</a>
+        </li>
+        <li class="toctree-l1">
+          <a class="reference internal" href="py-modindex.html">Python Module Index</a>
+        </li>
+  </ul>
+</nav></div>
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+<nav aria-label="Breadcrumb">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    <li class="breadcrumb-item active" aria-current="page">Getting Started</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section id="getting-started">
+<h1>Getting Started<a class="headerlink" href="#getting-started" title="Permalink to this heading">#</a></h1>
+<p>In this tutorial we will discuss how to get started with the library.
+First we define a Karma Game, then we compute the social state at the stationary Nash equilibrium (optimal rational policy + stationary state distribution) using the Optimizer.
+Next, we use the Karma Game and the computed social state to apply the Karma Game in simulations using the Simulator.
+Finally, we will visualize the different process steps.
+In addition to that, we will see how to load and save a model.</p>
+<p>More advanced topics can be found in the examples section.
+There, we will discuss how to fine tune hyper parameters in order to achieve stability and convergence during optimization.
+In addition to that, we will discuss advanced topics of modelling Karma games.</p>
+<section id="define-a-karma-game">
+<h2>Define a Karma Game<a class="headerlink" href="#define-a-karma-game" title="Permalink to this heading">#</a></h2>
+<p>In this example we will define a simple Karma Game instance that we will use in the next example to compute the optimal policy for a selfish agent.
+We will reproduce the Karma Game from the publication <a class="reference external" href="https://ieeexplore.ieee.org/abstract/document/8916911">“Today me, tomorrow thee: Efficient resource allocation in competitive settings using karma games.”</a>.</p>
+<p>First we need to define the GameParameters for a Karma Game with two participants per interaction, 200 agents,
+and an initial average karma balance of 6 across the population.
+We make use of several template functions, in order to model a Game, where the interaction is a sealed bid auction
+between two agents, in which the highest bid wins, the bid is paid to the peer, and thus no Karma overflow is distributed,
+and no Karma is redistributed.
+More advanced applications might require the design of your own functions, we will discuss that in another example below.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">karma_game_library</span> <span class="k">as</span> <span class="nn">karma</span>
+
+<span class="c1"># Define Karma Game</span>
+<span class="n">num_agents</span> <span class="o">=</span> <span class="mi">200</span>
+<span class="n">num_types</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">num_urgencies</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">num_outcomes</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">num_average_karma</span> <span class="o">=</span> <span class="mi">6</span>
+
+<span class="n">lst_init_types</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="n">num_types</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="n">num_agents</span><span class="p">)</span>
+<span class="n">lst_init_urgencies</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="n">num_urgencies</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="n">num_agents</span><span class="p">)</span>
+<span class="n">lst_init_karmas</span> <span class="o">=</span> <span class="n">num_average_karma</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="n">num_agents</span><span class="p">)</span>
+
+<span class="n">parameters</span> <span class="o">=</span> <span class="n">karma</span><span class="o">.</span><span class="n">GameParameters</span><span class="p">(</span><span class="n">num_agents</span><span class="o">=</span><span class="n">num_agents</span><span class="p">,</span>
+                                  <span class="n">num_participants</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
+                                  <span class="n">num_types</span><span class="o">=</span><span class="n">num_types</span><span class="p">,</span>
+                                  <span class="n">num_urgencies</span><span class="o">=</span><span class="n">num_urgencies</span><span class="p">,</span>
+                                  <span class="n">num_outcomes</span><span class="o">=</span><span class="n">num_outcomes</span><span class="p">,</span>
+                                  <span class="n">num_average_karma</span><span class="o">=</span><span class="n">num_average_karma</span><span class="p">,</span>
+                                  <span class="n">map_type_temp_preference</span><span class="o">=</span><span class="p">{</span><span class="mi">0</span><span class="p">:</span> <span class="mf">0.8</span><span class="p">},</span>
+                                  <span class="n">lst_init_types</span><span class="o">=</span><span class="n">lst_init_types</span><span class="p">,</span>
+                                  <span class="n">lst_init_urgencies</span><span class="o">=</span><span class="n">lst_init_urgencies</span><span class="p">,</span>
+                                  <span class="n">lst_init_karmas</span><span class="o">=</span><span class="n">lst_init_karmas</span><span class="p">,</span>
+                                  <span class="n">func_cost</span><span class="o">=</span><span class="n">karma</span><span class="o">.</span><span class="n">templates</span><span class="o">.</span><span class="n">cost</span><span class="o">.</span><span class="n">default</span><span class="p">,</span>
+                                  <span class="n">func_outcome</span><span class="o">=</span><span class="n">karma</span><span class="o">.</span><span class="n">templates</span><span class="o">.</span><span class="n">outcome</span><span class="o">.</span><span class="n">highest_bid</span><span class="p">,</span>
+                                  <span class="n">func_payment</span><span class="o">=</span><span class="n">karma</span><span class="o">.</span><span class="n">templates</span><span class="o">.</span><span class="n">payment</span><span class="o">.</span><span class="n">highest_bid_to_peer</span><span class="p">,</span>
+                                  <span class="n">func_urgency_transition</span><span class="o">=</span><span class="n">karma</span><span class="o">.</span><span class="n">templates</span><span class="o">.</span><span class="n">urgency_transition</span><span class="o">.</span><span class="n">random</span><span class="p">,</span>
+                                  <span class="n">func_overflow_distribution</span><span class="o">=</span><span class="n">karma</span><span class="o">.</span><span class="n">templates</span><span class="o">.</span><span class="n">overflow_distribution</span><span class="o">.</span><span class="n">none</span><span class="p">,</span>
+                                  <span class="n">func_karma_redistribution</span><span class="o">=</span><span class="n">karma</span><span class="o">.</span><span class="n">templates</span><span class="o">.</span><span class="n">karma_redistribution</span><span class="o">.</span><span class="n">none</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="compute-stationary-nash-equilibrium-using-optimizer">
+<h2>Compute stationary Nash equilibrium using Optimizer<a class="headerlink" href="#compute-stationary-nash-equilibrium-using-optimizer" title="Permalink to this heading">#</a></h2>
+<p>Now that we have defined the GameParameters, let us proceed and define the social state (a Policy and a StateDistribution), that we aim to optimize.
+The initialization parameter describes how we want to initialize the policy.
+The policy represents the probability distribution across actions for a given temporal preference type, urgency level, and karma balance.
+There are three options for the initialization parameter that determines the initial probability distribution of the policy: “even”, “bottom”, and “top”.
+We usually recommend to use “even”, as convergence is more computationally stable.
+The state is initialized accoridng to the initial population defined in the GameParameters (lst_init_types, lst_init_urgencies, lst_init_karmas).</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Define entities for optimization</span>
+<span class="n">policy</span> <span class="o">=</span> <span class="n">karma</span><span class="o">.</span><span class="n">Policy</span><span class="p">(</span><span class="n">game_parameters</span><span class="o">=</span><span class="n">parameters</span><span class="p">,</span> <span class="n">initialization</span><span class="o">=</span><span class="s2">&quot;even&quot;</span><span class="p">)</span>
+<span class="n">state</span> <span class="o">=</span> <span class="n">karma</span><span class="o">.</span><span class="n">StateDistribution</span><span class="p">(</span><span class="n">game_parameters</span><span class="o">=</span><span class="n">parameters</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>After instantiating policy and state distribution, let us proceed and instantiate an instance for the Optimizer.
+There are certain hyper parameters in addition to the GameParameters that need to be defined.
+<cite>hyper_dt</cite> represents the step width with which new state distributions changes in an optimization interation.
+<cite>hyper_nu</cite> represents the step width with which, relative to the step width of the state distribution, the policy changes in an optimization interation.
+<cite>hyper_lambda</cite> represents how strongly the optimization goes in the direction of the gradient descent.
+The optimization algorithm is an extension of the algorithm described in the publication <a class="reference external" href="https://link.springer.com/article/10.1007/s13235-023-00503-0">“A self-contained karma economy for the dynamic allocation of common resources”</a>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Compute stationary Nash equilibrium</span>
+<span class="n">optimizer</span> <span class="o">=</span> <span class="n">karma</span><span class="o">.</span><span class="n">Optimizer</span><span class="p">(</span><span class="n">game_parameters</span><span class="o">=</span><span class="n">parameters</span><span class="p">,</span>
+                            <span class="n">hyper_lambda</span><span class="o">=</span><span class="mi">1000</span><span class="p">,</span>
+                            <span class="n">hyper_dt</span><span class="o">=</span><span class="mf">0.10</span><span class="p">,</span>
+                            <span class="n">hyper_nu</span><span class="o">=</span><span class="mf">0.80</span><span class="p">,</span>
+                            <span class="n">func_prob_outcome</span><span class="o">=</span><span class="n">karma</span><span class="o">.</span><span class="n">templates</span><span class="o">.</span><span class="n">p_outcome</span><span class="o">.</span><span class="n">highest_bid</span><span class="p">,</span>
+                            <span class="n">func_prob_karma_transition</span><span class="o">=</span><span class="n">karma</span><span class="o">.</span><span class="n">templates</span><span class="o">.</span><span class="n">p_karma_transition</span><span class="o">.</span><span class="n">highest_bid_to_peer_no_redistribution</span><span class="p">,</span>
+                            <span class="n">func_prob_urgency_transition</span><span class="o">=</span><span class="n">karma</span><span class="o">.</span><span class="n">templates</span><span class="o">.</span><span class="n">p_urgency_transition</span><span class="o">.</span><span class="n">random</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Another important aspect to mention is, that we need three probabilistic functions for the optimization, that must be tailored to the specific logic functions defined in GameParameters.
+The correct modelling of these probabilistic functions is crucial for the Optimizer to find reasonable and accuracte solutions for the specific Karma Game resource allocation problem.
+In our template library, we offer various different probabilistic functions, however, in more advanced cases you might
+need to model these functions yourself. Several checks will support you to avoid misspecifications of the GameParamters and probabilistic functions.
+As mentioned before, we will discuss some best practices on the peculiarities of modelling in the examples section.</p>
+<p>During the optimization, the policy and state capture a finite karma balance space and thus possible action space.
+The action space is limited the by the largest amount of karmas in the population, and is dynamically extended when higher karma balances in the population occur.
+The karma balance space is also dynamically extended in case the karma balance distribution reaches the boundary of the current karma balance space.</p>
+<p>Now that he have defined our Optimizer instance, we can start the optimization process as a loop of iterations.
+Every call of <cite>optimizer.compute_iteration()</cite> will change state and policy, and return four parameters that represent how much and in which direction (cosine similarity) the change of state and policy matrixes took place.
+We suggest to define a maximum number of iterations and thresholds for early convergence to define boundaries for the runtime.
+Moreover, as the optimization can time consuming, to print an update on the optimization process to the console (e.g. every ten times).
+More advanced rules and also the dynamic change of the hyper parameters after each iteration are possible to accelerate the convergence, and will be discussed in the examples section.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">max_iterations</span> <span class="o">=</span> <span class="mi">1000</span>
+<span class="n">threshold_state</span> <span class="o">=</span> <span class="mf">0.002</span>
+<span class="n">threshold_policy</span> <span class="o">=</span> <span class="mf">0.001</span>
+<span class="k">for</span> <span class="n">iteration</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">max_iterations</span><span class="p">):</span>
+    <span class="n">delta_state</span><span class="p">,</span> <span class="n">delta_policy</span><span class="p">,</span> <span class="n">direct_state</span><span class="p">,</span> <span class="n">direct_policy</span> <span class="o">=</span> <span class="n">optimizer</span><span class="o">.</span><span class="n">compute_iteration</span><span class="p">(</span><span class="n">state</span><span class="p">,</span> <span class="n">policy</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">iteration</span><span class="o">%</span><span class="mi">10</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Current iteration </span><span class="si">%d</span><span class="s2">, delta_state=</span><span class="si">%.4f</span><span class="s2">, delta_policy=</span><span class="si">%.4f</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">iteration</span><span class="p">,</span> <span class="n">delta_state</span><span class="p">,</span> <span class="n">delta_policy</span><span class="p">))</span>
+    <span class="k">if</span> <span class="n">delta_state</span> <span class="o">&lt;=</span> <span class="n">threshold_state</span> <span class="ow">and</span> <span class="n">delta_policy</span> <span class="o">&lt;=</span> <span class="n">threshold_policy</span><span class="p">:</span>
+        <span class="k">break</span>
+</pre></div>
+</div>
+<p>At any point during the iteration, it is possible to retrieve intermediate computation results, such as the distribution of agent actions <cite>v</cite>, the probability of interaction outcomes given an action <cite>gamma</cite>,
+the probabilistic karma transition function <cite>kappa</cite>, the immediate reward function <cite>xi, the probabilistic state transition function `rho</cite>, the expected immediate reward <cite>Rt</cite>, the state transition probabilities <cite>Pt</cite>,
+the expected infinite horizon reward <cite>Vt</cite>, the single-stage deviation reward <cite>Qt</cite>, and the perturbated best response policy <cite>pit</cite>.</p>
+<p>Congratulations, you have successfully computed an approximation of the stationary Nash equilibrium, consisting of the optimal rational policy for selfish agents and a stationary state distribution.
+Let us have a look on the calculated policy and karma distribution, by visualizing the Nash equilibrium (after thousand iterations of optimization):</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Visualize Optimization Results: Policy and StateDistribution</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="n">xlabels</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">counter</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">parameters</span><span class="o">.</span><span class="n">_set_state_karmas</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">counter</span><span class="o">%</span><span class="mi">5</span><span class="o">==</span><span class="mi">0</span><span class="p">:</span>
+        <span class="n">xlabels</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">s</span><span class="p">))</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">xlabels</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+    <span class="n">counter</span> <span class="o">+=</span> <span class="mi">1</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="s2">&quot;Social State in the Stationary Nash Equilibrium&quot;</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">3</span><span class="o">*</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Social State in the Stationary Nash Equilibrium&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Karma Distribution&quot;</span><span class="p">)</span>
+<span class="n">karma</span><span class="o">.</span><span class="n">visualizer</span><span class="o">.</span><span class="n">draw_karma_distribution_from_state</span><span class="p">(</span><span class="n">state</span><span class="o">=</span><span class="n">state</span><span class="p">,</span> <span class="n">game_parameters</span><span class="o">=</span><span class="n">parameters</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">gca</span><span class="p">()</span><span class="o">.</span><span class="n">set_xticklabels</span><span class="p">(</span><span class="n">xlabels</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Policy (Urgency=0)&quot;</span><span class="p">)</span>
+<span class="n">karma</span><span class="o">.</span><span class="n">visualizer</span><span class="o">.</span><span class="n">draw_specific_policy</span><span class="p">(</span><span class="n">policy</span><span class="o">=</span><span class="n">policy</span><span class="p">,</span> <span class="n">game_parameters</span><span class="o">=</span><span class="n">parameters</span><span class="p">,</span> <span class="n">atype</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">urgency</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">gca</span><span class="p">()</span><span class="o">.</span><span class="n">set_xticklabels</span><span class="p">(</span><span class="n">xlabels</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Policy (Urgency=1)&quot;</span><span class="p">)</span>
+<span class="n">karma</span><span class="o">.</span><span class="n">visualizer</span><span class="o">.</span><span class="n">draw_specific_policy</span><span class="p">(</span><span class="n">policy</span><span class="o">=</span><span class="n">policy</span><span class="p">,</span> <span class="n">game_parameters</span><span class="o">=</span><span class="n">parameters</span><span class="p">,</span> <span class="n">atype</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">urgency</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">gca</span><span class="p">()</span><span class="o">.</span><span class="n">set_xticklabels</span><span class="p">(</span><span class="n">xlabels</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="_images/Social_State_in_the_Stationary_Nash_Equilibrium.svg"><img alt="_images/Social_State_in_the_Stationary_Nash_Equilibrium.svg" src="_images/Social_State_in_the_Stationary_Nash_Equilibrium.svg" width="900" /></a>
+<p>The “Karma Distribution” shows the average karma distribution across all urgencies for agent type=0.
+The two policies represent a plausible behaviour for agents that discount future rewards (costs) (we set a discount rate of 0.8).
+If there is no urgency (urgency=0), then there are no costs, and therefore no Karma units are bidded.
+If there is urgency, then a certain amaount of the available karma balance is bid, but not all, to save some for future interactions.</p>
+<p>What we can see from the diagrams is that after optimization, the Karma balance space expanded to 27 and the action space to 10.
+This means, that we can compute this optimal policy and stationary distribution for an infinite space sufficiently by the finite space,
+as there are (statistically) no individual with karma balances larger than 27 and they will not make bids larger than 10.</p>
+</section>
+<section id="save-load-the-karma-game">
+<h2>Save &amp; Load the Karma Game<a class="headerlink" href="#save-load-the-karma-game" title="Permalink to this heading">#</a></h2>
+<p>Before we continue, it could make sense to store our results, so that we do not need to recompute them the next time.
+In order to save the situation of the Karma Game (for example after policy computation with the Optimizer),
+three objects need to be saved, the StateDistribution (state), the Policy (policy) and the GameParameters (parameters).
+They are stored as TXT files in a Pickle format.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Save Karma Game</span>
+<span class="n">state</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="s2">&quot;state.txt&quot;</span><span class="p">)</span>
+<span class="n">policy</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="s2">&quot;policy.txt&quot;</span><span class="p">)</span>
+<span class="n">karma</span><span class="o">.</span><span class="n">GameParameters</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="n">parameters</span><span class="p">,</span> <span class="s2">&quot;parameters.txt&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Of course, we also need to show how loading the model can be done after saving.
+In order to load and restore a previous situation of the Karma Game, the three previously objects can be loaded from the TXT files.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">karma_game_library</span> <span class="k">as</span> <span class="nn">karma</span>
+
+<span class="c1"># Load Karma Game</span>
+<span class="n">parameters</span> <span class="o">=</span> <span class="n">karma</span><span class="o">.</span><span class="n">GameParameters</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s2">&quot;parameters.txt&quot;</span><span class="p">)</span>
+<span class="n">state</span> <span class="o">=</span> <span class="n">karma</span><span class="o">.</span><span class="n">StateDistribution</span><span class="p">(</span><span class="n">game_parameters</span><span class="o">=</span><span class="n">parameters</span><span class="p">)</span>
+<span class="n">state</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s2">&quot;state.txt.npy&quot;</span><span class="p">)</span>
+<span class="n">policy</span> <span class="o">=</span> <span class="n">karma</span><span class="o">.</span><span class="n">Policy</span><span class="p">(</span><span class="n">game_parameters</span><span class="o">=</span><span class="n">parameters</span><span class="p">,</span> <span class="n">initialization</span><span class="o">=</span><span class="s2">&quot;even&quot;</span><span class="p">)</span>
+<span class="n">policy</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s2">&quot;policy.txt.npy&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="perform-a-simulation">
+<h2>Perform a simulation<a class="headerlink" href="#perform-a-simulation" title="Permalink to this heading">#</a></h2>
+<p>Before we start the simulation, we need to define a Simulator.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Define Simulator</span>
+<span class="n">simulator</span> <span class="o">=</span> <span class="n">karma</span><span class="o">.</span><span class="n">Simulator</span><span class="p">(</span><span class="n">game_parameters</span><span class="o">=</span><span class="n">parameters</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>This will create an internal representation of the population as a matrix that captures the type, urgency level, karma balance, cumulative costs and number of encounters each agent has over time.
+At any point in time, it is possible to access the information of agents via functions such as <cite>get_agent_information()</cite>, <cite>get_population_cumulative_costs()</cite>, <cite>get_population_encounters()</cite> and <cite>get_agent_population()</cite>.
+Moreover, one can access information at the population level, including the Karma distribution across the population using <cite>get_karma_distribution()</cite>, the state (urgency-karma) transition distribution <cite>get_state_transition_distribution()</cite>,
+the total cumulative costs across the population <cite>get_total_cumulative_costs()</cite> and the total number of encounters <cite>get_total_encounters()</cite> that happened.</p>
+<p>Now that we have a defined KarmaGame and a stationary Nash equilibrium (optimal policy + stationary distribution) let us use this to simulate the KarmaGame.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Compute Simulation</span>
+<span class="n">num_iterations</span> <span class="o">=</span> <span class="mi">10000</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">num_iterations</span><span class="p">):</span>
+    <span class="n">simulator</span><span class="o">.</span><span class="n">begin_epoch</span><span class="p">()</span>
+
+    <span class="c1"># option 1: peer_selection_random()</span>
+    <span class="n">participants</span> <span class="o">=</span> <span class="n">simulator</span><span class="o">.</span><span class="n">peer_selection_random</span><span class="p">()</span>
+    <span class="n">simulator</span><span class="o">.</span><span class="n">play_interaction</span><span class="p">(</span><span class="n">policy</span><span class="p">,</span><span class="n">participants</span><span class="p">)</span>
+    <span class="c1"># option 2: peer_selection_whole_population()</span>
+    <span class="n">participants</span> <span class="o">=</span> <span class="n">simulator</span><span class="o">.</span><span class="n">peer_selection_whole_population</span><span class="p">()</span>
+    <span class="n">simulator</span><span class="o">.</span><span class="n">play_interaction</span><span class="p">(</span><span class="n">policy</span><span class="p">,</span><span class="n">participants</span><span class="p">)</span>
+    <span class="c1"># option 3: peer_selection_random_non_exclusive_peer_groups()</span>
+    <span class="n">participants_groups</span> <span class="o">=</span> <span class="n">simulator</span><span class="o">.</span><span class="n">peer_selection_random_non_exclusive_peer_groups</span><span class="p">(</span><span class="n">n_groups</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">participants</span> <span class="ow">in</span> <span class="n">participants_groups</span><span class="p">:</span>
+        <span class="n">simulator</span><span class="o">.</span><span class="n">play_interaction</span><span class="p">(</span><span class="n">policy</span><span class="p">,</span><span class="n">participants</span><span class="p">)</span>
+    <span class="c1"># option 4: peer_selection_random_exclusive_peer_groups()</span>
+    <span class="n">participants_groups</span> <span class="o">=</span> <span class="n">simulator</span><span class="o">.</span><span class="n">peer_selection_random_exclusive_peer_groups</span><span class="p">(</span><span class="n">n_groups</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">participants</span> <span class="ow">in</span> <span class="n">participants_groups</span><span class="p">:</span>
+        <span class="n">simulator</span><span class="o">.</span><span class="n">play_interaction</span><span class="p">(</span><span class="n">policy</span><span class="p">,</span><span class="n">participants</span><span class="p">)</span>
+
+    <span class="n">epoch_counter</span> <span class="o">=</span> <span class="n">simulator</span><span class="o">.</span><span class="n">close_epoch</span><span class="p">()</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">epoch_counter</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The simulation takes place in three steps per epoch.
+The <strong>first step</strong> is to open the next epoch. In this step, certain states are recorded internally.
+The <strong>second step</strong> can consist of one or multiple interactions.
+Each interaction requires a list of participating agent indexes, will determine the actions of the participants randomly based on the probabilities of the policy, and compute an outcome of the interaction based on the participant actions.
+The outcome of the interaction will then cause the transaction which includes the update of costs and karma balances.
+The selection of participating agents can take place by inputing a list.
+This inputing of the list could originate from a domain specific simulator.
+The selection of participating agents can alternatively take place randomly by functions provided by the Simulator class.
+There are four possible functions for that (see options in the code).
+The <strong>third step</strong> is to close the epoch. This includes the urgency transition, karma overflow distribution and karma redistribution. Besides, this includes internal reecording of states again.</p>
+<p>As shown above, the integration of domain specific simulators is simple, as multiple interactions per epoch are possible, and epochs can be aligned &amp; synchronized with dedicated periods from the domain specific simulator.
+The simulator can also be reset to the initial state using <cite>reset()</cite>, if multiple repetitions of an experiment shall be conducted.</p>
+<p>Let us have a look on the population situation after 10000 simulated epochs for option 1 (see above):</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Visualize Karma Game after 10000 iterations</span>
+<span class="n">xlabels</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">counter</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">parameters</span><span class="o">.</span><span class="n">_set_state_karmas</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">counter</span><span class="o">%</span><span class="mi">5</span><span class="o">==</span><span class="mi">0</span><span class="p">:</span>
+        <span class="n">xlabels</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">s</span><span class="p">))</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">xlabels</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+    <span class="n">counter</span> <span class="o">+=</span> <span class="mi">1</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="s2">&quot;Karma Game Simulation&quot;</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">3</span><span class="o">*</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="o">*</span><span class="mi">2</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">rc</span><span class="p">(</span><span class="s1">&#39;font&#39;</span><span class="p">,</span> <span class="n">family</span><span class="o">=</span><span class="s1">&#39;sans-serif&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">rc</span><span class="p">(</span><span class="s1">&#39;font&#39;</span><span class="p">,</span> <span class="n">serif</span><span class="o">=</span><span class="s1">&#39;Arial&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Karma Game Simulation&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Karma Distribution&quot;</span><span class="p">)</span>
+<span class="n">karma</span><span class="o">.</span><span class="n">visualizer</span><span class="o">.</span><span class="n">draw_karma_distribution_from_simulator</span><span class="p">(</span><span class="n">simulator</span><span class="p">,</span> <span class="n">parameters</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">gca</span><span class="p">()</span><span class="o">.</span><span class="n">set_xticklabels</span><span class="p">(</span><span class="n">xlabels</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Encounter Distribution&quot;</span><span class="p">)</span>
+<span class="n">karma</span><span class="o">.</span><span class="n">visualizer</span><span class="o">.</span><span class="n">draw_distribution_from_simulator</span><span class="p">(</span><span class="n">simulator</span><span class="p">,</span> <span class="n">parameters</span><span class="p">,</span> <span class="n">simulator</span><span class="o">.</span><span class="n">_ENCOUNTERS_COL</span><span class="p">,</span> <span class="s1">&#39;unique&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Number of interactions&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Cum. Cost Distribution&quot;</span><span class="p">)</span>
+<span class="n">karma</span><span class="o">.</span><span class="n">visualizer</span><span class="o">.</span><span class="n">draw_distribution_from_simulator</span><span class="p">(</span><span class="n">simulator</span><span class="p">,</span> <span class="n">parameters</span><span class="p">,</span> <span class="n">simulator</span><span class="o">.</span><span class="n">_CUM_COST_COL</span><span class="p">,</span> <span class="s1">&#39;histogram&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Cum. Cost Intervals&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Karma Balance Transitions&quot;</span><span class="p">)</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">karma</span><span class="o">.</span><span class="n">visualizer</span><span class="o">.</span><span class="n">draw_karma_transition_heatmap_from_simulator</span><span class="p">(</span><span class="n">simulator</span><span class="p">,</span> <span class="n">parameters</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">gca</span><span class="p">()</span><span class="o">.</span><span class="n">set_xticklabels</span><span class="p">(</span><span class="n">xlabels</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">gca</span><span class="p">()</span><span class="o">.</span><span class="n">set_yticklabels</span><span class="p">(</span><span class="n">xlabels</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="_images/Karma_Game_Simulation.svg"><img alt="_images/Karma_Game_Simulation.svg" src="_images/Karma_Game_Simulation.svg" width="900" /></a>
+<p>The shape of the Karma distribution is similar to the predicted stationary Nash equilibrium.
+On average, each agent had around 50 interactions on average.
+Furthermore, we can see that the cumulative costs of the agents are skewed to the right, with an average of 0.7.
+The karma balance transition shows the probabilities that an agent with a karma balance before (x axis) ends up with a karma balance after (y axis), averaged across all types and urgencies.</p>
+</section>
+<section id="visualization-of-the-optimization-progress">
+<h2>Visualization of the optimization progress<a class="headerlink" href="#visualization-of-the-optimization-progress" title="Permalink to this heading">#</a></h2>
+<p>As the optimization progress is time consuming, it can be helpful to display the intermediate results of optimization in order to fine-tune hyper parameters etc.
+We usually create a set of images to have a visual animation of the optimization to develop a better understanding.
+It is possible to render animations (GIF graphics) with our software framework to visualize the optimization process into more detail over the iterations.
+For further functionalities please review the API reference (documentation) of all functionalities that our <cite>karma_game_library.visualizer</cite> module offers.</p>
+<p>In the following we display an example of the animation of the above discussed resource allocation problem and render a GIF animation from it.
+First we define a function to display selected aspects of the optimization results.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="k">def</span> <span class="nf">draw_optimization_progress</span><span class="p">(</span><span class="n">optimizer</span><span class="p">,</span> <span class="n">parameters</span><span class="p">,</span> <span class="n">state</span><span class="p">,</span> <span class="n">policy</span><span class="p">,</span> <span class="n">iteration</span><span class="p">,</span> <span class="n">save</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">close</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">last_n</span><span class="o">=</span><span class="mi">200</span><span class="p">,</span> <span class="n">folder</span><span class="o">=</span><span class="s2">&quot;figs&quot;</span><span class="p">):</span>
+    <span class="n">xlabels</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">counter</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">parameters</span><span class="o">.</span><span class="n">_set_state_karmas</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">counter</span><span class="o">%</span><span class="mi">5</span><span class="o">==</span><span class="mi">0</span><span class="p">:</span>
+        <span class="n">xlabels</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">s</span><span class="p">))</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">xlabels</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+        <span class="n">counter</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="s2">&quot;Optimization Results&quot;</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">9</span><span class="p">,</span><span class="mi">9</span><span class="p">))</span>
+    <span class="n">fig</span><span class="o">.</span><span class="n">set_tight_layout</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">suptitle</span><span class="p">(</span><span class="s2">&quot;Optimization Results, iteration=&quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">iteration</span><span class="p">))</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Karma Distribution&quot;</span><span class="p">)</span>
+    <span class="n">karma</span><span class="o">.</span><span class="n">visualizer</span><span class="o">.</span><span class="n">draw_karma_distribution_from_state</span><span class="p">(</span><span class="n">state</span><span class="o">=</span><span class="n">state</span><span class="p">,</span> <span class="n">game_parameters</span><span class="o">=</span><span class="n">parameters</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">gca</span><span class="p">()</span><span class="o">.</span><span class="n">set_xticklabels</span><span class="p">(</span><span class="n">xlabels</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Karma Policy (T 0, U 0)&quot;</span><span class="p">)</span>
+    <span class="n">karma</span><span class="o">.</span><span class="n">visualizer</span><span class="o">.</span><span class="n">draw_specific_policy</span><span class="p">(</span><span class="n">policy</span><span class="p">,</span> <span class="n">parameters</span><span class="p">,</span> <span class="n">atype</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">urgency</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">gca</span><span class="p">()</span><span class="o">.</span><span class="n">set_xticklabels</span><span class="p">(</span><span class="n">xlabels</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Karma Policy (T 0, U 1)&quot;</span><span class="p">)</span>
+    <span class="n">karma</span><span class="o">.</span><span class="n">visualizer</span><span class="o">.</span><span class="n">draw_specific_policy</span><span class="p">(</span><span class="n">policy</span><span class="p">,</span> <span class="n">parameters</span><span class="p">,</span> <span class="n">atype</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">urgency</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">gca</span><span class="p">()</span><span class="o">.</span><span class="n">set_xticklabels</span><span class="p">(</span><span class="n">xlabels</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Infinite Horizon Reward (T 0, U 1)&quot;</span><span class="p">)</span>
+    <span class="n">karma</span><span class="o">.</span><span class="n">visualizer</span><span class="o">.</span><span class="n">draw_distribution_bar</span><span class="p">(</span><span class="n">parameters</span><span class="o">.</span><span class="n">_set_state_karmas</span><span class="p">,</span> <span class="n">optimizer</span><span class="o">.</span><span class="n">V</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">])</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Karma balance&quot;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Expected Reward&quot;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">gca</span><span class="p">()</span><span class="o">.</span><span class="n">set_xticklabels</span><span class="p">(</span><span class="n">xlabels</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">5</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Peturb. Best Response (T 0, U 1)&quot;</span><span class="p">)</span>
+    <span class="n">labels_x</span> <span class="o">=</span> <span class="n">karma</span><span class="o">.</span><span class="n">visualizer</span><span class="o">.</span><span class="n">_convert_set_to_labels</span><span class="p">(</span><span class="n">parameters</span><span class="o">.</span><span class="n">_set_state_karmas</span><span class="p">)</span>
+    <span class="n">labels_y</span> <span class="o">=</span> <span class="n">karma</span><span class="o">.</span><span class="n">visualizer</span><span class="o">.</span><span class="n">_convert_set_to_labels</span><span class="p">(</span><span class="n">parameters</span><span class="o">.</span><span class="n">_set_actions</span><span class="p">)</span>
+    <span class="n">karma</span><span class="o">.</span><span class="n">visualizer</span><span class="o">.</span><span class="n">draw_heatmap</span><span class="p">(</span><span class="n">optimizer</span><span class="o">.</span><span class="n">Q</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">transpose</span><span class="p">(),</span> <span class="n">labels_x</span><span class="p">,</span> <span class="n">labels_y</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Karma balance&quot;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Action&quot;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">gca</span><span class="p">()</span><span class="o">.</span><span class="n">set_xticklabels</span><span class="p">(</span><span class="n">xlabels</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">6</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Action Distribution&quot;</span><span class="p">)</span>
+    <span class="n">karma</span><span class="o">.</span><span class="n">visualizer</span><span class="o">.</span><span class="n">draw_distribution_bar</span><span class="p">(</span><span class="n">parameters</span><span class="o">.</span><span class="n">_set_actions</span><span class="p">,</span> <span class="n">optimizer</span><span class="o">.</span><span class="n">v</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Action&quot;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Probability&quot;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">7</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Change of State&quot;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="nb">max</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">iteration</span><span class="o">-</span><span class="n">last_n</span><span class="p">),</span> <span class="n">iteration</span><span class="o">+</span><span class="mi">1</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">optimizer</span><span class="o">.</span><span class="n">recorder</span><span class="p">)[</span><span class="o">-</span><span class="n">last_n</span><span class="o">-</span><span class="mi">1</span><span class="p">:,</span><span class="mi">0</span><span class="p">])</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Iteration&quot;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Difference to previous&quot;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">gca</span><span class="p">()</span><span class="o">.</span><span class="n">get_yaxis</span><span class="p">()</span><span class="o">.</span><span class="n">set_ticks</span><span class="p">([])</span>
+    <span class="k">if</span> <span class="n">iteration</span><span class="o">==</span><span class="mi">0</span><span class="p">:</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">xlim</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">])</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">rotation</span> <span class="o">=</span> <span class="mi">90</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">8</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Change of Policy&quot;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="nb">max</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">iteration</span><span class="o">-</span><span class="n">last_n</span><span class="p">),</span> <span class="n">iteration</span><span class="o">+</span><span class="mi">1</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">optimizer</span><span class="o">.</span><span class="n">recorder</span><span class="p">)[</span><span class="o">-</span><span class="n">last_n</span><span class="o">-</span><span class="mi">1</span><span class="p">:,</span><span class="mi">1</span><span class="p">])</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Iteration&quot;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Difference to previous&quot;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">gca</span><span class="p">()</span><span class="o">.</span><span class="n">get_yaxis</span><span class="p">()</span><span class="o">.</span><span class="n">set_ticks</span><span class="p">([])</span>
+    <span class="k">if</span> <span class="n">iteration</span><span class="o">==</span><span class="mi">0</span><span class="p">:</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">xlim</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">])</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">rotation</span> <span class="o">=</span> <span class="mi">90</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">9</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Expected Population Costs&quot;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="nb">max</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">iteration</span><span class="o">-</span><span class="n">last_n</span><span class="p">),</span> <span class="n">iteration</span><span class="o">+</span><span class="mi">1</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">optimizer</span><span class="o">.</span><span class="n">recorder</span><span class="p">)[</span><span class="o">-</span><span class="n">last_n</span><span class="o">-</span><span class="mi">1</span><span class="p">:,</span><span class="mi">2</span><span class="p">])</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Iteration&quot;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Total Costs&quot;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">iteration</span><span class="o">==</span><span class="mi">0</span><span class="p">:</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">xlim</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">])</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">rotation</span> <span class="o">=</span> <span class="mi">90</span><span class="p">)</span>
+    <span class="c1"># finish up</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+    <span class="k">if</span><span class="p">(</span><span class="n">save</span><span class="p">):</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="n">fname</span><span class="o">=</span><span class="n">folder</span><span class="o">+</span><span class="s2">&quot;/Iteration-&quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">iteration</span><span class="p">)</span><span class="o">+</span><span class="s2">&quot;.png&quot;</span><span class="p">)</span>
+    <span class="k">if</span><span class="p">(</span><span class="n">close</span><span class="p">):</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+    <span class="k">return</span> <span class="n">fig</span>
+</pre></div>
+</div>
+<p>Now, all you need to do is to create a folder “figs/”, and to replace the optimization iteration loop from above with following loop:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">ioff</span><span class="p">()</span>
+<span class="n">images</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">it</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1000</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">it</span><span class="p">,</span><span class="s2">&quot;</span><span class="se">\t</span><span class="s2">&quot;</span><span class="p">,</span><span class="n">optimizer</span><span class="o">.</span><span class="n">compute_iteration</span><span class="p">(</span><span class="n">state</span><span class="p">,</span> <span class="n">policy</span><span class="p">))</span>
+    <span class="k">if</span> <span class="n">it</span><span class="o">%</span><span class="mi">10</span><span class="o">==</span><span class="mi">0</span><span class="p">:</span>
+        <span class="n">draw_optimization_progress</span><span class="p">(</span><span class="n">optimizer</span><span class="p">,</span> <span class="n">parameters</span><span class="p">,</span> <span class="n">state</span><span class="p">,</span> <span class="n">policy</span><span class="p">,</span> <span class="n">it</span><span class="p">,</span> <span class="n">save</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">close</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">last_n</span><span class="o">=</span><span class="mi">400</span><span class="p">,</span> <span class="n">folder</span><span class="o">=</span><span class="s2">&quot;figs&quot;</span><span class="p">)</span>
+        <span class="n">images</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;figs/Iteration-&quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">it</span><span class="p">)</span><span class="o">+</span><span class="s2">&quot;.png&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Last but not least after computing the series of images we can render a GIF animation from it.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">karma</span><span class="o">.</span><span class="n">visualizer</span><span class="o">.</span><span class="n">render_gif_animation</span><span class="p">(</span><span class="n">images</span><span class="p">,</span> <span class="s2">&quot;animation.gif&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Et voila, we have an animated visualization of the optimization progress for the first 1000 iterations.</p>
+<p><strong>Discussion of first row:</strong> What we can observe is that the policy for urgency level=0 quickly converges to a bid of zero, and the policy for urgency level=1 is a curve below the diagonal (so dont bid all to economize Karma for next interactions).
+The Karma distribution starts with a peak at 6 (the average Karma in the population) and converges towards a stationary distribution.</p>
+<p><strong>Discussion of second row:</strong> We can observe how the inifinte horizon reward converges to a curve, where possessing higher karma balances usually is expected to have fewer costs (negative rewards) as through bidding one can avoid unpleasent situations.
+The action distirbution starts with an initial distribution (see policy) but then converges to a stationary distribution in line with the Karma distribution and policies.
+The perturbated best response displays the expected reward for a given Karma balance and action and guides the policy optimization. The policy becomes a line of highest descent in the perturbated best response topology.</p>
+<p><strong>Discussion of third row:</strong> We can observe how strong state and policy change over the iterations (usually after an initial phase they steadily decrease).
+Besides, we can observe the expected total population costs (product of Karma distribution and initite horizon reward. (usually we can observe a steady decrease).</p>
+<p><strong>Dynamic extension of state and action space:</strong> We can observe that once the karma distribution reaches a certain threshold value at its boundaries (on the left), the state space is expanded.
+We can observe, that once the policy reaches a certain threshold value at its boundaries (on the top), the action space is expanded.
+As long the state distribution  and action distribution stay in their finite boundaries, the infinite state action space of a Karma game can be represented (and computed) by this finite state action space numerically.
+Every time new actions or states are introduced, peaks in the curves of the last row become visible.</p>
+<a class="reference internal image-reference" href="_images/animation.gif"><img alt="_images/animation.gif" src="_images/animation.gif" style="width: 900px;" /></a>
+</section>
+</section>
+
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="home.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Karma Game Library, Documentation (v1.0.0)</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="modelling_examples.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Modelling Examples</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#define-a-karma-game">Define a Karma Game</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#compute-stationary-nash-equilibrium-using-optimizer">Compute stationary Nash equilibrium using Optimizer</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#save-load-the-karma-game">Save &amp; Load the Karma Game</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#perform-a-simulation">Perform a simulation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#visualization-of-the-optimization-progress">Visualization of the optimization progress</a></li>
+</ul>
+  </nav></div>
+
+  <div class="sidebar-secondary-item">
+
+  <div class="tocsection sourcelink">
+    <a href="_sources/gettingstarted.rst.txt">
+      <i class="fa-solid fa-file-lines"></i> Show Source
+    </a>
+  </div>
+</div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright 2023, Kevin Riehl.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.0.2.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.14.4.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>
