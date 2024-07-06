@@ -96,5 +96,5 @@ How to cite us
 ----------------------------------------------
 
 ```
-Riehl, K., Makridis, M., & You?. (2023). Fair and efficient resource allocation – An interdisciplinary literature review on the Karma mechanism. 
+Riehl, K., Makridis, M., & You?. (2023). Fair Money - Public Good Value Pricing With Karma Economies
 ```
