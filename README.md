@@ -8,7 +8,7 @@ It is easy to use and compatible with domain specific simulators.
 **This repository equips you with the necessary tools to successfully apply the Karma mechanism in your resource allocation context.**
 In the [documentation](https://derkevinriehl.github.io/karma_game_library/) you will find installation instructions, coding examples in Python and an extensive documentation.
 
-<img src="docs/source/_static/logo_light.svg" alt="KarmaKnot" style="width:150px;"/>
+<img src="src/docs/source/_static/logo_light.svg" alt="KarmaKnot" style="width:150px;"/>
 
 Installation
 ----------------------------------------------
