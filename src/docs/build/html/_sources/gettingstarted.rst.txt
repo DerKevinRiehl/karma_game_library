@@ -38,7 +38,7 @@ More advanced applications might require the design of your own functions, we wi
 
 	lst_init_types = np.random.randint(num_types, size=num_agents)
 	lst_init_urgencies = np.random.randint(num_urgencies, size=num_agents)
-	lst_init_karmas = 6*np.ones(num_agents)
+	lst_init_karmas = num_average_karma*np.ones(num_agents)
 
 	parameters = karma.GameParameters(num_agents=num_agents,
 					  num_participants=2,

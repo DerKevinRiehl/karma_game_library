@@ -66,7 +66,7 @@ html_theme_options = {
             # Label for this link
             "name": "GitHub",
             # URL where the link will redirect
-            "url": "https://github.com/<your-org>/<your-repo>",  # required
+            "url": "https://github.com/DerKevinRiehl/karma_game_library/",  # required
             # Icon class (if "type": "fontawesome"), or path to local image (if "type": "local")
             "icon": "fa-brands fa-square-github",
             # The type of image to be used (see below for details)
@@ -76,7 +76,7 @@ html_theme_options = {
             # Label for this link
             "name": "PyPI",
             # URL where the link will redirect
-            "url": "https://pypi.org/project/pydata-sphinx-theme/",  # required
+            "url": "https://pypi.org/project/karma-game-library/",  # required
             # Icon class (if "type": "fontawesome"), or path to local image (if "type": "local")
             "icon": "fa-brands fa-python",
             # The type of image to be used (see below for details)
@@ -86,7 +86,7 @@ html_theme_options = {
             # Label for this link
             "name": "Issue Tracker & Support",
             # URL where the link will redirect
-            "url": "https://pypi.org/project/pydata-sphinx-theme/",  # required
+            "url": "https://github.com/DerKevinRiehl/karma_game_library/issues/",  # required
             # Icon class (if "type": "fontawesome"), or path to local image (if "type": "local")
             "icon": "fa-regular fa-circle-question",
             # The type of image to be used (see below for details)
@@ -96,7 +96,7 @@ html_theme_options = {
             # Label for this link
             "name": "Contact & Mailing List",
             # URL where the link will redirect
-            "url": "https://pypi.org/project/pydata-sphinx-theme/",  # required
+            "url": "https://github.com/DerKevinRiehl/karma_game_library/",  # required
             # Icon class (if "type": "fontawesome"), or path to local image (if "type": "local")
             "icon": "fa-regular fa-envelope",
             # The type of image to be used (see below for details)

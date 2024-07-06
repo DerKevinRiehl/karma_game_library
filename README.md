@@ -14,17 +14,11 @@ Installation
 ----------------------------------------------
 The Karma Game Library can be installed as a Python package using the PIP package manager and the Conda package manager.
 
-**Pip / PyPI Package Manager** ([Link to repository](https://en.wikipedia.org/wiki/Endless_knot))
+**Pip / PyPI Package Manager** ([Link to repository](https://pypi.org/project/karma-game-library/))
 
 ```
-pip install karma_game	
+pip install karma-game-library
 ```
-
-**Conda Package Manager** ([Link to repository](https://en.wikipedia.org/wiki/Endless_knot))
-
-```
-conda install karma_game
-```	
 
 After installation, you can try one of our [examples](https://derkevinriehl.github.io/karma_game_library/gettingstarted.html) to verify your installation was successful.
 
