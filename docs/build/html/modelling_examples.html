@@ -1,0 +1,993 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Modelling Examples &#8212; Karma Game Library 1.0.0 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
+  <script src="_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'modelling_examples';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Documentation" href="documentation.html" />
+    <link rel="prev" title="Getting Started" href="gettingstarted.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+<div class="bd-header__inner bd-page-width">
+  <label class="sidebar-toggle primary-toggle" for="__primary">
+    <span class="fa-solid fa-bars"></span>
+  </label>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+
+<a class="navbar-brand logo" href="index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/logo_light.svg" class="logo__image only-light" alt=""/>
+    <script>document.write(`<img src="_static/logo_dark.svg" class="logo__image only-dark" alt=""/>`);</script>
+  
+  
+    <p class="title logo__title">Karma Game Library (v1.0.0)</p>
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="home.html">
+                        Home
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="gettingstarted.html">
+                            Getting Started
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="#">
+                        Modelling
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="documentation.html">
+                            Documentation
+                      </a>
+                    </li>
+                
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/<your-org>/<your-repo>" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/project/pydata-sphinx-theme/" title="PyPI" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-python fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">PyPI</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/project/pydata-sphinx-theme/" title="Issue Tracker & Support" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-regular fa-circle-question fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">Issue Tracker & Support</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/project/pydata-sphinx-theme/" title="Contact & Mailing List" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-regular fa-envelope fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">Contact & Mailing List</span></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+    </div>
+  
+
+  
+    <label class="sidebar-toggle secondary-toggle" for="__secondary" tabindex="0">
+      <span class="fa-solid fa-outdent"></span>
+    </label>
+  
+</div>
+
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar hide-on-wide">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          <div class="navbar-item">
+<nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="home.html">
+                        Home
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="gettingstarted.html">
+                            Getting Started
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="#">
+                        Modelling
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="documentation.html">
+                            Documentation
+                      </a>
+                    </li>
+                
+  </ul>
+</nav></div>
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script></div>
+        
+          <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/<your-org>/<your-repo>" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/project/pydata-sphinx-theme/" title="PyPI" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-python fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">PyPI</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/project/pydata-sphinx-theme/" title="Issue Tracker & Support" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-regular fa-circle-question fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">Issue Tracker & Support</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/project/pydata-sphinx-theme/" title="Contact & Mailing List" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-regular fa-envelope fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">Contact & Mailing List</span></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<nav class="sidebar-indices-items">
+  <p class="sidebar-indices-items__title" role="heading" aria-level="1">Indices</p>
+  <ul class="indices-link">
+        <li class="toctree-l1">
+          <a class="reference internal"
+             href="genindex.html"
+             accesskey="I">General Index</a>
+        </li>
+        <li class="toctree-l1">
+          <a class="reference internal" href="py-modindex.html">Python Module Index</a>
+        </li>
+  </ul>
+</nav></div>
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+<nav aria-label="Breadcrumb">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    <li class="breadcrumb-item active" aria-current="page">Modelling Examples</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section id="modelling-examples">
+<h1>Modelling Examples<a class="headerlink" href="#modelling-examples" title="Permalink to this heading">#</a></h1>
+<p>In this section we will elaborate on tips &amp; tricks for successful modelling of resource allocation problems.
+As we saw in the getting started section before, we need to define two groups of functions to model a resource allocation problem:
+logic functions and probabilistic functions. The logic functions are primarily used by the simulator, while the
+probabilistic functions are used for optimization purposes.</p>
+<p>The Karma Game library offers various templates for functions to model a variety of resource allocation problems.
+However, it might be necessary for you to define your own functions, for this the templates can be used as a reference (you can also see the source code in the documentation).</p>
+<p>In the following, we will discuss several aspects on modelling, as well as certain examples.
+For each function there is at least one example.
+<strong>When designing your own functions, it is important that you take exactly the given parameters (order, datatype, and name) and return exactly what is returned by the exemplary template functions (order, datatype).</strong></p>
+<p>In general, we also recommend the review of papers that used the game theoretic formalism of Karma games as inspiration for the modelling logic:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://link.springer.com/article/10.1007/s13235-023-00503-0">A self-contained karma economy for the dynamic allocation of common resources</a></p></li>
+<li><p><a class="reference external" href="https://ieeexplore.ieee.org/abstract/document/8916911/">Today me, tomorrow thee: Efficient resource allocation in competitive settings using karma games</a></p></li>
+<li><p><a class="reference external" href="https://ieeexplore.ieee.org/abstract/document/10185731/">Karma Priority lanes for fair and efficient bottleneck congestion management</a></p></li>
+</ul>
+<section id="modelling-of-logic-functions">
+<h2>Modelling of Logic Functions<a class="headerlink" href="#modelling-of-logic-functions" title="Permalink to this heading">#</a></h2>
+<section id="cost-functions">
+<h3>Cost Functions<a class="headerlink" href="#cost-functions" title="Permalink to this heading">#</a></h3>
+<p>The cost function takes an urgency level (int) and an interaction outcome (int), and returns the cost (float) a participant has from this interaction outcome at a given urgency level.
+In the following you can see an example of the default template function:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">default</span><span class="p">(</span><span class="n">urgency</span><span class="p">:</span><span class="nb">int</span><span class="p">,</span> <span class="n">outcome</span><span class="p">:</span><span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    The default cost function. Outcome=0 means resource not received, therefore</span>
+<span class="sd">    costs created. Cost = urgency_level (urgency_level=0 has no costs)</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span><span class="p">(</span><span class="n">outcome</span><span class="o">==</span><span class="mi">1</span><span class="p">):</span>
+        <span class="k">return</span> <span class="mi">0</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">urgency</span>
+</pre></div>
+</div>
+</section>
+<section id="outcome-functions">
+<h3>Outcome Functions<a class="headerlink" href="#outcome-functions" title="Permalink to this heading">#</a></h3>
+<p>The outcome function takes a list of actions (int), and returns a list of outcomes (int) for each participant of an interaction.
+For example, if the interaction is a sealed bid auction, and the actions are bids, one could define the rule, that the highest bid wins.
+The outcomes could be coded as: 0 = not a winner, do not get resource, and 1 = the winner, do get a resource.</p>
+<p>From a modelling perspective in economics, usually highest bid and second highest bid auctions are relevant, which is offered by our template library.
+In the following you can see an example of the template function and how an exemplary input and output could look like.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">highest_bid</span><span class="p">(</span><span class="n">actions</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    The highest bid (action) wins. Tiebreaker: random.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">highest_bid</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">actions</span><span class="p">)</span>
+    <span class="n">highest_bid_participants</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span><span class="o">==</span><span class="n">highest_bid</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">actions</span><span class="p">]</span>
+    <span class="n">winner</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">sum</span><span class="p">(</span><span class="n">highest_bid_participants</span><span class="p">))</span>
+    <span class="n">winner_idx</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">actions</span><span class="p">)):</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">highest_bid_participants</span><span class="p">[</span><span class="n">n</span><span class="p">]):</span>
+            <span class="k">if</span><span class="p">(</span><span class="n">winner_idx</span><span class="o">==</span><span class="n">winner</span><span class="p">):</span>
+                <span class="n">winner_idx</span> <span class="o">=</span> <span class="n">n</span>
+                <span class="k">break</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">winner_idx</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="n">outcomes</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">actions</span><span class="p">)):</span>
+        <span class="k">if</span><span class="p">(</span><span class="ow">not</span> <span class="n">winner_idx</span> <span class="o">==</span> <span class="n">n</span><span class="p">):</span>
+            <span class="n">outcomes</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">outcomes</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">outcomes</span>
+</pre></div>
+</div>
+<p><strong>Demo Input</strong>
+This shows an example, where participant 0 bids 3 Karma units, and participant 1 bids 6 Karma units.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">actions</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span><span class="mi">6</span><span class="p">]</span>
+</pre></div>
+</div>
+<p><strong>Demo Output</strong></p>
+<p>This shows the exemplary output for the inputs and outcome functions above.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">outcomes</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
+</pre></div>
+</div>
+</section>
+<section id="payment-functions">
+<h3>Payment Functions<a class="headerlink" href="#payment-functions" title="Permalink to this heading">#</a></h3>
+<p>The payment function takes a list of actions (int) and a list of outcomes (int, from the outcome function), and returns a list of payments (int) and an Karma overflow (int).
+In case the bid is paid to society, it is stored in the Karma overflow, which is then distributed at the end of an epoch by the overflow distribution function.
+The produced payments are added to the participants Karma balances, which means payments are represented by negative integers, and receipts are represented by positive integers.</p>
+<p>To stay with the example of the highest bid auction, the highest bid would need to be paid by the winner of the auction.
+It could now be possible, that the bid is received by the peer (if there are exactly two participants in an interaction), or that it is paid to the society (two cases we will discuss in the following).
+Our Template Library offers various functions, such as paying highest bid, paying second highest bid, paying difference between bids, or paying only one Karma unit. Please have a look in the documentation for more references.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">highest_bid_to_peer</span><span class="p">(</span><span class="n">actions</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="n">outcomes</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    The highest bid (action) is paid by the winner to the other peer.</span>
+<span class="sd">    Only for Karma Games with exactly two participants per interaction.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">actions</span><span class="p">)</span><span class="o">!=</span><span class="mi">2</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s2">&quot;This payment function is only compatible for exactly two participants!&quot;</span><span class="p">)</span>
+    <span class="n">payments</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">highest_bid</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">actions</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">actions</span><span class="p">)):</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">outcomes</span><span class="p">[</span><span class="n">n</span><span class="p">]</span><span class="o">==</span><span class="mi">1</span><span class="p">):</span>
+            <span class="n">payments</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="o">-</span><span class="n">highest_bid</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">payments</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="o">+</span><span class="n">highest_bid</span><span class="p">)</span>
+    <span class="n">overflow</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">return</span> <span class="n">payments</span><span class="p">,</span> <span class="n">overflow</span>
+
+<span class="k">def</span> <span class="nf">highest_bid_to_society</span><span class="p">(</span><span class="n">actions</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="n">outcomes</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    The highest bid (action) is paid by the winner to the society (Karma overflow).</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">payments</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">highest_bid</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">actions</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">actions</span><span class="p">)):</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">outcomes</span><span class="p">[</span><span class="n">n</span><span class="p">]</span><span class="o">==</span><span class="mi">1</span><span class="p">):</span>
+            <span class="n">payments</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="o">-</span><span class="n">highest_bid</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">payments</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+    <span class="n">overflow</span> <span class="o">=</span> <span class="o">+</span><span class="n">highest_bid</span>
+    <span class="k">return</span> <span class="n">payments</span><span class="p">,</span> <span class="n">overflow</span>
+</pre></div>
+</div>
+<p><strong>Demo Input</strong>
+This shows an example, where participant 0 bids 3 Karma units, and participant 1 bids 6 Karma units, and the outcomes for a highest bid auctions from the previous example.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">actions</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span><span class="mi">6</span><span class="p">]</span>
+<span class="n">outcomes</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
+</pre></div>
+</div>
+<p><strong>Demo Output</strong></p>
+<p>This shows the exemplary output for the inputs and outcome functions above.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># In case bid is paid to peer</span>
+<span class="n">payments</span> <span class="o">=</span> <span class="p">[</span><span class="o">+</span><span class="mi">6</span><span class="p">,</span> <span class="o">-</span><span class="mi">6</span><span class="p">]</span>
+<span class="n">overflow</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="c1"># In case bid is paid to society</span>
+<span class="n">payments</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">6</span><span class="p">]</span>
+<span class="n">overflow</span> <span class="o">=</span> <span class="o">+</span><span class="mi">6</span>
+</pre></div>
+</div>
+</section>
+<section id="urgency-transition-functions">
+<h3>Urgency Transition Functions<a class="headerlink" href="#urgency-transition-functions" title="Permalink to this heading">#</a></h3>
+<p>The urgency transition function takes an agent type, previous urgency level, the outcome of an interaction and the set of possible urgencies.
+The urgency transition takes place at the end of each epoch.
+The outcome is encoded as: -1 if the agent didnt participate, and otherwise the maximum outcome of all interactions the agent has had during that epoch.</p>
+<p>This function will most likely need to be modelled by the user, as this is very problem specific.
+Our template library only offers the random urgency transition from one to another urgency level, independent from interaction outcome or others.</p>
+<p>In this example, we want to show you how you can model a urgency transition that is represented by a finite state machine, as in the figure below.
+Imagine an urgency process of not getting enough water.
+You might start with having enough water (U=0), and then if you get the resource (outcome o=1) you will alway be reset to this urgency level.
+If you dont get the resource (outcome o=0) you have a 50 % chance of staying at the current urgency level, and a 50% chance to move to a higher
+urgency state.</p>
+<a class="reference internal image-reference" href="_images/StateTransitionFiniteStateMachine.png"><img alt="_images/StateTransitionFiniteStateMachine.png" src="_images/StateTransitionFiniteStateMachine.png" style="width: 600px;" /></a>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">thirsty</span><span class="p">(</span><span class="n">atype</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">urgency</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">outcome</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">set_urgencies</span><span class="p">:</span> <span class="n">Set</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+    <span class="k">if</span><span class="p">(</span><span class="n">outcome</span><span class="o">==-</span><span class="mi">1</span> <span class="ow">or</span> <span class="n">outcome</span><span class="o">==</span><span class="mi">0</span><span class="p">):</span> <span class="c1"># didnt participate interaction or did not receive the resource</span>
+        <span class="k">if</span> <span class="n">urgency</span><span class="o">==</span><span class="mi">3</span><span class="p">:</span>
+            <span class="n">urgency_next</span> <span class="o">=</span> <span class="mi">3</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">()</span><span class="o">&gt;</span><span class="mf">0.5</span><span class="p">:</span>
+                <span class="n">urgency_next</span> <span class="o">=</span> <span class="n">urgency</span> <span class="o">+</span> <span class="mi">1</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">urgency_next</span> <span class="o">=</span> <span class="n">urgency</span>
+    <span class="k">else</span><span class="p">:</span> <span class="c1">#if(outcome==1): # participated interaction, received the resource</span>
+        <span class="n">urgency_next</span> <span class="o">=</span> <span class="mi">0</span> <span class="c1"># reset to urgency level 0</span>
+    <span class="k">return</span> <span class="n">urgency_next</span>
+</pre></div>
+</div>
+</section>
+<section id="overflow-distribution-functions">
+<h3>Overflow Distribution Functions<a class="headerlink" href="#overflow-distribution-functions" title="Permalink to this heading">#</a></h3>
+<p>The overflow distribution function takes the karma balances of the whole population (list of int) and the Karma overflow (int), and returns a new list of karma balances of the whole population.
+This function is used, if the payment function is designed to pay bids to the society, at the end of the epoch.
+It is particularly important to mention, that the game theoretical formalism assumes a constant level of Karma across the population, therefore if Karma overflow is populated by payment functions, it is necessary to distribute it with this function.</p>
+<p>The template library offers various functions such as that a random individual receives the whole overflow, or a random group of individuals each receive one unit of the Karma overflow.
+In the following example you can see the two template functions.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">random_individual_all</span><span class="p">(</span><span class="n">pop_karmas</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="n">overflow</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    This function distributes the whole Karma overflow to one randomly chosen</span>
+<span class="sd">    individual.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">pop_karmas_next</span> <span class="o">=</span> <span class="n">pop_karmas</span>
+    <span class="n">overflow_receiver</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">pop_karmas_next</span><span class="p">))</span>
+    <span class="n">pop_karmas_next</span><span class="p">[</span><span class="n">overflow_receiver</span><span class="p">]</span> <span class="o">+=</span> <span class="n">overflow</span>
+    <span class="k">return</span> <span class="n">pop_karmas_next</span>
+
+<span class="k">def</span> <span class="nf">random_group_each_one</span><span class="p">(</span><span class="n">pop_karmas</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="n">overflow</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    This function distributes the Karma overflow randomly two n agents, where</span>
+<span class="sd">    each agent receives one unit of Karma.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">pop_karmas_next</span> <span class="o">=</span> <span class="n">pop_karmas</span>
+    <span class="n">overflow_receivers</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">([</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">pop_karmas</span><span class="p">))],</span> <span class="n">size</span><span class="o">=</span><span class="n">overflow</span><span class="p">,</span> <span class="n">replace</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">receiver</span> <span class="ow">in</span> <span class="n">overflow_receivers</span><span class="p">:</span>
+        <span class="n">pop_karmas_next</span><span class="p">[</span><span class="n">receiver</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="k">return</span> <span class="n">pop_karmas_next</span>
+</pre></div>
+</div>
+</section>
+<section id="karma-redistribution-functions">
+<h3>Karma Redistribution Functions<a class="headerlink" href="#karma-redistribution-functions" title="Permalink to this heading">#</a></h3>
+<p>The Karma redistribution function could be used to model a redistribution (e.g. taxes, maximum allowed Karma balance, etc.).
+It takes the karma balances of the whole population (list of int), and returns a new list of karma balances of the whole population.
+This function is used at the end of the epoch.</p>
+<p>This can also be modelled by the user similarly to the previous function.
+Depending on the design, this can cause any level of complexity when modelling the probabilistic functions.
+In the template library, we leave it up to the user to design these functions, and solemnly offer “none”.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">none</span><span class="p">(</span><span class="n">pop_karmas</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    This function does not redistribute Karma.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">pop_karmas_next</span> <span class="o">=</span> <span class="n">pop_karmas</span>
+    <span class="k">return</span> <span class="n">pop_karmas_next</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="modelling-of-probabilisic-functions">
+<h2>Modelling of Probabilisic Functions<a class="headerlink" href="#modelling-of-probabilisic-functions" title="Permalink to this heading">#</a></h2>
+<p>The modelling of the probabilistic functions is always from the perspective of one agent, as these functions are used to model the policy of one agent playing against others.
+The probabilistic functions always return a probability, float value between 0.0 and 1.0.
+Depending on the complexity of the Logic Functions, the modelling of the probabilstic funtions can be a difficult task, which is why
+it is important to use reasonable assumptions to facilitate the modelling.</p>
+<section id="id1">
+<h3>Outcome Functions<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h3>
+<p>The probabilistic outcome function represents the probability of an outcome given a list of two actions, where the first action in the list represents the ego agents action and the second represents any other action of the participants.</p>
+<p>To refer to the highest and second highest bid example we prepared templates in our library, they look like this:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">highest_bid</span><span class="p">(</span><span class="n">outcome</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">actions</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    The highest bid (action) wins. Tiebreaker: random.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">action</span> <span class="o">=</span> <span class="n">actions</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">other_action</span> <span class="o">=</span> <span class="n">actions</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+    <span class="k">if</span><span class="p">(</span><span class="n">action</span><span class="o">==</span><span class="n">other_action</span><span class="p">):</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">outcome</span><span class="o">==</span><span class="mi">0</span><span class="p">):</span>
+            <span class="k">return</span> <span class="mf">0.5</span>
+        <span class="k">elif</span><span class="p">(</span><span class="n">outcome</span><span class="o">==</span><span class="mi">1</span><span class="p">):</span>
+            <span class="k">return</span> <span class="mf">0.5</span>
+    <span class="k">elif</span><span class="p">(</span><span class="n">action</span><span class="o">&gt;</span><span class="n">other_action</span><span class="p">):</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">outcome</span><span class="o">==</span><span class="mi">0</span><span class="p">):</span>
+            <span class="k">return</span> <span class="mf">0.0</span>
+        <span class="k">elif</span><span class="p">(</span><span class="n">outcome</span><span class="o">==</span><span class="mi">1</span><span class="p">):</span>
+            <span class="k">return</span> <span class="mf">1.0</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">outcome</span><span class="o">==</span><span class="mi">0</span><span class="p">):</span>
+            <span class="k">return</span> <span class="mf">1.0</span>
+        <span class="k">elif</span><span class="p">(</span><span class="n">outcome</span><span class="o">==</span><span class="mi">1</span><span class="p">):</span>
+            <span class="k">return</span> <span class="mf">0.0</span>
+
+<span class="k">def</span> <span class="nf">second_highest_bid</span><span class="p">(</span><span class="n">outcome</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">actions</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    The second highest bid (action) wins. Tiebreaker: random.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">action</span> <span class="o">=</span> <span class="n">actions</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">other_action</span> <span class="o">=</span> <span class="n">actions</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+    <span class="k">if</span><span class="p">(</span><span class="n">action</span><span class="o">==</span><span class="n">other_action</span><span class="p">):</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">outcome</span><span class="o">==</span><span class="mi">0</span><span class="p">):</span>
+            <span class="k">return</span> <span class="mf">0.5</span>
+        <span class="k">elif</span><span class="p">(</span><span class="n">outcome</span><span class="o">==</span><span class="mi">1</span><span class="p">):</span>
+            <span class="k">return</span> <span class="mf">0.5</span>
+    <span class="k">elif</span><span class="p">(</span><span class="n">action</span><span class="o">&gt;</span><span class="n">other_action</span><span class="p">):</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">outcome</span><span class="o">==</span><span class="mi">0</span><span class="p">):</span>
+            <span class="k">return</span> <span class="mf">1.0</span>
+        <span class="k">elif</span><span class="p">(</span><span class="n">outcome</span><span class="o">==</span><span class="mi">1</span><span class="p">):</span>
+            <span class="k">return</span> <span class="mf">0.0</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">outcome</span><span class="o">==</span><span class="mi">0</span><span class="p">):</span>
+            <span class="k">return</span> <span class="mf">0.0</span>
+        <span class="k">elif</span><span class="p">(</span><span class="n">outcome</span><span class="o">==</span><span class="mi">1</span><span class="p">):</span>
+            <span class="k">return</span> <span class="mf">1.0</span>
+</pre></div>
+</div>
+</section>
+<section id="karma-transition-functions">
+<h3>Karma Transition Functions<a class="headerlink" href="#karma-transition-functions" title="Permalink to this heading">#</a></h3>
+<p>The probabilistic Karma transition function represents the probability that the agent has karma_next after the epoch given a prior karma, an action and an outcome during the interaction of the epoch.</p>
+<p>It is probably the most complex to model and therefore has various inputs (intermediate results of the optimization) that can be used during the optimization.</p>
+<p>We show the example for no redistribution and highest bid to peer auctions, for the two cases pay bid to peer and pay bid to society.</p>
+<p><strong>Example pay highest bid to peer:</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">_support_func_prob_karma_transition_highest_bid_to_peer_no_redistribution</span><span class="p">(</span><span class="n">karma_next</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+                                                                              <span class="n">karma</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">actions</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span>
+                                                                              <span class="n">outcome</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
+    <span class="n">action</span> <span class="o">=</span> <span class="n">actions</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">other_action</span> <span class="o">=</span> <span class="n">actions</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+    <span class="k">if</span><span class="p">(</span><span class="n">outcome</span><span class="o">==</span><span class="mi">1</span><span class="p">):</span> <span class="c1"># receive resource but loose karma</span>
+        <span class="n">karma_next_fac</span> <span class="o">=</span> <span class="n">karma</span> <span class="o">-</span> <span class="n">action</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">karma_next</span><span class="o">==</span><span class="n">karma_next_fac</span><span class="p">):</span>
+            <span class="k">return</span> <span class="mf">1.0</span>
+    <span class="k">if</span><span class="p">(</span><span class="n">outcome</span><span class="o">==</span><span class="mi">0</span><span class="p">):</span> <span class="c1"># dont receive resource but gain karma</span>
+        <span class="n">karma_next_fac</span> <span class="o">=</span> <span class="n">karma</span> <span class="o">+</span> <span class="n">other_action</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">karma_next</span><span class="o">==</span><span class="n">karma_next_fac</span><span class="p">):</span>
+            <span class="k">return</span> <span class="mf">1.0</span>
+    <span class="k">return</span> <span class="mf">0.0</span>
+
+<span class="k">def</span> <span class="nf">highest_bid_to_peer_no_redistribution</span><span class="p">(</span><span class="n">karma_next</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">karma</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">action</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">outcome</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+                                          <span class="n">state_mat</span><span class="p">:</span> <span class="n">npt</span><span class="o">.</span><span class="n">NDArray</span><span class="p">,</span> <span class="n">policy_mat</span><span class="p">:</span> <span class="n">npt</span><span class="o">.</span><span class="n">NDArray</span><span class="p">,</span>
+                                          <span class="n">game_parameters</span><span class="p">,</span> <span class="n">gamma_mat</span><span class="p">:</span> <span class="n">npt</span><span class="o">.</span><span class="n">NDArray</span><span class="p">,</span>
+                                          <span class="n">v_mat</span><span class="p">:</span> <span class="n">npt</span><span class="o">.</span><span class="n">NDArray</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    This function returns the probability to reach a karma_next balance given a karma,</span>
+<span class="sd">    action and outcome for the case that the highest bidding peer wins, pays the bid</span>
+<span class="sd">    to the peer, and there is no Karma redistribution.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">prob</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">other_action</span> <span class="ow">in</span> <span class="n">game_parameters</span><span class="o">.</span><span class="n">_set_actions</span><span class="p">:</span>
+        <span class="n">prob</span> <span class="o">+=</span> <span class="n">v_mat</span><span class="p">[</span><span class="n">other_action</span><span class="p">]</span> <span class="o">*</span> <span class="n">karma_game_library</span><span class="o">.</span><span class="n">templates</span><span class="o">.</span><span class="n">p_outcome</span><span class="o">.</span><span class="n">highest_bid</span><span class="p">(</span><span class="n">outcome</span><span class="p">,</span> <span class="p">[</span><span class="n">action</span><span class="p">,</span> <span class="n">other_action</span><span class="p">])</span>
+                                    <span class="o">*</span> <span class="n">_support_func_prob_karma_transition_highest_bid_to_peer_no_redistribution</span><span class="p">(</span><span class="n">karma_next</span><span class="p">,</span> <span class="n">karma</span><span class="p">,</span> <span class="p">[</span><span class="n">action</span><span class="p">,</span> <span class="n">other_action</span><span class="p">],</span> <span class="n">outcome</span><span class="p">)</span>
+    <span class="k">if</span><span class="p">(</span><span class="n">gamma_mat</span><span class="p">[</span><span class="n">outcome</span><span class="p">][</span><span class="n">action</span><span class="p">]</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">):</span>
+        <span class="n">prob</span> <span class="o">=</span> <span class="n">prob</span> <span class="o">/</span> <span class="n">gamma_mat</span><span class="p">[</span><span class="n">outcome</span><span class="p">][</span><span class="n">action</span><span class="p">]</span>
+    <span class="k">return</span> <span class="n">prob</span>
+</pre></div>
+</div>
+<p><strong>Example pay highst bid to society:</strong>
+Important to mention here is a trick: one assumes that every agent in the population interacts on average exactly one time during an epoch.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">_support_func_average_highest_bid</span><span class="p">(</span><span class="n">parameters</span><span class="p">,</span> <span class="n">gamma_mat</span><span class="p">:</span> <span class="n">npt</span><span class="o">.</span><span class="n">NDArray</span><span class="p">,</span> <span class="n">state_mat</span><span class="p">:</span> <span class="n">npt</span><span class="o">.</span><span class="n">NDArray</span><span class="p">,</span>
+                                      <span class="n">policy_mat</span><span class="p">:</span> <span class="n">npt</span><span class="o">.</span><span class="n">NDArray</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
+    <span class="n">average_bid</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">atype</span> <span class="ow">in</span> <span class="n">parameters</span><span class="o">.</span><span class="n">_set_types</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">urgency</span> <span class="ow">in</span> <span class="n">parameters</span><span class="o">.</span><span class="n">_set_urgencies</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">karma</span> <span class="ow">in</span> <span class="n">parameters</span><span class="o">.</span><span class="n">_set_state_karmas</span><span class="p">:</span>
+                <span class="k">for</span> <span class="n">action</span> <span class="ow">in</span> <span class="n">parameters</span><span class="o">.</span><span class="n">_set_actions</span><span class="p">:</span>
+                    <span class="n">average_bid</span> <span class="o">+=</span> <span class="n">state_mat</span><span class="p">[</span><span class="n">atype</span><span class="p">][</span><span class="n">urgency</span><span class="p">][</span><span class="n">karma</span><span class="p">]</span>
+                                   <span class="o">*</span> <span class="n">policy_mat</span><span class="p">[</span><span class="n">atype</span><span class="p">][</span><span class="n">urgency</span><span class="p">][</span><span class="n">karma</span><span class="p">][</span><span class="n">action</span><span class="p">]</span>
+                                   <span class="o">*</span> <span class="n">gamma_mat</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="n">action</span><span class="p">]</span> <span class="o">*</span> <span class="n">action</span>
+    <span class="k">return</span> <span class="n">average_bid</span>
+
+<span class="k">def</span> <span class="nf">highest_bid_to_society_no_redistribution</span><span class="p">(</span><span class="n">karma_next</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">karma</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">action</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">outcome</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+                                             <span class="n">state_mat</span><span class="p">:</span> <span class="n">npt</span><span class="o">.</span><span class="n">NDArray</span><span class="p">,</span> <span class="n">policy_mat</span><span class="p">:</span> <span class="n">npt</span><span class="o">.</span><span class="n">NDArray</span><span class="p">,</span>
+                                             <span class="n">game_parameters</span><span class="p">,</span> <span class="n">gamma_mat</span><span class="p">:</span> <span class="n">npt</span><span class="o">.</span><span class="n">NDArray</span><span class="p">,</span>
+                                             <span class="n">v_mat</span><span class="p">:</span> <span class="n">npt</span><span class="o">.</span><span class="n">NDArray</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    This function returns the probability to reach a karma_next balance given a karma,</span>
+<span class="sd">        action and outcome for the case that the highest bidding peer wins, pays the bid</span>
+<span class="sd">        to the society (Karma overflow), and there is no Karma redistribution.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">average_bid</span> <span class="o">=</span> <span class="n">_support_func_average_highest_bid</span><span class="p">(</span><span class="n">game_parameters</span><span class="p">,</span> <span class="n">gamma_mat</span><span class="p">,</span> <span class="n">state_mat</span><span class="p">,</span> <span class="n">policy_mat</span><span class="p">)</span>
+    <span class="n">lower_av_bid</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">floor</span><span class="p">(</span><span class="n">average_bid</span><span class="p">)</span>
+    <span class="n">higher_av_bid</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ceil</span><span class="p">(</span><span class="n">average_bid</span><span class="p">)</span>
+    <span class="k">if</span><span class="p">((</span><span class="n">higher_av_bid</span> <span class="o">-</span> <span class="n">lower_av_bid</span><span class="p">)</span><span class="o">==</span><span class="mi">0</span><span class="p">):</span>
+        <span class="n">fraction</span> <span class="o">=</span> <span class="mf">0.5</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">fraction</span> <span class="o">=</span> <span class="p">(</span><span class="n">average_bid</span> <span class="o">-</span> <span class="n">lower_av_bid</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">higher_av_bid</span> <span class="o">-</span> <span class="n">lower_av_bid</span><span class="p">)</span>
+    <span class="k">if</span><span class="p">(</span><span class="n">outcome</span><span class="o">==</span><span class="mi">1</span><span class="p">):</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">karma_next</span> <span class="o">==</span> <span class="n">karma</span> <span class="o">-</span> <span class="n">action</span> <span class="o">+</span> <span class="n">lower_av_bid</span><span class="p">):</span>
+            <span class="k">return</span> <span class="mi">1</span><span class="o">-</span><span class="n">fraction</span>
+        <span class="k">elif</span><span class="p">(</span><span class="n">karma_next</span> <span class="o">==</span> <span class="n">karma</span> <span class="o">-</span> <span class="n">action</span> <span class="o">+</span> <span class="n">higher_av_bid</span><span class="p">):</span>
+            <span class="k">return</span> <span class="n">fraction</span>
+    <span class="k">if</span><span class="p">(</span><span class="n">outcome</span><span class="o">==</span><span class="mi">0</span><span class="p">):</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">karma_next</span> <span class="o">==</span> <span class="n">karma</span> <span class="o">+</span> <span class="n">lower_av_bid</span><span class="p">):</span>
+            <span class="k">return</span> <span class="mi">1</span><span class="o">-</span><span class="n">fraction</span>
+        <span class="k">elif</span><span class="p">(</span><span class="n">karma_next</span> <span class="o">==</span> <span class="n">karma</span> <span class="o">+</span> <span class="n">higher_av_bid</span><span class="p">):</span>
+            <span class="k">return</span> <span class="n">fraction</span>
+    <span class="k">return</span> <span class="mi">0</span>
+</pre></div>
+</div>
+</section>
+<section id="id2">
+<h3>Urgency Transition Functions<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h3>
+<p>The probabilistic Urgency transition function represents the probability that the agent has urgency_next after the epoch given a prior urgency, and an outcome during the interaction of the epoch.
+The outcome is encoded similar to as defined in the Logic, outcome function.</p>
+<p>For example a random urgency transition could look like this:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">random</span><span class="p">(</span><span class="n">urgency_next</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">urgency</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">outcome</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">atype</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">set_urgencies</span><span class="p">:</span> <span class="n">Set</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    This function assumes that the transition probability from one urgency level to another is random.</span>
+<span class="sd">    It is completely independent from the agent type, urgency, and interaction outcome.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="mi">1</span><span class="o">/</span><span class="nb">len</span><span class="p">(</span><span class="n">set_urgencies</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>A urgency transition suitable to the thirsty example above could look like this:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">thirsty</span><span class="p">(</span><span class="n">urgency_next</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">urgency</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">outcome</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">atype</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">set_urgencies</span><span class="p">:</span> <span class="n">Set</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">outcome</span><span class="o">==</span><span class="mi">1</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">urgency_next</span><span class="o">==</span><span class="mi">0</span><span class="p">:</span>
+            <span class="k">return</span> <span class="mf">1.0</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="mf">0.0</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">urgency</span> <span class="o">==</span> <span class="mi">3</span> <span class="ow">and</span> <span class="n">urgency_next</span> <span class="o">==</span> <span class="mi">3</span><span class="p">:</span>
+            <span class="k">return</span> <span class="mf">1.0</span>
+        <span class="k">elif</span> <span class="n">urgency_next</span> <span class="o">=</span> <span class="n">urgency</span><span class="o">+</span><span class="mi">1</span><span class="p">:</span>
+            <span class="k">return</span> <span class="mf">0.5</span>
+        <span class="k">elif</span> <span class="n">urgency_next</span> <span class="o">=</span> <span class="n">urgency</span><span class="p">:</span>
+            <span class="k">return</span> <span class="mf">0.5</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="mf">0.0</span>
+</pre></div>
+</div>
+</section>
+</section>
+</section>
+
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="gettingstarted.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Getting Started</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="documentation.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Documentation</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#modelling-of-logic-functions">Modelling of Logic Functions</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cost-functions">Cost Functions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#outcome-functions">Outcome Functions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#payment-functions">Payment Functions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#urgency-transition-functions">Urgency Transition Functions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#overflow-distribution-functions">Overflow Distribution Functions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#karma-redistribution-functions">Karma Redistribution Functions</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#modelling-of-probabilisic-functions">Modelling of Probabilisic Functions</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Outcome Functions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#karma-transition-functions">Karma Transition Functions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Urgency Transition Functions</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+  <div class="sidebar-secondary-item">
+
+  <div class="tocsection sourcelink">
+    <a href="_sources/modelling_examples.rst.txt">
+      <i class="fa-solid fa-file-lines"></i> Show Source
+    </a>
+  </div>
+</div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright 2023, Kevin Riehl.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.0.2.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.14.4.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

@@ -1,4 +1,7 @@
-# Karma Game Library (v1.0.0)
+Karma Game Library, Documentation (v1.0.0)
+##############################################
+
+**Historical documentation:** `1.0.0 <http://google.com>`_
 
 The Karma Game is an efficient, fair, decentralized resource allocation mechanism.
 
@@ -6,28 +9,7 @@ The Karma Game Library is a powerful and rich software framework for the computa
 It is easy to use and compatible with domain specific simulators.
 
 **This repository equips you with the necessary tools to successfully apply the Karma mechanism in your resource allocation context.**
-In the [documentation](docs/build/html/index.html) you will find installation instructions, coding examples in Python and an extensive documentation.
-
-<img src="docs/source/_static/logo_light.svg" alt="KarmaKnot" style="width:150px;"/>
-
-Installation
-----------------------------------------------
-The Karma Game Library can be installed as a Python package using the PIP package manager and the Conda package manager.
-
-**Pip / PyPI Package Manager** ([Link to repository](https://en.wikipedia.org/wiki/Endless_knot))
-
-```
-pip install karma_game	
-```
-
-**Conda Package Manager** ([Link to repository](https://en.wikipedia.org/wiki/Endless_knot))
-
-```
-conda install karma_game
-```	
-
-After installation, you can try one of our [examples](docs/build/html/examples.html) to verify your installation was successful.
-
+In this documentation you will find installation instructions, coding examples in Python and an extensive documentation.
 
 What is Karma
 ----------------------------------------------
@@ -38,6 +20,31 @@ by producing and lost only by consuming resources.
 
 Karma was already applied in many different contexts including computation
 resources, telecommunication networks, transportation traffic control on road networks, and social contexts (e.g. food banks, organ donations).
+
+
+Installation of Karma Game Library
+----------------------------------------------
+The Karma Game Library can be installed as a Python package using the PIP package manager and the Conda package manager.
+
+**Pip / PyPI Package Manager** (`Link to repository <https://en.wikipedia.org/wiki/Endless_knot>`_)
+
+.. code-block:: python
+
+	pip install karma_game
+	
+**Conda Package Manager** (`Link to repository <https://en.wikipedia.org/wiki/Endless_knot>`_)
+
+.. code-block:: python
+
+	conda install karma_game
+	
+After installation, verify your installation was successful:
+
+.. code-block:: python
+
+	import karma_game_library
+	karma_game_libray.version()
+	
 
 Why Karma
 ----------------------------------------------
@@ -84,7 +91,7 @@ The endless knot is a symbolic knot and one of the Eight Auspicious Symbols.
 It is an important symbol in Hinduism, Jainism and Buddhism. 
 It is an important cultural marker in places significantly influenced by Tibetan Buddhism such as Tibet, Mongolia, Tuva, Kalmykia, and Buryatia. 
 It is also found in Celtic, Kazakh and Chinese symbolism. 
-[More Information on the logo](https://en.wikipedia.org/wiki/Endless_knot)
+`More Information on the logo <https://en.wikipedia.org/wiki/Endless_knot>`_
 
 
 
@@ -95,6 +102,6 @@ STILL TO DO
 How to cite us
 ----------------------------------------------
 
-```
-Riehl, K., Makridis, M., & You?. (2023). Fair and efficient resource allocation – An interdisciplinary literature review on the Karma mechanism. 
-```
+.. code-block:: 
+	
+	Riehl, K., Makridis, M., & You?. (2023). Fair and efficient resource allocation – An interdisciplinary literature review on the Karma mechanism. 

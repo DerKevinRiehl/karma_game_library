@@ -1,0 +1,2 @@
+cd ..
+py -m build

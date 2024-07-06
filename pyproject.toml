@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "karma_game_library"
+version = "1.0.0"
+authors = [
+  { name="Kevin Riehl", email="kriehl@ethz.ch" },
+]
+description = "The Karma Game Library is a powerful and rich software framework for the computation of optimal policies for rational agents and the simulation of Karma Games in scientific contexts. It is easy to use and compatible with domain specific simulators."
+readme = "README.md"
+dynamic = ["dependencies"]
+requires-python = ">=3.7"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: GNU GPLv3 License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/DerKevinRiehl/karma_game_library"
+Issues = "https://github.com/DerKevinRiehl/karma_game_library/issues"
+
+[tool.setuptools.dynamic]
+dependencies = {file = ["requirements.txt"]}

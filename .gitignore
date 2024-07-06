@@ -1,0 +1,15 @@
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.log
+*.pdf
+*.run.xml
+*.synctex.gz
+src/figs/
+__pycache__/
+*.pyc
+src/parameters.txt
+src/policy.txt.npy
+src/state.txt.npy
+src/animation.gif

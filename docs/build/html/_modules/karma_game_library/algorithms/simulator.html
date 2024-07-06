@@ -1,0 +1,1358 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>karma_game_library.algorithms.simulator &#8212; Karma Game Library 1.0.0 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../../../_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+
+  
+  <link href="../../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
+  <script src="../../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
+
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '_modules/karma_game_library/algorithms/simulator';</script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+<div class="bd-header__inner bd-page-width">
+  <label class="sidebar-toggle primary-toggle" for="__primary">
+    <span class="fa-solid fa-bars"></span>
+  </label>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+
+<a class="navbar-brand logo" href="../../../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../../_static/logo_light.svg" class="logo__image only-light" alt=""/>
+    <script>document.write(`<img src="../../../_static/logo_dark.svg" class="logo__image only-dark" alt=""/>`);</script>
+  
+  
+    <p class="title logo__title">Karma Game Library (v1.0.0)</p>
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../home.html">
+                        Home
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../gettingstarted.html">
+                            Getting Started
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../modelling_examples.html">
+                        Modelling
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../documentation.html">
+                            Documentation
+                      </a>
+                    </li>
+                
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/<your-org>/<your-repo>" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/project/pydata-sphinx-theme/" title="PyPI" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-python fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">PyPI</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/project/pydata-sphinx-theme/" title="Issue Tracker & Support" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-regular fa-circle-question fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">Issue Tracker & Support</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/project/pydata-sphinx-theme/" title="Contact & Mailing List" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-regular fa-envelope fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">Contact & Mailing List</span></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+    </div>
+  
+
+  
+</div>
+
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar hide-on-wide">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          <div class="navbar-item">
+<nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../home.html">
+                        Home
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../gettingstarted.html">
+                            Getting Started
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../modelling_examples.html">
+                        Modelling
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../documentation.html">
+                            Documentation
+                      </a>
+                    </li>
+                
+  </ul>
+</nav></div>
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script></div>
+        
+          <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/<your-org>/<your-repo>" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/project/pydata-sphinx-theme/" title="PyPI" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-python fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">PyPI</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/project/pydata-sphinx-theme/" title="Issue Tracker & Support" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-regular fa-circle-question fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">Issue Tracker & Support</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/project/pydata-sphinx-theme/" title="Contact & Mailing List" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-regular fa-envelope fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">Contact & Mailing List</span></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<nav class="sidebar-indices-items">
+  <p class="sidebar-indices-items__title" role="heading" aria-level="1">Indices</p>
+  <ul class="indices-link">
+        <li class="toctree-l1">
+          <a class="reference internal"
+             href="../../../genindex.html"
+             accesskey="I">General Index</a>
+        </li>
+        <li class="toctree-l1">
+          <a class="reference internal" href="../../../py-modindex.html">Python Module Index</a>
+        </li>
+  </ul>
+</nav></div>
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+<nav aria-label="Breadcrumb">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../../../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="../../index.html" class="nav-link">Module code</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page">karma_game_l...</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <h1>Source code for karma_game_library.algorithms.simulator</h1><div class="highlight"><pre>
+<span></span><span class="c1"># Karma Game Library, Copyrights Kevin Riehl 2023, &lt;kriehl@ethz.ch&gt;</span>
+
+<span class="c1"># Imports</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">karma_game_library</span> <span class="kn">import</span> <span class="n">GameParameters</span><span class="p">,</span> <span class="n">Policy</span><span class="p">,</span> <span class="n">StateDistribution</span>
+<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">List</span>
+<span class="kn">import</span> <span class="nn">numpy.typing</span> <span class="k">as</span> <span class="nn">npt</span>
+
+<span class="c1"># Classes</span>
+
+<div class="viewcode-block" id="Simulator"><a class="viewcode-back" href="../../../documentation.html#karma_game_library.Simulator">[docs]</a><span class="k">class</span> <span class="nc">Simulator</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    A class to provide entities and functionality to perform the simulation of</span>
+<span class="sd">    a Karma game.</span>
+
+<span class="sd">    Attributes</span>
+<span class="sd">    ----------</span>
+<span class="sd">    epoch_counter : int</span>
+<span class="sd">        The current epoch of the game (starts counting from zero).</span>
+<span class="sd">    last_participants : List[int]</span>
+<span class="sd">        List of participating agents from last interaction.</span>
+<span class="sd">    last_actions : List[int]</span>
+<span class="sd">        List of participant actions from last interaction.</span>
+<span class="sd">    last_outcome : List[int]</span>
+<span class="sd">        List of outcomes from last interaction.</span>
+<span class="sd">    all_epoch_participants : List[int]</span>
+<span class="sd">        List of participants during all interactions of the current epoch.</span>
+<span class="sd">    all_epoch_outcomes : List[int]</span>
+<span class="sd">        List of the maximum of outcomes during all interactions of the current epoch for the participants in all_epoch_participants.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    
+    <span class="c1">#### Attributes</span>
+        <span class="c1"># Constants</span>
+    <span class="n">_TYPE_COL</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">_URGENCY_COL</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="n">_KARMA_COL</span> <span class="o">=</span> <span class="mi">2</span>
+    <span class="n">_CUM_COST_COL</span> <span class="o">=</span> <span class="mi">3</span>
+    <span class="n">_ENCOUNTERS_COL</span> <span class="o">=</span> <span class="mi">4</span>
+        <span class="c1"># General</span>
+    <span class="n">_parameters</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">epoch_counter</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">_open_epoch</span> <span class="o">=</span> <span class="kc">False</span>
+    <span class="n">_total_karma_epoch_begin</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="c1"># Population</span>
+    <span class="n">_population</span> <span class="o">=</span> <span class="p">[]</span> <span class="c1"># num_agents x 5 [type, urgency, karma, cum_cost, encounters]</span>
+    <span class="n">_karma_overflow</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="c1"># Recording</span>
+    <span class="n">_state_transition_counter</span> <span class="o">=</span> <span class="p">[[]]</span> <span class="c1"># [urgency_next, karma_next, urgency_before, karma_before]</span>
+    <span class="n">_state_transition_counter_participants</span> <span class="o">=</span> <span class="p">[[]]</span> <span class="c1"># [urgency_next, karma_next, urgency_before, karma_before]</span>
+        <span class="c1"># Epoch specific</span>
+    <span class="n">all_epoch_participants</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">all_epoch_outcomes</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="c1"># Interaction specific</span>
+    <span class="n">last_participants</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">last_actions</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">last_outcomes</span> <span class="o">=</span> <span class="kc">None</span>
+    
+    <span class="c1">#### Constructor</span>
+<div class="viewcode-block" id="Simulator.__init__"><a class="viewcode-back" href="../../../documentation.html#karma_game_library.Simulator.__init__">[docs]</a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">game_parameters</span><span class="p">:</span> <span class="n">GameParameters</span><span class="p">,</span> <span class="n">state</span> <span class="p">:</span> <span class="n">StateDistribution</span><span class="p">,</span> <span class="n">steady_state_init</span><span class="p">:</span><span class="nb">bool</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        This constructor initializes the internal variables of the simulator</span>
+<span class="sd">        according to the simulation_parameters by calling the function reset().</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        game_parameters : GameParameters</span>
+<span class="sd">            The game parameters for the simulator.</span>
+<span class="sd">        steady_state_init : bool</span>
+<span class="sd">            Optional, Default: True. This will define whether population</span>
+<span class="sd">            initialization for the simulation is as given by the initial</span>
+<span class="sd">            parameters for the optimization (lst_init_types, </span>
+<span class="sd">            lst_init_urgencies, lst_init_karmas), or the steady state computed</span>
+<span class="sd">            by the optimizer will be used.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        None</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_parameters</span> <span class="o">=</span> <span class="n">game_parameters</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">reset</span><span class="p">(</span><span class="n">state</span><span class="p">,</span> <span class="n">steady_state_init</span><span class="p">)</span></div>
+        
+    <span class="c1">### Public Methods</span>
+<div class="viewcode-block" id="Simulator.reset"><a class="viewcode-back" href="../../../documentation.html#karma_game_library.Simulator.reset">[docs]</a>    <span class="k">def</span> <span class="nf">reset</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">state</span> <span class="p">:</span> <span class="n">StateDistribution</span><span class="p">,</span> <span class="n">steady_state_init</span><span class="p">:</span><span class="nb">bool</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        This function resets all internal variables of the simulator so that </span>
+<span class="sd">        a restart of the simulation from the beginning is possible.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        state : StateDistribution</span>
+<span class="sd">            The state distribution, that is used to reset the population in</span>
+<span class="sd">            case steady_state_init is set to True.</span>
+<span class="sd">        steady_state_init : bool</span>
+<span class="sd">            Optional, Default: True. This will define whether population</span>
+<span class="sd">            initialization for the simulation is as given by the initial</span>
+<span class="sd">            parameters for the optimization (lst_init_types, </span>
+<span class="sd">            lst_init_urgencies, lst_init_karmas), or the steady state computed</span>
+<span class="sd">            by the optimizer will be used.</span>
+<span class="sd">        </span>
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        None</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">epoch_counter</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_population</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="bp">self</span><span class="o">.</span><span class="n">_parameters</span><span class="o">.</span><span class="n">_num_agents</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+        <span class="k">if</span> <span class="n">steady_state_init</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_parameters</span><span class="o">.</span><span class="n">_num_agents</span><span class="p">):</span>
+                <span class="n">probs</span> <span class="o">=</span> <span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">state</span><span class="o">.</span><span class="n">dist_matrix</span><span class="p">[</span><span class="n">x</span><span class="p">])</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_parameters</span><span class="o">.</span><span class="n">_set_types</span><span class="p">]</span>
+                <span class="n">probs</span> <span class="o">=</span> <span class="n">probs</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">probs</span><span class="p">)</span>
+                <span class="n">random_type</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_parameters</span><span class="o">.</span><span class="n">_set_types</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">p</span><span class="o">=</span><span class="n">probs</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+                <span class="n">probs</span> <span class="o">=</span> <span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">state</span><span class="o">.</span><span class="n">dist_matrix</span><span class="p">[</span><span class="n">random_type</span><span class="p">][</span><span class="n">x</span><span class="p">])</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_parameters</span><span class="o">.</span><span class="n">_set_urgencies</span><span class="p">]</span>
+                <span class="n">probs</span> <span class="o">=</span> <span class="n">probs</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">probs</span><span class="p">)</span>
+                <span class="n">random_urgency</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_parameters</span><span class="o">.</span><span class="n">_set_urgencies</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">p</span><span class="o">=</span><span class="n">probs</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+                <span class="n">probs</span> <span class="o">=</span> <span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">state</span><span class="o">.</span><span class="n">dist_matrix</span><span class="p">[</span><span class="n">random_type</span><span class="p">][</span><span class="n">random_urgency</span><span class="p">][</span><span class="n">x</span><span class="p">])</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_parameters</span><span class="o">.</span><span class="n">_set_state_karmas</span><span class="p">]</span>
+                <span class="n">probs</span> <span class="o">=</span> <span class="n">probs</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">probs</span><span class="p">)</span>
+                <span class="n">random_karma</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_parameters</span><span class="o">.</span><span class="n">_set_state_karmas</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">p</span><span class="o">=</span><span class="n">probs</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">_population</span><span class="p">[</span><span class="n">n</span><span class="p">,</span><span class="n">Simulator</span><span class="o">.</span><span class="n">_TYPE_COL</span><span class="p">]</span> <span class="o">=</span> <span class="n">random_type</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">_population</span><span class="p">[</span><span class="n">n</span><span class="p">,</span><span class="n">Simulator</span><span class="o">.</span><span class="n">_URGENCY_COL</span><span class="p">]</span> <span class="o">=</span> <span class="n">random_urgency</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">_population</span><span class="p">[</span><span class="n">n</span><span class="p">,</span><span class="n">Simulator</span><span class="o">.</span><span class="n">_KARMA_COL</span><span class="p">]</span> <span class="o">=</span> <span class="n">random_karma</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_population</span><span class="p">[:,</span><span class="n">Simulator</span><span class="o">.</span><span class="n">_TYPE_COL</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_parameters</span><span class="o">.</span><span class="n">_lst_init_types</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_population</span><span class="p">[:,</span><span class="n">Simulator</span><span class="o">.</span><span class="n">_URGENCY_COL</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_parameters</span><span class="o">.</span><span class="n">_lst_init_urgencies</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_population</span><span class="p">[:,</span><span class="n">Simulator</span><span class="o">.</span><span class="n">_KARMA_COL</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_parameters</span><span class="o">.</span><span class="n">_lst_init_karmas</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_state_transition_counter</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="bp">self</span><span class="o">.</span><span class="n">_parameters</span><span class="o">.</span><span class="n">_num_urgencies</span><span class="p">,</span> 
+                                                   <span class="bp">self</span><span class="o">.</span><span class="n">_parameters</span><span class="o">.</span><span class="n">_num_state_karmas</span><span class="p">,</span> 
+                                                   <span class="bp">self</span><span class="o">.</span><span class="n">_parameters</span><span class="o">.</span><span class="n">_num_urgencies</span><span class="p">,</span> 
+                                                   <span class="bp">self</span><span class="o">.</span><span class="n">_parameters</span><span class="o">.</span><span class="n">_num_state_karmas</span><span class="p">))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_state_transition_counter_participants</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="bp">self</span><span class="o">.</span><span class="n">_parameters</span><span class="o">.</span><span class="n">_num_urgencies</span><span class="p">,</span> 
+                                                                <span class="bp">self</span><span class="o">.</span><span class="n">_parameters</span><span class="o">.</span><span class="n">_num_state_karmas</span><span class="p">,</span> 
+                                                                <span class="bp">self</span><span class="o">.</span><span class="n">_parameters</span><span class="o">.</span><span class="n">_num_urgencies</span><span class="p">,</span> 
+                                                                <span class="bp">self</span><span class="o">.</span><span class="n">_parameters</span><span class="o">.</span><span class="n">_num_state_karmas</span><span class="p">))</span></div>
+        
+        
+<div class="viewcode-block" id="Simulator.begin_epoch"><a class="viewcode-back" href="../../../documentation.html#karma_game_library.Simulator.begin_epoch">[docs]</a>    <span class="k">def</span> <span class="nf">begin_epoch</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        This function begins the next epoch of the game.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        None</span>
+
+<span class="sd">        Raises</span>
+<span class="sd">        ------</span>
+<span class="sd">        Exception</span>
+<span class="sd">            In case the previous epoch was not closed.</span>
+<span class="sd">            In case the karma overflow is not empty due to invalid functions func_payment, func_overflow_distribution or func_karma_redistribution.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        None</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># check if previous epoch was closed</span>
+        <span class="k">if</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_open_epoch</span><span class="p">):</span>
+            <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s2">&quot;Previous epoch was not closed! Cannot start next epoch!&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_open_epoch</span> <span class="o">=</span> <span class="kc">True</span>
+        <span class="c1"># check if _karma_overflow is empty</span>
+        <span class="k">if</span><span class="p">(</span><span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">_karma_overflow</span><span class="o">==</span><span class="mi">0</span><span class="p">):</span>
+            <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s2">&quot;Karma overflow is not empty, func_payment, func_overflow_distribution or func_karma_redistribution need to be corrected so that the total amount of Karma stays constant after each epoch!&quot;</span><span class="p">)</span>
+        <span class="c1"># reset epoch outcomes and particiapnts</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">all_epoch_participants</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">all_epoch_outcomes</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="c1"># record karma before interactions</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_total_karma_epoch_begin</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_karma_overflow</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_population</span><span class="p">[:,</span><span class="n">Simulator</span><span class="o">.</span><span class="n">_KARMA_COL</span><span class="p">])</span>
+        <span class="c1"># record states before interactions</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_population_states_before</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_return_participant_states</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">peer_selection_whole_population</span><span class="p">())</span></div>
+        
+<div class="viewcode-block" id="Simulator.play_interaction"><a class="viewcode-back" href="../../../documentation.html#karma_game_library.Simulator.play_interaction">[docs]</a>    <span class="k">def</span> <span class="nf">play_interaction</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">policy</span><span class="p">:</span> <span class="n">Policy</span><span class="p">,</span> <span class="n">participants</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        This function performs one interaction, consisting out of decision</span>
+<span class="sd">        making, outcome determinantion and transaction (of costs, urgencies, </span>
+<span class="sd">        and karma balances exclusive overflow distribution and karma </span>
+<span class="sd">        redistribution).</span>
+<span class="sd">        </span>
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        policy : Policy</span>
+<span class="sd">            The Karma policy that should be used to play in this interaction.</span>
+<span class="sd">        </span>
+<span class="sd">        participants : List[int]</span>
+<span class="sd">            The list of participants of this interaction.</span>
+<span class="sd">            </span>
+<span class="sd">        Raises</span>
+<span class="sd">        ------</span>
+<span class="sd">        Exception</span>
+<span class="sd">            In case the policy is invalid, an exception will be raised.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        None</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># check validity of policy</span>
+        <span class="k">if</span><span class="p">(</span><span class="ow">not</span> <span class="n">policy</span><span class="o">.</span><span class="n">validate</span><span class="p">()):</span>
+            <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s2">&quot;Invalid policy, therefore epoch was not played!&quot;</span><span class="p">)</span>
+        <span class="c1"># interaction</span>
+        <span class="n">actions</span><span class="p">,</span> <span class="n">outcomes</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_decision_making_outcome_determination</span><span class="p">(</span><span class="n">policy</span><span class="p">,</span> <span class="n">participants</span><span class="p">)</span>
+        <span class="c1"># transaction</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_transaction</span><span class="p">(</span><span class="n">participants</span><span class="p">,</span> <span class="n">actions</span><span class="p">,</span> <span class="n">outcomes</span><span class="p">)</span>       
+        <span class="c1"># recording of participants and outcomes</span>
+        <span class="k">for</span> <span class="n">agent_idx</span> <span class="ow">in</span> <span class="n">participants</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">agent_idx</span> <span class="ow">not</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">all_epoch_participants</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">all_epoch_participants</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">agent_idx</span><span class="p">)</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">all_epoch_outcomes</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">outcomes</span><span class="p">[</span><span class="n">participants</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">agent_idx</span><span class="p">)])</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">idx_position</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">all_epoch_participants</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">agent_idx</span><span class="p">)</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">all_epoch_outcomes</span><span class="p">[</span><span class="n">idx_position</span><span class="p">]</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">all_epoch_outcomes</span><span class="p">[</span><span class="n">idx_position</span><span class="p">],</span> <span class="n">outcomes</span><span class="p">[</span><span class="n">participants</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">agent_idx</span><span class="p">)])</span></div>
+    
+<div class="viewcode-block" id="Simulator.close_epoch"><a class="viewcode-back" href="../../../documentation.html#karma_game_library.Simulator.close_epoch">[docs]</a>    <span class="k">def</span> <span class="nf">close_epoch</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        This function closes / ends the current epoch of the game. This </span>
+<span class="sd">        includes the distribution of karma overflow, and the redistribution of </span>
+<span class="sd">        karma balances.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        None</span>
+<span class="sd">        </span>
+<span class="sd">        Raises</span>
+<span class="sd">        ------</span>
+<span class="sd">        Exception</span>
+<span class="sd">            In case there is no open epoch started yet.</span>
+<span class="sd">            In case the karma overflow is not empty due to invalid functions </span>
+<span class="sd">            func_payment, func_overflow_distribution or func_karma_redistribution.</span>
+<span class="sd">            In case the total amount of karma did not stay constant due to </span>
+<span class="sd">            invalid functions func_payment, func_overflow_distribution or </span>
+<span class="sd">            func_karma_redistribution.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        epoch_counter : int</span>
+<span class="sd">            The increment epoch_counter after playing the epoch.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># urgency transition</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_urgency_transition</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">all_epoch_participants</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">all_epoch_outcomes</span><span class="p">)</span>
+        <span class="c1"># distribute overflow karma and redistribute karma</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_karma_re_distribution</span><span class="p">()</span>
+        <span class="c1"># record state transition</span>
+        <span class="n">population_states_after</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_return_participant_states</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">peer_selection_whole_population</span><span class="p">())</span>        
+        <span class="bp">self</span><span class="o">.</span><span class="n">_record_state_transitions</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_state_transition_counter</span><span class="p">,</span>
+                                       <span class="bp">self</span><span class="o">.</span><span class="n">peer_selection_whole_population</span><span class="p">(),</span> 
+                                       <span class="bp">self</span><span class="o">.</span><span class="n">_population_states_before</span><span class="p">,</span> 
+                                       <span class="n">population_states_after</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_record_state_transitions</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_state_transition_counter_participants</span><span class="p">,</span>
+                                       <span class="bp">self</span><span class="o">.</span><span class="n">all_epoch_participants</span><span class="p">,</span> 
+                                       <span class="bp">self</span><span class="o">.</span><span class="n">_population_states_before</span><span class="p">,</span> 
+                                       <span class="n">population_states_after</span><span class="p">)</span>
+        
+        <span class="c1"># check if previous epoch was closed</span>
+        <span class="k">if</span><span class="p">(</span><span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">_open_epoch</span><span class="p">):</span>
+            <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s2">&quot;No epoch started yet! Cannot close epoch!&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_open_epoch</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="c1"># record karma after interactions</span>
+        <span class="n">total_karma_end</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_karma_overflow</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_population</span><span class="p">[:,</span><span class="n">Simulator</span><span class="o">.</span><span class="n">_KARMA_COL</span><span class="p">])</span>
+        <span class="c1"># check if total karma stayed constant</span>
+        <span class="k">if</span><span class="p">(</span><span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">_karma_overflow</span><span class="o">==</span><span class="mi">0</span><span class="p">):</span>
+            <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s2">&quot;Karma overflow is not empty, func_payment, func_overflow_distribution or func_karma_redistribution need to be corrected so that the total amount of Karma stays constant after each epoch!&quot;</span><span class="p">)</span>
+        <span class="k">if</span><span class="p">(</span><span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">_total_karma_epoch_begin</span><span class="o">==</span><span class="n">total_karma_end</span><span class="p">):</span>
+            <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s2">&quot;Total Karma amount before and after playing the epoch is not equal, func_payment, func_overflow_distribution or func_karma_redistribution need to be corrected so that the total amount of Karma stays constant after each epoch!&quot;</span><span class="p">)</span>
+        <span class="c1"># updates</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">epoch_counter</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">epoch_counter</span></div>
+        
+<div class="viewcode-block" id="Simulator.peer_selection_random"><a class="viewcode-back" href="../../../documentation.html#karma_game_library.Simulator.peer_selection_random">[docs]</a>    <span class="k">def</span> <span class="nf">peer_selection_random</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">excluded_indexes</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        This function simulates the random peer selection, which is the random</span>
+<span class="sd">        selection of num_participants from a population of num_agents.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        excluded_indexes : List[int]</span>
+<span class="sd">            Optional. Default is None. If defined, certain agents can be </span>
+<span class="sd">            excluded from the peer_selection process.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        participants : List[int]</span>
+<span class="sd">            The agent indexes of the participants of the interaction.</span>
+<span class="sd">        &quot;&quot;&quot;</span>        
+        <span class="n">possible_indexes</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="bp">self</span><span class="o">.</span><span class="n">_parameters</span><span class="o">.</span><span class="n">_num_agents</span><span class="p">)]</span>
+        <span class="k">if</span> <span class="n">excluded_indexes</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">index</span> <span class="ow">in</span> <span class="n">excluded_indexes</span><span class="p">:</span>
+                <span class="n">possible_indexes</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">index</span><span class="p">)</span>
+        <span class="c1">#participants = random.sample(possible_indexes, self._parameters._num_participants)</span>
+        <span class="n">participants</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">possible_indexes</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_parameters</span><span class="o">.</span><span class="n">_num_participants</span><span class="p">,</span> <span class="n">replace</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">participants</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span></div>
+    
+<div class="viewcode-block" id="Simulator.peer_selection_whole_population"><a class="viewcode-back" href="../../../documentation.html#karma_game_library.Simulator.peer_selection_whole_population">[docs]</a>    <span class="k">def</span> <span class="nf">peer_selection_whole_population</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        This function simulates the peer selection of all agents interacting</span>
+<span class="sd">        with each other at the same time.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        None</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        participants : List[int]</span>
+<span class="sd">            The agent indexes of the participants of the interaction.</span>
+<span class="sd">        &quot;&quot;&quot;</span>        
+        <span class="n">participants</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="bp">self</span><span class="o">.</span><span class="n">_parameters</span><span class="o">.</span><span class="n">_num_agents</span><span class="p">)]</span>
+        <span class="k">return</span> <span class="n">participants</span></div>
+    
+<div class="viewcode-block" id="Simulator.peer_selection_random_non_exclusive_peer_groups"><a class="viewcode-back" href="../../../documentation.html#karma_game_library.Simulator.peer_selection_random_non_exclusive_peer_groups">[docs]</a>    <span class="k">def</span> <span class="nf">peer_selection_random_non_exclusive_peer_groups</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">n_groups</span><span class="p">:</span> <span class="nb">int</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        This function simulates the random peer selection, which is the random</span>
+<span class="sd">        selection of num_participants from a population of num_agents. This is</span>
+<span class="sd">        repeated for n_pairs times, and returns a list of participants lists.</span>
+<span class="sd">        This function produces non-exclusive peer groups, meaning that it is</span>
+<span class="sd">        possible that one agent participates in more than one interaction.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        n_groups : int</span>
+<span class="sd">            Number of participant groups that shall be returned.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        lst_participants : List[List[int]]</span>
+<span class="sd">            The list of participant lists (agent indexes of the participants) </span>
+<span class="sd">            of the interactions.</span>
+<span class="sd">        &quot;&quot;&quot;</span>        
+        <span class="n">lst_participants</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">n_groups</span><span class="p">):</span>
+            <span class="n">lst_participants</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">peer_selection_random</span><span class="p">())</span>
+        <span class="k">return</span> <span class="n">lst_participants</span></div>
+    
+<div class="viewcode-block" id="Simulator.peer_selection_random_exclusive_peer_groups"><a class="viewcode-back" href="../../../documentation.html#karma_game_library.Simulator.peer_selection_random_exclusive_peer_groups">[docs]</a>    <span class="k">def</span> <span class="nf">peer_selection_random_exclusive_peer_groups</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">n_groups</span><span class="p">:</span> <span class="nb">int</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        This function simulates the random peer selection, which is the random</span>
+<span class="sd">        selection of num_participants from a population of num_agents. This is</span>
+<span class="sd">        repeated for n_pairs times, and returns a list of participants lists.</span>
+<span class="sd">        This function produces exclusive peer groups, meaning that it is</span>
+<span class="sd">        not possible that one agent participates in more than one interaction.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        n_groups : int</span>
+<span class="sd">            Number of participant groups that shall be returned.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        lst_participants : List[List[int]]</span>
+<span class="sd">            The list of participant lists (agent indexes of the participants) of the interactions.</span>
+<span class="sd">        &quot;&quot;&quot;</span>  
+        <span class="n">lst_indexes_used</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">lst_participants</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">n_groups</span><span class="p">):</span>
+            <span class="n">participants</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">peer_selection_random</span><span class="p">(</span><span class="n">excluded_indexes</span><span class="o">=</span><span class="n">lst_indexes_used</span><span class="p">)</span>
+            <span class="n">lst_participants</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">participants</span><span class="p">)</span>
+            <span class="k">for</span> <span class="n">index</span> <span class="ow">in</span> <span class="n">participants</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">index</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">lst_indexes_used</span><span class="p">:</span>
+                    <span class="n">lst_indexes_used</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">index</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">lst_participants</span></div>
+    
+<div class="viewcode-block" id="Simulator.get_agent_information"><a class="viewcode-back" href="../../../documentation.html#karma_game_library.Simulator.get_agent_information">[docs]</a>    <span class="k">def</span> <span class="nf">get_agent_information</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">agent_idx</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">arr</span><span class="p">:</span><span class="nb">bool</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        This function returns the information of an agent.</span>
+<span class="sd">        </span>
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        agent_idx : int</span>
+<span class="sd">            The agent index in the population.</span>
+<span class="sd">        arr : bool</span>
+<span class="sd">            Whether an array shall be returned, or a tuple of values. </span>
+<span class="sd">            Default is True.</span>
+<span class="sd">            </span>
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        arr : np.array</span>
+<span class="sd">            The agent information as a 1x5 array, where each column is </span>
+<span class="sd">            represented by following enumeration: TYPE_COL = 0, </span>
+<span class="sd">            URGENCY_COL = 1, KARMA_COL = 2, CUM_COST_COL = 3,</span>
+<span class="sd">            ENCOUNTERS_COL = 4.</span>
+<span class="sd">        type : int</span>
+<span class="sd">            (if parameter &#39;arr&#39; set to False)</span>
+<span class="sd">        urgency : int</span>
+<span class="sd">            (if parameter &#39;arr&#39; set to False)</span>
+<span class="sd">        karma : int</span>
+<span class="sd">            (if parameter &#39;arr&#39; set to False)</span>
+<span class="sd">        cum_cost : float</span>
+<span class="sd">            (if parameter &#39;arr&#39; set to False)</span>
+<span class="sd">        encounters : int</span>
+<span class="sd">            (if parameter &#39;arr&#39; set to False)</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">agent_information</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_population</span><span class="p">[</span><span class="n">agent_idx</span><span class="p">]</span>
+        <span class="k">if</span> <span class="n">arr</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">agent_information</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="nb">int</span><span class="p">(</span><span class="n">agent_information</span><span class="p">[</span><span class="n">Simulator</span><span class="o">.</span><span class="n">_TYPE_COL</span><span class="p">]),</span> <span class="nb">int</span><span class="p">(</span><span class="n">agent_information</span><span class="p">[</span><span class="n">Simulator</span><span class="o">.</span><span class="n">_URGENCY_COL</span><span class="p">]),</span> <span class="nb">int</span><span class="p">(</span><span class="n">agent_information</span><span class="p">[</span><span class="n">Simulator</span><span class="o">.</span><span class="n">_KARMA_COL</span><span class="p">]),</span> <span class="n">agent_information</span><span class="p">[</span><span class="n">Simulator</span><span class="o">.</span><span class="n">_CUM_COST_COL</span><span class="p">],</span> <span class="nb">int</span><span class="p">(</span><span class="n">agent_information</span><span class="p">[</span><span class="n">Simulator</span><span class="o">.</span><span class="n">_ENCOUNTERS_COL</span><span class="p">])</span> </div>
+    
+<div class="viewcode-block" id="Simulator.get_agent_population"><a class="viewcode-back" href="../../../documentation.html#karma_game_library.Simulator.get_agent_population">[docs]</a>    <span class="k">def</span> <span class="nf">get_agent_population</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        This function returns the complete population, meaning the information</span>
+<span class="sd">        of all agents. Each column is represented by following enumeration: </span>
+<span class="sd">        TYPE_COL = 0, URGENCY_COL = 1, KARMA_COL = 2, CUM_COST_COL = 3,</span>
+<span class="sd">        ENCOUNTERS_COL = 4.</span>
+<span class="sd">        </span>
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        None</span>
+<span class="sd">        </span>
+<span class="sd">        </span>
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        population : np.array</span>
+<span class="sd">            The agent information as a [num_agent x 5] array, where each column </span>
+<span class="sd">            is represented by following enumeration: TYPE_COL = 0, </span>
+<span class="sd">            URGENCY_COL = 1, KARMA_COL = 2, CUM_COST_COL = 3,</span>
+<span class="sd">            ENCOUNTERS_COL = 4.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_population</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span></div>
+    
+<div class="viewcode-block" id="Simulator.get_karma_distribution"><a class="viewcode-back" href="../../../documentation.html#karma_game_library.Simulator.get_karma_distribution">[docs]</a>    <span class="k">def</span> <span class="nf">get_karma_distribution</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        This function returns the Karma distribution of the population.</span>
+<span class="sd">        </span>
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        None</span>
+<span class="sd">        </span>
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        distribution : np.array</span>
+<span class="sd">            This distribution represents the relative share of the population</span>
+<span class="sd">            that owns a specific amount of Karma. The distribution is</span>
+<span class="sd">            calculated for all karmas in parameters._num_state_karmas. The</span>
+<span class="sd">            last value of the distribution thus represents the share of agents</span>
+<span class="sd">            with a karma balance of num_state_karmas-1 or higher.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">pop_karma</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_population</span><span class="p">[:,</span><span class="n">Simulator</span><span class="o">.</span><span class="n">_KARMA_COL</span><span class="p">]</span>
+        <span class="n">_</span><span class="p">,</span> <span class="n">counts</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">unique</span><span class="p">(</span><span class="n">pop_karma</span><span class="p">,</span> <span class="n">return_counts</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+        <span class="n">distribution_state</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_parameters</span><span class="o">.</span><span class="n">_num_state_karmas</span><span class="p">)</span>
+        <span class="n">max_distr_karma</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_parameters</span><span class="o">.</span><span class="n">_set_state_karmas</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+        <span class="k">for</span> <span class="n">karma</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">counts</span><span class="p">)):</span>
+            <span class="k">if</span><span class="p">(</span><span class="n">karma</span><span class="o">&gt;=</span><span class="n">max_distr_karma</span><span class="p">):</span>
+                <span class="n">distribution_state</span><span class="p">[</span><span class="n">max_distr_karma</span><span class="p">]</span> <span class="o">+=</span> <span class="n">counts</span><span class="p">[</span><span class="n">karma</span><span class="p">]</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">distribution_state</span><span class="p">[</span><span class="n">karma</span><span class="p">]</span> <span class="o">=</span> <span class="n">counts</span><span class="p">[</span><span class="n">karma</span><span class="p">]</span>
+        <span class="n">distribution_state</span> <span class="o">=</span> <span class="n">distribution_state</span> <span class="o">/</span> <span class="bp">self</span><span class="o">.</span><span class="n">_parameters</span><span class="o">.</span><span class="n">_num_agents</span>
+        <span class="k">return</span> <span class="n">distribution_state</span></div>
+    
+<div class="viewcode-block" id="Simulator.get_state_transition_counts"><a class="viewcode-back" href="../../../documentation.html#karma_game_library.Simulator.get_state_transition_counts">[docs]</a>    <span class="k">def</span> <span class="nf">get_state_transition_counts</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">participants_only</span><span class="p">:</span> <span class="nb">bool</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        This function returns the state transition counts.</span>
+<span class="sd">        This means the times an agent reached state X (urgency, karma) from the</span>
+<span class="sd">        original state Y (urgency, karma). </span>
+<span class="sd">        </span>
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        participants_only : bool</span>
+<span class="sd">            Optional. Default=True. This defines, whether the state transition</span>
+<span class="sd">            distribution of all agents, or just of the agents that participated</span>
+<span class="sd">            during an epoch shall be considered.</span>
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        distribution : np.array</span>
+<span class="sd">            This distribution is a four dimensional matrix with following</span>
+<span class="sd">            indexes: [urgency_next][karma_next][urgency_before][karma_before]</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">participants_only</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_state_transition_counter_participants</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_state_transition_counter</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span></div>
+        
+<div class="viewcode-block" id="Simulator.get_population_cumulative_costs"><a class="viewcode-back" href="../../../documentation.html#karma_game_library.Simulator.get_population_cumulative_costs">[docs]</a>    <span class="k">def</span> <span class="nf">get_population_cumulative_costs</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        This function returns the cumulative, and discounted costs for each </span>
+<span class="sd">        agent of the population. Discounting takes place for each encounter </span>
+<span class="sd">        and not for each epoch!</span>
+<span class="sd">        </span>
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        None</span>
+<span class="sd">        </span>
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        pop_costs : np.array</span>
+<span class="sd">            This array represents the cumulative, discounted costs for each</span>
+<span class="sd">            agent of the population.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_population</span><span class="p">[:,</span><span class="n">Simulator</span><span class="o">.</span><span class="n">_CUM_COST_COL</span><span class="p">]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span></div>
+    
+<div class="viewcode-block" id="Simulator.get_total_cumulative_costs"><a class="viewcode-back" href="../../../documentation.html#karma_game_library.Simulator.get_total_cumulative_costs">[docs]</a>    <span class="k">def</span> <span class="nf">get_total_cumulative_costs</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        This function returns the total cumulative, and discounted costs as</span>
+<span class="sd">        sum of the cumulative, discounted costs over all agents. Discounting </span>
+<span class="sd">        takes place for each encounter and not for each epoch!</span>
+<span class="sd">        </span>
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        None</span>
+<span class="sd">        </span>
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        costs : float</span>
+<span class="sd">            This cost is the sum of all cumulative, discounted costs over all</span>
+<span class="sd">            agents.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_population</span><span class="p">[:,</span><span class="n">Simulator</span><span class="o">.</span><span class="n">_CUM_COST_COL</span><span class="p">])</span></div>
+        
+<div class="viewcode-block" id="Simulator.get_population_encounters"><a class="viewcode-back" href="../../../documentation.html#karma_game_library.Simulator.get_population_encounters">[docs]</a>    <span class="k">def</span> <span class="nf">get_population_encounters</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        This function returns the number of encounters (being a participant in</span>
+<span class="sd">        an interaction) for each agent of the population.</span>
+<span class="sd">        </span>
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        None</span>
+<span class="sd">        </span>
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        pop_encounters : np.array</span>
+<span class="sd">            This represents the number of encounters for each agent during the game.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_population</span><span class="p">[:,</span><span class="n">Simulator</span><span class="o">.</span><span class="n">_ENCOUNTERS_COL</span><span class="p">]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span></div>
+    
+<div class="viewcode-block" id="Simulator.get_total_encounters"><a class="viewcode-back" href="../../../documentation.html#karma_game_library.Simulator.get_total_encounters">[docs]</a>    <span class="k">def</span> <span class="nf">get_total_encounters</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        This function returns the total number of encounters (participations in</span>
+<span class="sd">        interactions) as sum over all agents of the population.</span>
+<span class="sd">        </span>
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        None</span>
+<span class="sd">        </span>
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        encounters : int</span>
+<span class="sd">            This represents the number of total encounters during the game.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="nb">int</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_population</span><span class="p">[:,</span><span class="n">Simulator</span><span class="o">.</span><span class="n">_ENCOUNTERS_COL</span><span class="p">]</span><span class="o">.</span><span class="n">copy</span><span class="p">()))</span></div>
+       
+    <span class="c1">#### Main Simulation Epoch Functions</span>
+    <span class="k">def</span> <span class="nf">_decision_making_outcome_determination</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">policy</span><span class="p">:</span> <span class="n">Policy</span><span class="p">,</span> <span class="n">participants</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        This function simulates the decision making and outcome determination.</span>
+<span class="sd">        The fields last_participants, last_actions and last_outcome are </span>
+<span class="sd">        updated for the user to be accessible.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        policy : Policy</span>
+<span class="sd">            The policy used by the agents for the decision making process.</span>
+<span class="sd">        participants : List[int]</span>
+<span class="sd">            The agent indexes of the participants of the interaction.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        actions : List[int]</span>
+<span class="sd">            The list of actions of the participants.</span>
+<span class="sd">        outcomes : List[int]</span>
+<span class="sd">            The outcomes of the interaction.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># peer selection</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_record_encounters</span><span class="p">(</span><span class="n">participants</span><span class="p">)</span>
+        <span class="c1"># agent decision making process</span>
+        <span class="n">actions</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_actions</span><span class="p">(</span><span class="n">policy</span><span class="p">,</span> <span class="n">participants</span><span class="p">)</span>
+        <span class="c1"># determine outcome</span>
+        <span class="n">outcomes</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_parameters</span><span class="o">.</span><span class="n">_func_outcome</span><span class="p">(</span><span class="n">actions</span><span class="p">)</span>
+        <span class="c1"># store results</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">last_participants</span> <span class="o">=</span> <span class="n">participants</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">last_actions</span> <span class="o">=</span> <span class="n">actions</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">last_outcomes</span> <span class="o">=</span> <span class="n">outcomes</span>
+        <span class="k">return</span> <span class="n">actions</span><span class="p">,</span> <span class="n">outcomes</span>
+    
+    <span class="k">def</span> <span class="nf">_transaction</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">participants</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="n">actions</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="n">outcomes</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        This function simulates the transation that consists of following</span>
+<span class="sd">        steps: (i) to update karma balances and urgencies based on interaction,</span>
+<span class="sd">        (ii) to update karma balances according to redistribution rule.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        participants : List[int]</span>
+<span class="sd">            The agent indexes of the participants of the interaction.</span>
+<span class="sd">        actions : List[int]</span>
+<span class="sd">            The list of actions of the participants.</span>
+<span class="sd">        outcomes : List[int]</span>
+<span class="sd">            The outcomes of the interaction.</span>
+<span class="sd">            </span>
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        None</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># cost transition</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_cost_transition</span><span class="p">(</span><span class="n">participants</span><span class="p">,</span> <span class="n">outcomes</span><span class="p">)</span>
+        <span class="c1"># karma transition</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_karma_transition</span><span class="p">(</span><span class="n">participants</span><span class="p">,</span> <span class="n">actions</span><span class="p">,</span> <span class="n">outcomes</span><span class="p">)</span>
+    
+    <span class="c1">### Deeper Epoch Functions  </span>
+    <span class="k">def</span> <span class="nf">_get_actions</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">policy</span><span class="p">:</span> <span class="n">Policy</span><span class="p">,</span> <span class="n">participants</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        This function simulates the decision making process of participants</span>
+<span class="sd">        based on their private state information (type, urgency, karma) and</span>
+<span class="sd">        the policy.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        policy : Policy</span>
+<span class="sd">            The policy used by the agents for the decision making process.</span>
+<span class="sd">        participants : List[int]</span>
+<span class="sd">            The agent indexes of the participants of the interaction.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        actions : List[int]</span>
+<span class="sd">            The list of actions of the participants.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">actions</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">agent_idx</span> <span class="ow">in</span> <span class="n">participants</span><span class="p">:</span>
+            <span class="n">agent_type</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_population</span><span class="p">[</span><span class="n">agent_idx</span><span class="p">,</span><span class="n">Simulator</span><span class="o">.</span><span class="n">_TYPE_COL</span><span class="p">]</span>
+            <span class="n">agent_urgency</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_population</span><span class="p">[</span><span class="n">agent_idx</span><span class="p">,</span><span class="n">Simulator</span><span class="o">.</span><span class="n">_URGENCY_COL</span><span class="p">]</span>
+            <span class="n">agent_karma</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_population</span><span class="p">[</span><span class="n">agent_idx</span><span class="p">,</span><span class="n">Simulator</span><span class="o">.</span><span class="n">_KARMA_COL</span><span class="p">],</span> <span class="bp">self</span><span class="o">.</span><span class="n">_parameters</span><span class="o">.</span><span class="n">_num_actions</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+            <span class="n">probabilities</span> <span class="o">=</span> <span class="n">policy</span><span class="o">.</span><span class="n">prob_matrix</span><span class="p">[</span><span class="nb">int</span><span class="p">(</span><span class="n">agent_type</span><span class="p">)][</span><span class="nb">int</span><span class="p">(</span><span class="n">agent_urgency</span><span class="p">)][</span><span class="nb">int</span><span class="p">(</span><span class="n">agent_karma</span><span class="p">)]</span>
+            <span class="c1"># action = random.choices(self._parameters._set_actions, weights=probabilities, k=1)[0]</span>
+            <span class="n">action</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">a</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_parameters</span><span class="o">.</span><span class="n">_set_actions</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">p</span><span class="o">=</span><span class="n">probabilities</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+            <span class="n">actions</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">action</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">actions</span>
+    
+    <span class="k">def</span> <span class="nf">_update_cum_costs</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">participants</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="n">immediate_costs</span> <span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">float</span><span class="p">]):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        This function simulates the updates of the participants cumulated </span>
+<span class="sd">        costs.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        participants : List[int]</span>
+<span class="sd">            The agent indexes of the participants of the interaction.</span>
+<span class="sd">        immediate_costs : List[float]</span>
+<span class="sd">            The list of participants&#39; immediate costs.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        None</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">for</span> <span class="n">agent_idx</span> <span class="ow">in</span> <span class="n">participants</span><span class="p">:</span>
+            <span class="n">agent_type</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_population</span><span class="p">[</span><span class="n">agent_idx</span><span class="p">,</span><span class="n">Simulator</span><span class="o">.</span><span class="n">_TYPE_COL</span><span class="p">]</span>
+            <span class="n">agent_temporal_preference</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_parameters</span><span class="o">.</span><span class="n">_map_type_temp_preference</span><span class="p">[</span><span class="n">agent_type</span><span class="p">]</span>
+            <span class="n">agent_cum_cost_current</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_population</span><span class="p">[</span><span class="n">agent_idx</span><span class="p">,</span><span class="n">Simulator</span><span class="o">.</span><span class="n">_CUM_COST_COL</span><span class="p">]</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_population</span><span class="p">[</span><span class="n">agent_idx</span><span class="p">,</span><span class="n">Simulator</span><span class="o">.</span><span class="n">_CUM_COST_COL</span><span class="p">]</span> <span class="o">=</span> <span class="n">immediate_costs</span><span class="p">[</span><span class="n">participants</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">agent_idx</span><span class="p">)]</span> <span class="o">+</span> <span class="n">agent_temporal_preference</span><span class="o">*</span><span class="n">agent_cum_cost_current</span>
+    
+    <span class="k">def</span> <span class="nf">_cost_transition</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">participants</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="n">outcomes</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        This function updates the cumulated costs of all participants.</span>
+<span class="sd">        The immediate cost is the product of outcome and urgency.</span>
+<span class="sd">        </span>
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        participants : List[int]</span>
+<span class="sd">            The agent indexes of the participants of the interaction.</span>
+<span class="sd">        outcomes : List[int]</span>
+<span class="sd">            The outcomes of the interaction.</span>
+<span class="sd">            </span>
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        None</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">immediate_costs</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">participants</span><span class="p">)):</span>
+            <span class="n">cost</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_parameters</span><span class="o">.</span><span class="n">_func_cost</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_population</span><span class="p">[</span><span class="n">participants</span><span class="p">[</span><span class="n">n</span><span class="p">],</span><span class="n">Simulator</span><span class="o">.</span><span class="n">_URGENCY_COL</span><span class="p">],</span>  <span class="n">outcomes</span><span class="p">[</span><span class="n">n</span><span class="p">])</span>
+            <span class="n">immediate_costs</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">cost</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_update_cum_costs</span><span class="p">(</span><span class="n">participants</span><span class="p">,</span> <span class="n">immediate_costs</span><span class="p">)</span>
+    
+    <span class="k">def</span> <span class="nf">_karma_transition</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">participants</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="n">actions</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="n">outcomes</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        This function updates the karma balances of all participants.</span>
+<span class="sd">        </span>
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        participants : List[int]</span>
+<span class="sd">            The agent indexes of the participants of the interaction.</span>
+<span class="sd">        actions : List[int]</span>
+<span class="sd">            The actions of the participants of the interaction.</span>
+<span class="sd">        outcomes : List[int]</span>
+<span class="sd">            The outcomes of the interaction.</span>
+<span class="sd">            </span>
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        None</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+            <span class="c1"># payment</span>
+        <span class="n">payments</span><span class="p">,</span> <span class="n">karma_overflow</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_parameters</span><span class="o">.</span><span class="n">_func_payment</span><span class="p">(</span>
+            <span class="n">actions</span><span class="o">=</span><span class="n">actions</span><span class="p">,</span> 
+            <span class="n">outcomes</span><span class="o">=</span><span class="n">outcomes</span>
+        <span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_karma_overflow</span> <span class="o">=</span> <span class="n">karma_overflow</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">payments</span><span class="p">)):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_population</span><span class="p">[</span><span class="n">participants</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="n">Simulator</span><span class="o">.</span><span class="n">_KARMA_COL</span><span class="p">]</span> <span class="o">+=</span> <span class="n">payments</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+        
+    <span class="k">def</span> <span class="nf">_karma_re_distribution</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        This function distributes the karma overflow and redistirbutes karma</span>
+<span class="sd">        according to func_overflow_distribution and func_karma_redistribution.</span>
+<span class="sd">        </span>
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        None</span>
+<span class="sd">        </span>
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        None</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+            <span class="c1"># overflow distribution</span>
+        <span class="n">pop_karmas_after_distribution</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_parameters</span><span class="o">.</span><span class="n">_func_overflow_distribution</span><span class="p">(</span>
+            <span class="n">pop_karmas</span><span class="o">=</span><span class="nb">list</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_population</span><span class="p">[:,</span><span class="n">Simulator</span><span class="o">.</span><span class="n">_KARMA_COL</span><span class="p">]),</span> 
+            <span class="n">overflow</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_karma_overflow</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_population</span><span class="p">[:,</span><span class="n">Simulator</span><span class="o">.</span><span class="n">_KARMA_COL</span><span class="p">]</span> <span class="o">=</span> <span class="n">pop_karmas_after_distribution</span>
+            <span class="c1"># karma redistribution</span>
+        <span class="n">pop_karmas_after_redistribution</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_parameters</span><span class="o">.</span><span class="n">_func_karma_redistribution</span><span class="p">(</span>
+            <span class="n">pop_karmas</span><span class="o">=</span><span class="nb">list</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_population</span><span class="p">[:,</span><span class="n">Simulator</span><span class="o">.</span><span class="n">_KARMA_COL</span><span class="p">])</span>
+        <span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_karma_overflow</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_population</span><span class="p">[:,</span><span class="n">Simulator</span><span class="o">.</span><span class="n">_KARMA_COL</span><span class="p">]</span> <span class="o">=</span> <span class="n">pop_karmas_after_redistribution</span>
+        
+    <span class="k">def</span> <span class="nf">_urgency_transition</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">all_epoch_participants</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="n">max_epoch_outcomes</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        This function updates the urgency levels of all agents using the user</span>
+<span class="sd">        specified function func_urgency_transition.</span>
+<span class="sd">        </span>
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        all_epoch_participants : List[int]</span>
+<span class="sd">            The agent indexes of the participants of all the interactions </span>
+<span class="sd">            during this epoch.</span>
+<span class="sd">        max_epoch_outcomes : List[int]</span>
+<span class="sd">            The maximum outcomes of all the interactions during this epoch.</span>
+<span class="sd">            </span>
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        None</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">for</span> <span class="n">agent_idx</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_parameters</span><span class="o">.</span><span class="n">_num_agents</span><span class="p">):</span>
+            <span class="k">if</span><span class="p">(</span><span class="n">agent_idx</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">all_epoch_participants</span><span class="p">):</span>
+                <span class="n">outcome_code</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">outcome_code</span> <span class="o">=</span> <span class="n">max_epoch_outcomes</span><span class="p">[</span><span class="n">all_epoch_participants</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">agent_idx</span><span class="p">)]</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_population</span><span class="p">[</span><span class="n">agent_idx</span><span class="p">,</span><span class="n">Simulator</span><span class="o">.</span><span class="n">_URGENCY_COL</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_parameters</span><span class="o">.</span><span class="n">_func_urgency_transition</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_population</span><span class="p">[</span><span class="n">agent_idx</span><span class="p">,</span> <span class="n">Simulator</span><span class="o">.</span><span class="n">_TYPE_COL</span><span class="p">],</span>
+                                                                                                          <span class="bp">self</span><span class="o">.</span><span class="n">_population</span><span class="p">[</span><span class="n">agent_idx</span><span class="p">,</span> <span class="n">Simulator</span><span class="o">.</span><span class="n">_URGENCY_COL</span><span class="p">],</span> 
+                                                                                                          <span class="n">outcome_code</span><span class="p">,</span>
+                                                                                                          <span class="bp">self</span><span class="o">.</span><span class="n">_parameters</span><span class="o">.</span><span class="n">_set_urgencies</span><span class="p">)</span>
+    
+    <span class="c1">#### Recording Functions</span>
+    <span class="k">def</span> <span class="nf">_record_encounters</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">participants</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        This function updates the encounter counters for the participants.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        participants : List[int]</span>
+<span class="sd">            The agent indexes of the participants of the interaction.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        None</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">for</span> <span class="n">participant</span> <span class="ow">in</span> <span class="n">participants</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_population</span><span class="p">[</span><span class="n">participant</span><span class="p">][</span><span class="n">Simulator</span><span class="o">.</span><span class="n">_ENCOUNTERS_COL</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span>
+            
+    <span class="k">def</span> <span class="nf">_return_participant_states</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">participants</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        This function returns the states of participants.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        participants : List[int]</span>
+<span class="sd">            The agent indexes of the participants of the interaction.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        participant_states : np.array</span>
+<span class="sd">            The subset of participant states from the population. First column</span>
+<span class="sd">            represents the urgencies, second column represents the karma</span>
+<span class="sd">            balances.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">participant_states</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">participant</span> <span class="ow">in</span> <span class="n">participants</span><span class="p">:</span>
+            <span class="n">participant_states</span><span class="o">.</span><span class="n">append</span><span class="p">([</span>
+                    <span class="nb">int</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_population</span><span class="p">[</span><span class="n">participant</span><span class="p">,</span><span class="n">Simulator</span><span class="o">.</span><span class="n">_URGENCY_COL</span><span class="p">]),</span>
+                    <span class="nb">min</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_population</span><span class="p">[</span><span class="n">participant</span><span class="p">,</span><span class="n">Simulator</span><span class="o">.</span><span class="n">_KARMA_COL</span><span class="p">]),</span> 
+                    <span class="bp">self</span><span class="o">.</span><span class="n">_parameters</span><span class="o">.</span><span class="n">_num_state_karmas</span><span class="o">-</span><span class="mi">1</span><span class="p">),</span>
+                <span class="p">])</span>
+        <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">participant_states</span><span class="p">)</span>
+    
+    <span class="k">def</span> <span class="nf">_record_state_transitions</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">counter</span><span class="p">,</span> <span class="n">participants</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="n">population_states_before</span><span class="p">:</span> <span class="n">npt</span><span class="o">.</span><span class="n">NDArray</span><span class="p">,</span> <span class="n">population_states_after</span><span class="p">:</span> <span class="n">npt</span><span class="o">.</span><span class="n">NDArray</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        This function records the state transitions of an interaction.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        counter : npt.NDArray</span>
+<span class="sd">            The counter array that should count the state transitions.</span>
+<span class="sd">        participants : List[int]</span>
+<span class="sd">            The agent indexes of the participants of the interaction.</span>
+<span class="sd">        population_states_before : npt.NDArray</span>
+<span class="sd">            The subset of participant states from the population before </span>
+<span class="sd">            the interaction. First column represents the urgencies, second </span>
+<span class="sd">            column represents the karma balances.</span>
+<span class="sd">        population_states_after : npt.NDArray</span>
+<span class="sd">            The subset of participant states from the population after </span>
+<span class="sd">            the interaction. First column represents the urgencies, second </span>
+<span class="sd">            column represents the karma balances.</span>
+<span class="sd">            </span>
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        None</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">participants</span><span class="p">:</span>
+            <span class="n">counter</span><span class="p">[</span><span class="n">population_states_after</span><span class="p">[</span><span class="n">p</span><span class="p">][</span><span class="mi">0</span><span class="p">]][</span><span class="n">population_states_after</span><span class="p">[</span><span class="n">p</span><span class="p">][</span><span class="mi">1</span><span class="p">]][</span><span class="n">population_states_before</span><span class="p">[</span><span class="n">p</span><span class="p">][</span><span class="mi">0</span><span class="p">]][</span><span class="n">population_states_before</span><span class="p">[</span><span class="n">p</span><span class="p">][</span><span class="mi">1</span><span class="p">]]</span> <span class="o">+=</span> <span class="mi">1</span></div>
+</pre></div>
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
+<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright 2023, Kevin Riehl.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.0.2.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.14.4.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>
