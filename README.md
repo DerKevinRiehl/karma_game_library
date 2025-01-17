@@ -90,5 +90,5 @@ How to cite us
 ----------------------------------------------
 
 ```
-Riehl, K., Makridis, M., & You?. (2023). Fair Money - Public Good Value Pricing With Karma Economies
+Riehl, K., Kouvelas, A., & Makridis, M. A. (2024). Karma economies for sustainable urban mobility–a fair approach to public good value pricing. npj Sustainable Mobility and Transport, 1(1), 1-17.
 ```
