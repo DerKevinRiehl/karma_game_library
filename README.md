@@ -84,7 +84,7 @@ It is also found in Celtic, Kazakh and Chinese symbolism.
 
 Acknowledgements
 ----------------------------------------------
-STILL TO DO
+We would like to thank Ezzat Elokda, Florian Dörfler, and Saverio Bolognani for the valuable and useful feedback, which was instrumental when improving this work. Moreover, we would like to thank Dario Morandini for reviewing and testing the software framework, and his helpful comments. This work did not receive any financial funding.
 
 How to cite us
 ----------------------------------------------
